@@ -1,0 +1,1 @@
+{"sections":{"custom_liquid_HBYbiC":{"type":"custom-liquid","settings":{"custom_liquid":"{% render 'page-title-banner' %}","color_scheme":"","padding_top":0,"padding_bottom":0}},"main":{"type":"main-page","settings":{"padding_top":36,"padding_bottom":36}}},"order":["custom_liquid_HBYbiC","main"]}

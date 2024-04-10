@@ -1,0 +1,47 @@
+{
+    "name": "t:sections.footer.name",
+    "type": "footer",
+    "sections": {
+        "footer": {
+            "type": "footer",
+            "blocks": {
+                "image_93RfRF": {
+                    "type": "image",
+                    "settings": {
+                        "image": "shopify:\/\/shop_images\/Starling_submark_red_07c58594-8fee-4b85-a4fd-2298fb890880.png",
+                        "image_width": 100,
+                        "alignment": ""
+                    }
+                },
+                "link_list_gwEkdq": {
+                    "type": "link_list",
+                    "settings": {
+                        "heading": "",
+                        "menu": "footer"
+                    }
+                }
+            },
+            "block_order": [
+                "image_93RfRF",
+                "link_list_gwEkdq"
+            ],
+            "settings": {
+                "color_scheme": "scheme-792352b9-43be-4258-a70b-27dae93ff582",
+                "newsletter_enable": true,
+                "newsletter_heading": "Join our newsletter and get 10% off!",
+                "enable_follow_on_shop": false,
+                "show_social": false,
+                "enable_country_selector": false,
+                "enable_language_selector": false,
+                "payment_enable": false,
+                "show_policy": false,
+                "margin_top": 0,
+                "padding_top": 36,
+                "padding_bottom": 36
+            }
+        }
+    },
+    "order": [
+        "footer"
+    ]
+}

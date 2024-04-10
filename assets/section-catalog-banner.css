@@ -1,0 +1,37 @@
+.catalog-banner {
+    background-color: pink;
+    display: grid;
+    height: 500px;
+    grid-template-columns: 2fr 1fr;
+    /* Adjust the ratio according to your preference */
+    gap: 10px;
+    /* Space between the main and side images */
+}
+
+.catalog-image-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Adjust the ratio according to your preference */
+    gap: 10px;
+    /* Space between the main and side images */
+}
+
+.collection-image img,
+.product-images img {
+    width: 100%;
+    /* Make images fill their containers */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Remove any default margins */
+}
+
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Create two columns for the side images */
+    grid-template-rows: repeat(2, 1fr);
+    /* Create two rows for the side images */
+    gap: 10px;
+    /* Space between side images */
+}

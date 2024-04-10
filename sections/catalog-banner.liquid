@@ -1,0 +1,93 @@
+{{ 'section-catalog-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="catalog-banner{% if section.settings.mobile_layout == 'catalog' %} catalog-banner--mobile{% endif %}">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'collection' -%}
+    <div class="catalog-image-grid">
+        <div class="collection-image">
+              {% render 'card-collection',
+                card_collection: block.settings.collection,
+                media_aspect_ratio: 'adapt',
+                columns: 1,
+                extend_height: true,
+                wrapper_class: section.settings.card_styles
+              %}
+        </div>
+        <div class="product-images">
+            <img src="" alt="Image 1">
+            <img src="" alt="Image 2">
+            <img src="" alt="Image 3">
+            <img src="" alt="Image 4">
+        </div>
+    </div>
+{%  endcase %}
+{%  endfor %}
+</div>
+{% schema %}
+{
+  "name": "t:sections.catalog-banner.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+        "type": "select",
+        "id": "desktop_layout",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.catalog-banner.settings.desktop_layout.options__1.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.catalog-banner.settings.desktop_layout.options__2.label"
+          }
+        ],
+        "default": "left",
+        "label": "t:sections.catalog-banner.settings.desktop_layout.label"
+      },
+      {
+        "type": "select",
+        "id": "mobile_layout",
+        "options": [
+          {
+            "value": "catalog",
+            "label": "t:sections.catalog-banner.settings.mobile_layout.options__1.label"
+          },
+          {
+            "value": "column",
+            "label": "t:sections.catalog-banner.settings.mobile_layout.options__2.label"
+          }
+        ],
+        "default": "column",
+        "label": "t:sections.catalog-banner.settings.mobile_layout.label"
+      }
+  ],
+  "blocks": [
+    {
+        "type": "collection",
+        "name": "t:sections.catalog-banner.blocks.collection.name",
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "t:sections.catalog-banner.blocks.collection.settings.collection.label"
+          }
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.catalog-banner.presets.name",
+      "blocks": [
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

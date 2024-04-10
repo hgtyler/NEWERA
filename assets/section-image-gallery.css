@@ -1,0 +1,23 @@
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.image-gallery-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 750px) {
+    .image-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 30px;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+}

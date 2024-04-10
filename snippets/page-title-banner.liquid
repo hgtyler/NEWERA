@@ -1,0 +1,75 @@
+<style>
+    @keyframes scrollLeft {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .page-scrolling-banner {
+        height: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #4F0E0D;
+        display: flex;
+        align-items: center;
+    }
+
+    .page-scrolling-banner-content {
+        display: flex; /* Changed to flex to better manage inline elements */
+        animation: scrollLeft 120s linear infinite;
+    }
+
+    .page-scrolling-banner-text {
+        font-size: 22px;
+        color: white;
+        font-family: "BeirutDisplayWeb-Book";
+        padding-right: 50px; /* Adjust if necessary to control spacing */
+    }
+
+    @media screen and (max-width: 750px) {
+        .page-scrolling-banner {
+            height: 40px;
+            overflow: hidden;
+            white-space: nowrap;
+            background-color: #4F0E0D;
+            display: flex;
+            align-items: center;
+        }
+    
+        .page-scrolling-banner-content {
+            display: flex; /* Changed to flex to better manage inline elements */
+            animation: scrollLeft 120s linear infinite;
+        }
+    
+        .page-scrolling-banner-text {
+            font-size: 16px;
+            color: white;
+            font-family: "BeirutDisplayWeb-Book";
+            padding-right: 50px; /* Adjust if necessary to control spacing */
+        }
+    }
+
+</style>
+<div class="page-scrolling-banner">
+    <div class="page-scrolling-banner-content" id="marqueeContent">
+        <!-- Text will be inserted dynamically here -->
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var pageTitle = "{{ page.title | escape }}"; // Adjust based on your templating system
+    var marqueeContent = document.getElementById('marqueeContent');
+    var repeatText = '';
+    
+    for (var i = 0; i < 40; i++) { // Adjust the 20 to increase/decrease the repetition based on needs
+        repeatText += '<span class="page-scrolling-banner-text">' + pageTitle + '</span>';
+    }
+    
+    marqueeContent.innerHTML = repeatText;
+});
+</script>
+
