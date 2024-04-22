@@ -76,7 +76,7 @@
         {%- else -%}
           {{
             section.settings.video
-            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: true, muted: false
+            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: false, muted: true
           }}
         {%- endif -%}
       </div>
@@ -139,9 +139,10 @@
             image_size: '1100x',
             autoplay: section.settings.enable_auto_play,
             loop: section.settings.enable_video_looping,
-            controls: true,
-            muted: section.settings.enable_auto_play
+            controls: false,
+            muted: true
         }}
+        
         {%- endif -%}
       </template>
     </deferred-media>
@@ -187,7 +188,7 @@
       "type": "checkbox",
       "id": "enable_video_looping",
       "label": "t:sections.video.settings.enable_video_looping.label",
-      "default": false
+      "default": true
     },
     {
       "type": "header",
@@ -239,7 +240,7 @@
       "type": "checkbox",
       "id": "enable_auto_play",
       "label": "Enable Auto-Play",
-      "default": false
+      "default": true
     },
     {
       "type": "color_scheme",

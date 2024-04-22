@@ -19,6 +19,15 @@
     "card_border_opacity": 85,
     "popup_corner_radius": 20,
     "currency_code_enabled": false,
+    "show_cart_note": true,
+    "cart_drawer_collection": "best-sellers",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Starling_submark_red_07c58594-8fee-4b85-a4fd-2298fb890880.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_color": "#4f0a24",
+    "checkout_accent_color": "#4f0a24",
+    "checkout_button_color": "#4f0a24",
     "sections": {
       "footer": {
         "type": "footer",

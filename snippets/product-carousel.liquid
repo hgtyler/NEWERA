@@ -1,0 +1,40 @@
+<style>
+    .swiper-container {
+        max-height: 300px; /* Adjust based on your dropdown size */
+    }
+
+    .swiper-pagination {
+    display: none;
+    }
+</style>
+
+<div class="swiper-container" style="width: 45%; overflow: hidden;">
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        {% for product in collections.all.products limit: 10 %}
+        <div class="swiper-slide" style="width: auto; flex-shrink: 0;">
+            <img src="{{ product.images.first | img_url: '180x180' }}" alt="{{ product.title }}" />
+            <h2 style="text-align:center;font-size:1rem;">{{ product.title }}</h2>
+            <p style="text-align:center;">{{ product.price | money_with_currency }}</p>
+           
+        </div>
+        {% endfor %}
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+            },
+        });
+    });
+</script>
+        

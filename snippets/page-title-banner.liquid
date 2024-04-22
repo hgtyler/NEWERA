@@ -1,75 +1,73 @@
 <style>
     @keyframes scrollLeft {
-        from {
+        0% {
             transform: translateX(0%);
         }
-        to {
-            transform: translateX(-100%);
+        100% {
+            transform: translateX(-50%);
         }
     }
-
+    
     .page-scrolling-banner {
         height: 80px;
         overflow: hidden;
         white-space: nowrap;
-        background-color: #4F0E0D;
+        background-color: #4F0A24;
         display: flex;
         align-items: center;
     }
-
+    
     .page-scrolling-banner-content {
-        display: flex; /* Changed to flex to better manage inline elements */
-        animation: scrollLeft 120s linear infinite;
+        display: inline-flex;
+        animation: scrollLeft 10s linear infinite;
     }
-
-    .page-scrolling-banner-text {
-        font-size: 22px;
-        color: white;
-        font-family: "BeirutDisplayWeb-Book";
-        padding-right: 50px; /* Adjust if necessary to control spacing */
+    
+    .page-scrolling-banner img {
+        width: 120px;
+        height: 120px;
+        margin-right: 10px; /* Adjust spacing between images */
     }
-
+    
     @media screen and (max-width: 750px) {
         .page-scrolling-banner {
             height: 40px;
-            overflow: hidden;
-            white-space: nowrap;
-            background-color: #4F0E0D;
-            display: flex;
-            align-items: center;
         }
     
-        .page-scrolling-banner-content {
-            display: flex; /* Changed to flex to better manage inline elements */
-            animation: scrollLeft 120s linear infinite;
-        }
-    
-        .page-scrolling-banner-text {
-            font-size: 16px;
-            color: white;
-            font-family: "BeirutDisplayWeb-Book";
-            padding-right: 50px; /* Adjust if necessary to control spacing */
+        .page-scrolling-banner img {
+            width: 60px; /* Adjust based on preference for smaller screens */
+            height: 60px;
         }
     }
-
+    
 </style>
 <div class="page-scrolling-banner">
-    <div class="page-scrolling-banner-content" id="marqueeContent">
-        <!-- Text will be inserted dynamically here -->
-    </div>
+          <marquee behavior="scroll" direction="left">
+            <img src="https://cdn.shopify.com/s/files/1/0021/7474/6681/files/3_2.png?v=1712781009" width="120" height="120" alt="aqua" />
+            <img src="https://cdn.shopify.com/s/files/1/0021/7474/6681/files/15.png?v=1712781007" width="120" height="120" alt="aqua" />
+            <img src="https://cdn.shopify.com/s/files/1/0021/7474/6681/files/4._2.png?v=1712781007" width="120" height="120" alt="aqua" />
+            <img src="https://cdn.shopify.com/s/files/1/0021/7474/6681/files/1_1.png?v=1712781008" width="120" height="120" alt="aqua" />
+          </marquee>
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var pageTitle = "{{ page.title | escape }}"; // Adjust based on your templating system
-    var marqueeContent = document.getElementById('marqueeContent');
-    var repeatText = '';
+    document.addEventListener('DOMContentLoaded', function() {
+        var images = [
+            "https://cdn.shopify.com/s/files/1/0021/7474/6681/files/3_2.png?v=1712781009",
+            "https://cdn.shopify.com/s/files/1/0021/7474/6681/files/15.png?v=1712781007",
+            "https://cdn.shopify.com/s/files/1/0021/7474/6681/files/4._2.png?v=1712781007",
+            "https://cdn.shopify.com/s/files/1/0021/7474/6681/files/1_1.png?v=1712781008"
+        ]; // Array of image URLs
+        var marqueeContent = document.querySelector('.page-scrolling-banner-content');
+        var repeatImages = '';
     
-    for (var i = 0; i < 40; i++) { // Adjust the 20 to increase/decrease the repetition based on needs
-        repeatText += '<span class="page-scrolling-banner-text">' + pageTitle + '</span>';
-    }
+        for (var i = 0; i < 40; i++) { // Adjust the 40 to increase/decrease the repetition based on needs
+            images.forEach(function(image) {
+                repeatImages += '<img src="' + image + '" width="120" height="120" alt="aqua" />'; // Add proper alt descriptions for each image
+            });
+        }
     
-    marqueeContent.innerHTML = repeatText;
-});
-</script>
+        marqueeContent.innerHTML = repeatImages;
+    });
+    </script>
+    
 

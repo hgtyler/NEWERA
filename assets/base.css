@@ -606,7 +606,7 @@ details>* {
 
 .underlined-link,
 .customer a {
-    color: rgba(var(--color-link), var(--alpha-link));
+    color: #8F1838;
 }
 
 .inline-richtext a,

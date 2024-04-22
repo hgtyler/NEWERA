@@ -7,6 +7,25 @@
   Usage:
   {% render 'header-search', input_id: 'My-Id'%}
 {% endcomment %}
+<style>
+  .top-links{
+   text-align: center;
+   display: flex;
+   padding-left: 10px;
+   align-items: center;
+   font-size: 12.5px;
+  }
+
+  .top-links-link {
+  padding-left: 15px;
+  }
+
+  @media screen and (max-width: 750px) {
+    .top-links{
+      display: none;
+     }
+    }
+</style>
 
 <details-modal class="header__search">
   <details>
@@ -105,4 +124,8 @@
       </div>
     </div>
   </details>
+  <div class="top-links"> 
+      <a class="full-unstyled-link top-links-link" href="/pages/heirloom-revival-inquiry"> Heirloom Revival </a>
+      <a class="full-unstyled-link top-links-link" href="pages/custom-projects"> Custom Projects </a> 
+  </div>
 </details-modal>
