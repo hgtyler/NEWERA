@@ -51,38 +51,8 @@
         </div>
       {%- endunless -%}
     </div>
-    <noscript>
-      <div
-        class="video-section__media"
-        {% if poster != null %}
-          style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {%- if section.settings.video == null and section.settings.video_url != null -%}
-          <a
-            href="{{ section.settings.video_url }}"
-            class="video-section__poster media media--transparent{% if poster == null %} video-section__placeholder{% endif %}"
-          >
-            {%- if poster != null -%}
-              {{
-                poster
-                | image_url: width: 3840
-                | image_tag: sizes: sizes, widths: '375, 750, 1100, 1500, 1780, 2000, 3000, 3840', alt: alt
-              }}
-            {%- else -%}
-              {{ 'hero-apparel-3' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
-            {%- endif -%}
-          </a>
-        {%- else -%}
-          {{
-            section.settings.video
-            | video_tag: image_size: '1100x', loop: section.settings.enable_video_looping, controls: false, muted: true
-          }}
-        {%- endif -%}
-      </div>
-    </noscript>
     <deferred-media
-      class="video-section__media deferred-media no-js-hidden gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+      class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
       data-media-id="{{ video_id }}"
       {% if poster != null %}
         style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
@@ -117,15 +87,15 @@
           -%}
           {%- if section.settings.video_url.type == 'youtube' -%}
             <iframe
-              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay={% if section.settings.enable_auto_play %}1{% else %}0{% endif %}{{ loop }}"
+              src="https://www.youtube.com/embed/{{ video_id }}?enablejsapi=1&autoplay=1{{ loop }}"
               class="js-youtube"
               allow="autoplay; encrypted-media"
               allowfullscreen
               title="{{ section.settings.description | escape }}"
             ></iframe>
-          {%- elsif section.settings.video_url.type == 'vimeo' -%}
+          {%- else -%}
             <iframe
-              src="https://player.vimeo.com/video/{{ video_id }}?autoplay={% if section.settings.enable_auto_play %}1{% else %}0{% endif %}{{ loop }}"
+              src="https://player.vimeo.com/video/{{ video_id }}?autoplay=1{{ loop }}"
               class="js-vimeo"
               allow="autoplay; encrypted-media"
               allowfullscreen
@@ -133,16 +103,15 @@
             ></iframe>
           {%- endif -%}
         {%- else -%}
-        {{
-          section.settings.video
-          | video_tag:
-            image_size: '1100x',
-            autoplay: section.settings.enable_auto_play,
-            loop: section.settings.enable_video_looping,
-            controls: false,
-            muted: true
-        }}
-        
+          {{
+            section.settings.video
+            | video_tag:
+              image_size: '1100x',
+              autoplay: true,
+              loop: section.settings.enable_video_looping,
+              controls: true,
+              muted: false
+          }}
         {%- endif -%}
       </template>
     </deferred-media>
@@ -155,7 +124,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["footer"]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {
@@ -188,7 +157,7 @@
       "type": "checkbox",
       "id": "enable_video_looping",
       "label": "t:sections.video.settings.enable_video_looping.label",
-      "default": true
+      "default": false
     },
     {
       "type": "header",
@@ -237,16 +206,10 @@
       "default": false
     },
     {
-      "type": "checkbox",
-      "id": "enable_auto_play",
-      "label": "Enable Auto-Play",
-      "default": true
-    },
-    {
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "default": "scheme-1"
     },
     {
       "type": "header",

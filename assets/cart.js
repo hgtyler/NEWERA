@@ -43,7 +43,12 @@ class CartItems extends HTMLElement {
   }
 
   onChange(event) {
-    this.updateQuantity(event.target.dataset.index, event.target.value, document.activeElement.getAttribute('name'), event.target.dataset.quantityVariantId);
+    this.updateQuantity(
+      event.target.dataset.index,
+      event.target.value,
+      document.activeElement.getAttribute('name'),
+      event.target.dataset.quantityVariantId
+    );
   }
 
   onCartUpdate() {
@@ -234,7 +239,7 @@ if (!customElements.get('cart-note')) {
         super();
 
         this.addEventListener(
-          'change',
+          'input',
           debounce((event) => {
             const body = JSON.stringify({ note: event.target.value });
             fetch(`${routes.cart_update_url}`, { ...fetchConfig(), ...{ body } });

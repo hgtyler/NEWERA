@@ -23,7 +23,7 @@
   assign price_min = product.price_min
   assign price_max = product.price_max
   assign available = target.available | default: false
-  assign money_price = price | money_without_trailing_zeros
+  assign money_price = price | money
   assign money_price_min = price_min | money
   assign money_price_max = price_max | money
   if settings.currency_code_enabled
@@ -59,14 +59,14 @@
         {%- if show_compare_at_price and compare_at_price -%}
           {%- unless product.price_varies == false and product.compare_at_price_varies %}
             <span class="visually-hidden visually-hidden--inline">
-             {{- 'products.product.price.regular_price' | t -}}
+              {{- 'products.product.price.regular_price' | t -}}
             </span>
             <span>
               <s class="price-item price-item--regular variant-item__old-price">
                 {% if settings.currency_code_enabled %}
                   {{ compare_at_price | money_with_currency }}
                 {% else %}
-                  {{ compare_at_price | money_without_trailing_zeros }}
+                  {{ compare_at_price | money }}
                 {% endif %}
               </s>
             </span>
