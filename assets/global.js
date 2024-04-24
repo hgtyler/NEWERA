@@ -184,16 +184,28 @@ class QuantityInput extends HTMLElement {
     event.preventDefault();
     const previousValue = this.input.value;
 
-    event.target.name === 'plus' ? this.input.stepUp() : this.input.stepDown();
+    if (event.target.name === 'plus') {
+      if (parseInt(this.input.dataset.min) > parseInt(this.input.step) && this.input.value == 0) {
+        this.input.value = this.input.dataset.min;
+      } else {
+        this.input.stepUp();
+      }
+    } else {
+      this.input.stepDown();
+    }
+
     if (previousValue !== this.input.value) this.input.dispatchEvent(this.changeEvent);
+
+    if (this.input.dataset.min === previousValue && event.target.name === 'minus') {
+      this.input.value = parseInt(this.input.min);
+    }
   }
 
   validateQtyRules() {
     const value = parseInt(this.input.value);
     if (this.input.min) {
-      const min = parseInt(this.input.min);
       const buttonMinus = this.querySelector(".quantity__button[name='minus']");
-      buttonMinus.classList.toggle('disabled', value <= min);
+      buttonMinus.classList.toggle('disabled', parseInt(value) <= parseInt(this.input.min));
     }
     if (this.input.max) {
       const max = parseInt(this.input.max);
@@ -359,9 +371,9 @@ class MenuDrawer extends HTMLElement {
     this.querySelectorAll('summary').forEach((summary) =>
       summary.addEventListener('click', this.onSummaryClick.bind(this))
     );
-    this.querySelectorAll('button:not(.localization-selector)').forEach((button) =>
-      button.addEventListener('click', this.onCloseButtonClick.bind(this))
-    );
+    this.querySelectorAll(
+      'button:not(.localization-selector):not(.country-selector__close-button):not(.country-filter__reset-button)'
+    ).forEach((button) => button.addEventListener('click', this.onCloseButtonClick.bind(this)));
   }
 
   onKeyUp(event) {
@@ -951,9 +963,10 @@ class VariantSelects extends HTMLElement {
     this.addEventListener('change', this.onVariantChange);
   }
 
-  onVariantChange() {
+  onVariantChange(event) {
     this.updateOptions();
     this.updateMasterId();
+    this.updateSelectedSwatchValue(event);
     this.toggleAddButton(true, '', false);
     this.updatePickupAvailability();
     this.removeErrorMessage();
@@ -963,7 +976,6 @@ class VariantSelects extends HTMLElement {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
     } else {
-      this.updateMedia();
       this.updateURL();
       this.updateVariantInput();
       this.renderProductInfo();
@@ -972,7 +984,14 @@ class VariantSelects extends HTMLElement {
   }
 
   updateOptions() {
-    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+    this.options = Array.from(this.querySelectorAll('select, fieldset'), (element) => {
+      if (element.tagName === 'SELECT') {
+        return element.value;
+      }
+      if (element.tagName === 'FIELDSET') {
+        return Array.from(element.querySelectorAll('input')).find((radio) => radio.checked)?.value;
+      }
+    });
   }
 
   updateMasterId() {
@@ -985,19 +1004,29 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  updateMedia() {
-    if (!this.currentVariant) return;
-    if (!this.currentVariant.featured_media) return;
+  updateSelectedSwatchValue({ target }) {
+    const { name, value, tagName } = target;
 
-    const mediaGalleries = document.querySelectorAll(`[id^="MediaGallery-${this.dataset.section}"]`);
-    mediaGalleries.forEach((mediaGallery) =>
-      mediaGallery.setActiveMedia(`${this.dataset.section}-${this.currentVariant.featured_media.id}`, true)
-    );
+    if (tagName === 'SELECT' && target.selectedOptions.length) {
+      const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
+      const selectedDropdownSwatchValue = this.querySelector(`[data-selected-dropdown-swatch="${name}"] > .swatch`);
+      if (!selectedDropdownSwatchValue) return;
+      if (swatchValue) {
+        selectedDropdownSwatchValue.style.setProperty('--swatch--background', swatchValue);
+        selectedDropdownSwatchValue.classList.remove('swatch--unavailable');
+      } else {
+        selectedDropdownSwatchValue.style.setProperty('--swatch--background', 'unset');
+        selectedDropdownSwatchValue.classList.add('swatch--unavailable');
+      }
 
-    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
-    if (!modalContent) return;
-    const newMediaModal = modalContent.querySelector(`[data-media-id="${this.currentVariant.featured_media.id}"]`);
-    modalContent.prepend(newMediaModal);
+      selectedDropdownSwatchValue.style.setProperty(
+        '--swatch-focal-point',
+        target.selectedOptions[0].dataset.optionSwatchFocalPoint || 'unset'
+      );
+    } else if (tagName === 'INPUT' && target.type === 'radio') {
+      const selectedSwatchValue = this.querySelector(`[data-selected-swatch-value="${name}"]`);
+      if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
+    }
   }
 
   updateURL() {
@@ -1038,12 +1067,17 @@ class VariantSelects extends HTMLElement {
     });
   }
 
-  setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach((input) => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.innerText = input.getAttribute('value');
-      } else {
-        input.innerText = window.variantStrings.unavailable_with_option.replace('[value]', input.getAttribute('value'));
+  setInputAvailability(elementList, availableValuesList) {
+    elementList.forEach((element) => {
+      const value = element.getAttribute('value');
+      const availableElement = availableValuesList.includes(value);
+
+      if (element.tagName === 'INPUT') {
+        element.classList.toggle('disabled', !availableElement);
+      } else if (element.tagName === 'OPTION') {
+        element.innerText = availableElement
+          ? value
+          : window.variantStrings.unavailable_with_option.replace('[value]', value);
       }
     });
   }
@@ -1066,6 +1100,70 @@ class VariantSelects extends HTMLElement {
 
     const productForm = section.querySelector('product-form');
     if (productForm) productForm.handleErrorMessage();
+  }
+
+  updateMedia(html) {
+    const mediaGallerySource = document.querySelector(`[id^="MediaGallery-${this.dataset.section}"] ul`);
+    const mediaGalleryDestination = html.querySelector(`[id^="MediaGallery-${this.dataset.section}"] ul`);
+
+    const refreshSourceData = () => {
+      const mediaGallerySourceItems = Array.from(mediaGallerySource.querySelectorAll('li[data-media-id]'));
+      const sourceSet = new Set(mediaGallerySourceItems.map((item) => item.dataset.mediaId));
+      const sourceMap = new Map(mediaGallerySourceItems.map((item, index) => [item.dataset.mediaId, { item, index }]));
+      return [mediaGallerySourceItems, sourceSet, sourceMap];
+    };
+
+    if (mediaGallerySource && mediaGalleryDestination) {
+      let [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
+      const mediaGalleryDestinationItems = Array.from(mediaGalleryDestination.querySelectorAll('li[data-media-id]'));
+      const destinationSet = new Set(mediaGalleryDestinationItems.map(({ dataset }) => dataset.mediaId));
+      let shouldRefresh = false;
+
+      // add items from new data not present in DOM
+      for (let i = mediaGalleryDestinationItems.length - 1; i >= 0; i--) {
+        if (!sourceSet.has(mediaGalleryDestinationItems[i].dataset.mediaId)) {
+          mediaGallerySource.prepend(mediaGalleryDestinationItems[i]);
+          shouldRefresh = true;
+        }
+      }
+
+      // remove items from DOM not present in new data
+      for (let i = 0; i < mediaGallerySourceItems.length; i++) {
+        if (!destinationSet.has(mediaGallerySourceItems[i].dataset.mediaId)) {
+          mediaGallerySourceItems[i].remove();
+          shouldRefresh = true;
+        }
+      }
+
+      // refresh
+      if (shouldRefresh) [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
+
+      // if media galleries don't match, sort to match new data order
+      mediaGalleryDestinationItems.forEach((destinationItem, destinationIndex) => {
+        const sourceData = sourceMap.get(destinationItem.dataset.mediaId);
+
+        if (sourceData && sourceData.index !== destinationIndex) {
+          mediaGallerySource.insertBefore(
+            sourceData.item,
+            mediaGallerySource.querySelector(`li:nth-of-type(${destinationIndex + 1})`)
+          );
+
+          // refresh source now that it has been modified
+          [mediaGallerySourceItems, sourceSet, sourceMap] = refreshSourceData();
+        }
+      });
+    }
+
+    if (this.currentVariant.featured_media) {
+      document
+        .querySelector(`[id^="MediaGallery-${this.dataset.section}"]`)
+        ?.setActiveMedia?.(`${this.dataset.section}-${this.currentVariant.featured_media.id}`);
+    }
+
+    // update media modal
+    const modalContent = document.querySelector(`#ProductModal-${this.dataset.section} .product-media-modal__content`);
+    const newModalContent = html.querySelector(`product-modal`);
+    if (modalContent && newModalContent) modalContent.innerHTML = newModalContent.innerHTML;
   }
 
   renderProductInfo() {
@@ -1099,6 +1197,8 @@ class VariantSelects extends HTMLElement {
         const volumePricingSource = html.getElementById(
           `Volume-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
         );
+
+        this.updateMedia(html);
 
         const pricePerItemDestination = document.getElementById(`Price-Per-Item-${this.dataset.section}`);
         const pricePerItemSource = html.getElementById(
@@ -1200,31 +1300,6 @@ class VariantSelects extends HTMLElement {
 
 customElements.define('variant-selects', VariantSelects);
 
-class VariantRadios extends VariantSelects {
-  constructor() {
-    super();
-  }
-
-  setInputAvailability(listOfOptions, listOfAvailableOptions) {
-    listOfOptions.forEach((input) => {
-      if (listOfAvailableOptions.includes(input.getAttribute('value'))) {
-        input.classList.remove('disabled');
-      } else {
-        input.classList.add('disabled');
-      }
-    });
-  }
-
-  updateOptions() {
-    const fieldsets = Array.from(this.querySelectorAll('fieldset'));
-    this.options = fieldsets.map((fieldset) => {
-      return Array.from(fieldset.querySelectorAll('input')).find((radio) => radio.checked).value;
-    });
-  }
-}
-
-customElements.define('variant-radios', VariantRadios);
-
 class ProductRecommendations extends HTMLElement {
   constructor() {
     super();
@@ -1264,3 +1339,23 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+class AccountIcon extends HTMLElement {
+  constructor() {
+    super();
+
+    this.icon = this.querySelector('.icon');
+  }
+
+  connectedCallback() {
+    document.addEventListener('storefront:signincompleted', this.handleStorefrontSignInCompleted.bind(this));
+  }
+
+  handleStorefrontSignInCompleted(event) {
+    if (event?.detail?.avatar) {
+      this.icon?.replaceWith(event.detail.avatar.cloneNode());
+    }
+  }
+}
+
+customElements.define('account-icon', AccountIcon);

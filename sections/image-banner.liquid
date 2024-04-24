@@ -27,18 +27,6 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
-
-  #Banner-{{ section.id }} {
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-  }
-
-  .banner__media {
-    width: {{ section.settings.image_container_size }}%;
-    border-radius: {{ section.settings.image_border_radius }}px;
-    overflow: hidden;
-  }
 {%- endstyle -%}
 
 {%- liquid
@@ -63,9 +51,6 @@
   endif
 -%}
 
-{% if section.settings.header_display == true and template.name != 'index' %}
-  <div id="Banner-{{ section.id }}" class="hide"> </div>
-{% else  %}
 <div
   id="Banner-{{ section.id }}"
   class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
@@ -180,7 +165,6 @@
     </div>
   </div>
 </div>
-{% endif %}
 
 {% schema %}
 {
@@ -188,7 +172,7 @@
   "tag": "section",
   "class": "section",
   "disabled_on": {
-    "groups": ["footer"]
+    "groups": ["header", "footer"]
   },
   "settings": [
     {
@@ -310,7 +294,7 @@
       "type": "color_scheme",
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
-      "default": "background-1"
+      "default": "scheme-1"
     },
     {
       "type": "header",
@@ -375,12 +359,6 @@
       "id": "show_text_below",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_below.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "header_display",
-      "default": false,
-      "label": "t:sections.image-banner.settings.header_display.label"
     }
   ],
   "blocks": [
