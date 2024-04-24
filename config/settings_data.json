@@ -10,7 +10,7 @@
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "vertical-lift",
     "buttons_radius": 4,
-    "variant_pills_radius": 40,
+    "variant_pills_radius": 4,
     "inputs_radius": 4,
     "card_style": "card",
     "card_image_padding": 0,

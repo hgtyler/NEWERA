@@ -4,6 +4,38 @@
   Usage:
   {% render 'header-mega-menu' %}
 {% endcomment %}
+<style>
+  .mega-menu__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;  /* Adds vertical padding around the images */
+  }
+  
+  .mega-menu__image {
+    width: 100px;    /* Sets the width of each image */
+    height: auto;    /* Maintains the aspect ratio of the images */
+    margin: 0 10px;  /* Adds horizontal spacing between images */
+    transition: opacity 0.3s ease; /* Smooth transition for any opacity changes */
+  }
+  
+  /* Optional: Add a hover effect to increase interactivity */
+  .mega-menu__image:hover {
+    opacity: 0.8; /* Makes the image slightly transparent on hover */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .mega-menu__images {
+      flex-direction: column; /* Stack images vertically on smaller screens */
+    }
+  
+    .mega-menu__image {
+      margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+  }
+  
+</style>
 
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
@@ -43,9 +75,12 @@
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}
+                        data-images="{{ childlink.metafields.global.image_1 }};{{ childlink.metafields.global.image_2 }};{{ childlink.metafields.global.image_3 }}"
                       >
                         {{ childlink.title | escape }}
                       </a>
+                      
+                      
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
                           {%- for grandchildlink in childlink.links -%}
@@ -67,7 +102,12 @@
                     </li>
                   {%- endfor -%}
                 </ul> 
-                {% render 'product-carousel' %}
+                <div class="mega-menu__images">
+                  <img src="" id="menu-image-1" class="mega-menu__image">
+                  <img src="" id="menu-image-2" class="mega-menu__image">
+                  <img src="" id="menu-image-3" class="mega-menu__image">
+                </div>
+                
               </div>
             </details>
           </header-menu>
@@ -93,3 +133,20 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('.mega-menu__link');
+
+  links.forEach(link => {
+    link.addEventListener('mouseenter', function() {
+      const images = link.getAttribute('data-images').split(';');
+      if (images.length === 3) {
+        document.getElementById('menu-image-1').src = images[0];
+        document.getElementById('menu-image-2').src = images[1];
+        document.getElementById('menu-image-3').src = images[2];
+      }
+    });
+  });
+});
+</script>

@@ -23,7 +23,7 @@
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "dropdown"
+            "picker_type": "button"
           }
         },
         "buy_buttons": {
@@ -48,22 +48,28 @@
         "text_zD9nKW": {
           "type": "text",
           "settings": {
-            "text": "Shipping Info",
+            "text": "Estimated Ship Date:",
             "text_style": "body"
           }
         },
-        "text_WqQM6b": {
-          "type": "text",
+        "custom_liquid_3zb3AQ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "popup_r6N6Y4": {
+          "type": "popup",
           "settings": {
             "text": "Quality Guarantee",
-            "text_style": "body"
+            "page": "happiness-guarantee"
           }
         },
-        "text_kUeibV": {
-          "type": "text",
+        "popup_gqPihc": {
+          "type": "popup",
           "settings": {
-            "text": "Returns",
-            "text_style": "body"
+            "text": "Shipping & Returns",
+            "page": "shipping-policy"
           }
         }
       },
@@ -76,8 +82,9 @@
         "custom_liquid_9JNUxW",
         "custom_liquid_NJEtVa",
         "text_zD9nKW",
-        "text_WqQM6b",
-        "text_kUeibV"
+        "custom_liquid_3zb3AQ",
+        "popup_r6N6Y4",
+        "popup_gqPihc"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -232,16 +239,6 @@
     },
     "1711402673d498e0f1": {
       "type": "apps",
-      "blocks": {
-        "product_reviews_reviews_N4XGE3": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "product_reviews_reviews_N4XGE3"
-      ],
       "settings": {
         "include_margins": true
       }

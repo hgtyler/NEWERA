@@ -1,3 +1,13 @@
+<style>
+  .product__title {
+    font-size: 1rem;
+  }
+
+  .h3 {
+    font-size: 1rem;
+  }
+</style>
+
 <section
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -88,13 +98,12 @@
               </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
-                <h2>{{ product.title | escape }}</h2>
+                <h3>{{ product.title | escape }}</h3>
                 <a href="{{ product.url }}" class="product__title">
-                  <h2 class="h2"> 
+                  <h3 class="h3"> 
                     {{ product.title | escape }}
-                  </h2>
+                </h3>
                 </a>
-              </div>
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price',
@@ -109,6 +118,7 @@
                   <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                 </div>
               {%- endif -%}
+            </div>
                 {% comment %} <div class="product__tax caption rte">
                   {%- if cart.taxes_included -%}
                     {{ 'products.product.include_taxes' | t }}
