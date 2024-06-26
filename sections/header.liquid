@@ -54,7 +54,7 @@
   }
 
   summary.list-menu__item {
-    padding-right: 2.7rem;
+    padding-right: 0.5rem;
   }
 
   .list-menu__item {
@@ -76,6 +76,25 @@
       padding-top: 0.5rem;
     }
   }
+
+    /* Initial header styles */
+    .header-wrapper {
+      transition: background-color 0.3s ease;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+  
+    /* Transparent state */
+    .header-transparent {
+      background-color: rgba(255, 255, 255, 0); /* Adjust as needed */
+    }
+  
+    /* Colored state when scrolled */
+    .header-colored {
+      background-color: rgba(255, 255, 255, 100); /* Adjust as needed */
+    }
 </style>
 
 {%- style -%}
@@ -133,8 +152,7 @@
     endif
   endfor
 -%}
-
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}" class="header-wrapper color-{{ section.settings.color_scheme }} gradient header-transparent{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -147,7 +165,7 @@
       assign localization_forms = true
     endif
   -%}
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }}{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
       if section.settings.menu != blank
         render 'header-drawer'
@@ -256,13 +274,17 @@
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
-          <account-icon>
-            {%- if customer and customer.has_avatar? -%}
-              {{ customer | avatar }}
-            {%- else -%}
-              {% render 'icon-account' %}
-            {%- endif -%}
-          </account-icon>
+          {%- if section.settings.enable_customer_avatar -%}
+            <account-icon>
+              {%- if customer and customer.has_avatar? -%}
+                {{ customer | avatar }}
+              {%- else -%}
+                {% render 'icon-account' %}
+              {%- endif -%}
+            </account-icon>
+          {%- else -%}
+            {% render 'icon-account' %}
+          {%- endif -%}
           <span class="visually-hidden">
             {%- liquid
               if customer
@@ -302,13 +324,33 @@
       </a>
     </div>
   </header>
-</{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
+</sticky-header>
 
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 
 {% javascript %}
+  document.addEventListener('DOMContentLoaded', function () {
+    const headerWrapper = document.querySelector('.header-wrapper');
+
+    function checkScroll() {
+      if (window.scrollY > 50) { // Adjust scroll value as needed
+        headerWrapper.classList.add('header-colored');
+        headerWrapper.classList.remove('header-transparent');
+      } else {
+        headerWrapper.classList.add('header-transparent');
+        headerWrapper.classList.remove('header-colored');
+      }
+    }
+
+    // Initial check
+    checkScroll();
+
+    // Add event listener for scroll events
+    window.addEventListener('scroll', checkScroll);
+  });
+
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
@@ -585,6 +627,18 @@
       "id": "enable_language_selector",
       "default": false,
       "label": "t:sections.header.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header__7.content",
+      "info": "t:sections.header.settings.header__7.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_customer_avatar",
+      "default": true,
+      "label": "t:sections.header.settings.enable_customer_avatar.label",
+      "info": "t:sections.header.settings.enable_customer_avatar.info"
     },
     {
       "type": "header",

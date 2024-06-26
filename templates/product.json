@@ -1,1 +1,275 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","media_position":"left","image_zoom":"lightbox","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
+        "custom_liquid_AyLNcx": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'product-desc' %}"
+          }
+        },
+        "text_rrMqMt": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Estimated Ship Date:",
+            "text_style": "body"
+          }
+        },
+        "custom_liquid_pDfbiD": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% render 'shipping-estimate' %}"
+          }
+        },
+        "popup_MimNPG": {
+          "type": "popup",
+          "disabled": true,
+          "settings": {
+            "text": "Size Guide",
+            "page": "size-guide"
+          }
+        },
+        "popup_Fxpnxf": {
+          "type": "popup",
+          "settings": {
+            "text": "Shipping & Returns",
+            "page": "shipping-policy"
+          }
+        },
+        "popup_CgRnTT": {
+          "type": "popup",
+          "settings": {
+            "text": "Quality Guarantee",
+            "page": "happiness-guarantee"
+          }
+        },
+        "custom_liquid_Y78Bkk": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "custom_liquid_AyLNcx",
+        "text_rrMqMt",
+        "custom_liquid_pDfbiD",
+        "popup_MimNPG",
+        "popup_Fxpnxf",
+        "popup_CgRnTT",
+        "custom_liquid_Y78Bkk"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "multicolumn_rHp6xc": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_btM7FH": {
+          "type": "column",
+          "settings": {
+            "title": "Dimensions:",
+            "text": "<p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9ahbw7": {
+          "type": "column",
+          "settings": {
+            "title": "Gemstone:",
+            "text": "<p>.{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4NNNd6": {
+          "type": "column",
+          "settings": {
+            "title": "Metal:",
+            "text": "<p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_btM7FH",
+        "column_9ahbw7",
+        "column_4NNNd6"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_rpcBdD": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_FAUNnQ": {
+      "type": "multirow",
+      "blocks": {
+        "row_pRMcmc": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/HOWITSMADE-SQ_5c96efdf-35f2-4751-8d80-7fac25a866f8.png",
+            "caption": "",
+            "heading": "",
+            "text": "<p>We are proud to say all of our jewelry is handmade in Downtown Los Angeles. Every little detail is done by hand, from refining old gold pieces, reclaiming diamonds, sketching, creating 3D CADs, printing wax models, making molds, lost wax casting with our recycled 14k gold, tumbling the metal casting, sanding, soldering, polishing, setting, engraving and finishing. Each piece is handled with care as it arrives to you, including folding every box, tying every ribbon, and shipping with services we trust.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_iXytfc": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MKSADLER-1349_1_d6ad7b46-32ca-486b-abae-d3048341f6cb.jpg",
+            "caption": "CARE FOR YOUR",
+            "heading": "{{ product.title }}",
+            "text": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_pRMcmc",
+        "row_iXytfc"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"assistant\";}"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h2",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "More to Love",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1714842290b890cc1d": {
+      "type": "apps",
+      "blocks": {
+        "stamped_product_reviews_ugc_main_widget_47VYV4": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_product_reviews_ugc_main_widget_47VYV4"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "multicolumn_rHp6xc",
+    "video_rpcBdD",
+    "multirow_FAUNnQ",
+    "related-products",
+    "1714842290b890cc1d"
+  ]
+}

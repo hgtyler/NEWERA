@@ -1,1 +1,332 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image_overlay_opacity":40,"image_height":"large","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"scheme-3","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["image_banner","featured_collection"]}
+{
+  "sections": {
+    "video_DxiFyk": {
+      "type": "video",
+      "disabled": true,
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/BANNER.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_ybm3Gt": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "image_1_content_position": "bottom-left",
+        "image_2_content_position": "bottom-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_6FhJgi": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qcrMnC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fine jewelry moved by light and color. Made to be — ever yours.",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_qcrMnC"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_wXJbwk": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "best-sellers",
+        "products_to_show": 10,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "link",
+        "enable_desktop_slider": true,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_ggyVkk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_tApmN7": {
+          "type": "heading",
+          "settings": {
+            "heading": "hello",
+            "heading_size": "h2"
+          }
+        },
+        "text_MDHAih": {
+          "type": "text",
+          "settings": {
+            "text": "test",
+            "text_style": "body"
+          }
+        },
+        "buttons_qaHtYc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "heading_2_6DYDB6": {
+          "type": "heading_2",
+          "settings": {
+            "heading_2": "test",
+            "heading_size_2": "h2"
+          }
+        },
+        "text_2_UKJiLK": {
+          "type": "text_2",
+          "settings": {
+            "text_2": "test",
+            "text_style_2": "body"
+          }
+        },
+        "buttons_2_BJPrMb": {
+          "type": "buttons_2",
+          "settings": {
+            "button_label_3": "test",
+            "button_link_3": "",
+            "button_style_secondary_3": false,
+            "button_label_4": "",
+            "button_link_4": "",
+            "button_style_secondary_4": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tApmN7",
+        "text_MDHAih",
+        "buttons_qaHtYc",
+        "heading_2_6DYDB6",
+        "text_2_UKJiLK",
+        "buttons_2_BJPrMb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
+        "image_2": "shopify:\/\/shop_images\/aquamarine-bezel-set-ring-3_d5eefb1e-130a-4d93-a530-4faf7dd56116.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-right",
+        "image_1_content_position": "bottom-left",
+        "image_2_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-fe4bd60d-5954-4f0b-8c61-ef257bb14f87",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "image_with_text_qtyTbe": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_Jpwe7J": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by every color-kissed gemstone that is as individual as the person who chooses to twine their life with that of the stone. And in awe of how gemstones flaunt their beauty in naturally occurring inclusions that catch light to singularly striking results. <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_Jpwe7J"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Face_Clean_1.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-4",
+        "color_scheme": "scheme-4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1714838859db24a20c": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_ig3Ga6": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "@starling",
+            "title_color": "#4c1326",
+            "title_size": 20,
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_ig3Ga6"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "image_banner_wamzta": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_je898x": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "text_MVrx7E": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_g9tPV4": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_je898x",
+        "text_MVrx7E",
+        "buttons_g9tPV4"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "image_1_content_position": "bottom-left",
+        "image_2_content_position": "bottom-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "slideshow_BWPh34": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_Qi7hH8": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_tFUajB": {
+          "type": "slide",
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Qi7hH8",
+        "slide_tFUajB"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    }
+  },
+  "order": [
+    "video_DxiFyk",
+    "image_banner_ybm3Gt",
+    "rich_text_6FhJgi",
+    "featured_collection_wXJbwk",
+    "image_banner_ggyVkk",
+    "image_with_text_qtyTbe",
+    "1714838859db24a20c",
+    "image_banner_wamzta",
+    "slideshow_BWPh34"
+  ]
+}

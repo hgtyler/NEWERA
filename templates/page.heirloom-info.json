@@ -1,14 +1,5 @@
 {
   "sections": {
-    "custom_liquid_FgnU86": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% render 'page-title-banner' %}",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "main": {
       "type": "main-page",
       "disabled": true,
@@ -24,19 +15,31 @@
           "type": "heading",
           "settings": {
             "heading": "Heirloom Revival",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
-        "text_H4RaWa": {
+        "text_yThdWT": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>We believe jewelry is meant to be worn and are here to help you revive your jewelry box. The Heirloom Revival mission is: wear more, buy less. The largest diamond mine is in our homes. Let's start putting those stones to use. It's our responsibility as citizens of earth, the future of fine jewelry and so sentimental. Heirloom Revival is here to help you recycle and remake your most precious objects.<\/p><p><\/p><p>Read more about our process below! <\/p><p><\/p><p><\/p>"
+          }
+        },
+        "button_PN7JKY": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start Your Revival",
+            "button_link": "shopify:\/\/products\/heirloom-revival-deposit",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
         "heading_AWChb6",
-        "text_H4RaWa"
+        "text_yThdWT",
+        "button_PN7JKY"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -47,67 +50,292 @@
         "padding_bottom": 52
       }
     },
-    "multirow_PH7Q9t": {
-      "type": "multirow",
+    "multicolumn_kjnTqa": {
+      "type": "multicolumn",
       "blocks": {
-        "row_JgkYcq": {
-          "type": "row",
+        "column_x94Cxg": {
+          "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/oval-balloon-necklace-1.jpg",
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/box-blk_550x_c74b3995-f15c-48d9-99bf-785cf7825481.webp",
+            "title": "1. Pick Your Revival",
+            "text": "<p>Select a piece(s) from your jewelry collection that holds sentimental value but doesn't suit your style. We recommend only picking 1-3 pieces to start with, otherwise it can get overwhelming. And if you are having any hesitation on if you want to take apart your piece or not, it’s best to not. <\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "row_PLDrdn": {
-          "type": "row",
+        "column_mYHCV9": {
+          "type": "column",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/pick-blk_550x_28cf85f9-1d36-434e-8b4b-67fa8255681b.webp",
+            "title": "2. Think About Your New Design & Get An Estimate",
+            "text": "<p>Look around our site and socials for inspiration! We will also be adding to this before and after slideshow which is helpful to see how other pieces have come out. If your stones are about the same size as the stones (regardless of shape or cut) in the picture you like, the design is probably possible! <\/p><p>To get a price estimate email us with any questions: <a href=\"mailto:heirloomerevival@starlingjewelry.com\"><span style=\"text-decoration:underline\">heirloomerevival@starlingjewelry.com<\/span><\/a> OR fill out this contact form. As a rough guide our revivals are generally between $2000 - $5000. <\/p>",
+            "link_label": "",
+            "link": ""
           }
         },
-        "row_7ip3WQ": {
-          "type": "row",
+        "column_YCjaqr": {
+          "type": "column",
           "settings": {
-            "caption": "Caption",
-            "heading": "Row",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "button_label": "Button label",
-            "button_link": ""
+            "image": "shopify:\/\/shop_images\/select-blk_550x_3e9a13ef-5138-4499-8ff9-5ce27e532cb4.webp",
+            "title": "3. Reserve A Revival Spot",
+            "text": "<p>Once we've chatted via email and\/or you are feeling comfortable reserve your Heirloom Revival spot in an upcoming month here —--. We limit our Heirloom Revival projects to 10 a month so we can provide the best experience for everyone. The $200 deposit is non-refundable and goes towards your heirloom revival project. For planning purposes the process generally takes 8-10 weeks. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_q6Jbq8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ship-blk_550x_cfb2c2b5-78e3-4934-85d7-3e213d5c3a37.webp",
+            "title": "4. Send In Your Jewelry",
+            "text": "<p>During the first week of the month you have selected we will automatically mail you a shipping kit. It will include instructions on how to safely ship us your jewelry, jewelry bags for securing your pieces and a prepaid shipping label affixed to a shipping box. We understand that your jewels require the utmost care, please follow the shipping safety practices and reach out with any questions.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bK6KP7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/inspect-blk_550x_cbd1faf4-030f-45cc-b8b7-e95e3c293167.webp",
+            "title": "5. We Inspect, Design & Confirm Pricing",
+            "text": "<p>You will be notified once your heirlooms safely arrive at the Starling studio. After receiving your jewelry in Los Angeles, we carefully inspect and confirm the design direction you are loving and offer a final estimate based on your exact stone specifications. Pricing includes insured shipping both ways, custom renderings and settings, metalsmithing, design and new materials. To start reviving your pieces we send a 50% deposit. This takes about 2 weeks. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_titmky": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cadorsketch_550x_bec13227-29a7-441b-b9c2-eb91e670ed8a.webp",
+            "title": "6. Time to Revive! Removing Stones & Creating Custom 3D CAD Drawings",
+            "text": "<p>Your project has begun! Depending on your revival this process can include removing stones, taking apart findings and weighing the metals. During this step, we will also share a sketch and\/or 3D CAD drawing so you can see a rendering of your design and give final approval before we move to metalsmithing. Each project includes up to two edits of the rendering. This takes about 2 weeks. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9cXXt8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/make-blk_550x_8aa3cba9-6c74-4076-95b1-afef3018da44.webp",
+            "title": "7. Time to Revive! Metalsmithing",
+            "text": "<p>The metalsmithing begins! Your 3D design is cast in gold and\/or your metal is melted down. Our skilled team of goldsmiths start drawing down, sawing, sanding, setting, and polishing your new heirloom piece. This takes about 3-4 weeks. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Drjdz7": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/truck_550x_a1d0f209-5344-4b75-9f2c-5f4d6cf0815d.webp",
+            "title": "8: Fin!",
+            "text": "<p>Your Heirloom Revival is finished! We will email the final balance invoice and confirm the return shipping address and coordinate delivery time with you. All finished Heirloom Revival pieces are mailed overnight or 2-day, fully insured with signature required. *We prefer that the first time you see the revival is in person and for that reason do not send sneak peek images before mailing.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DBE9fY": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woman-blk_550x_7e437f63-27ce-4f4c-a4e9-f765a75c9dfa.webp",
+            "title": "9. Enjoy!",
+            "text": "<p>You receive your Heirloom Revival! Mail day has truly never been better!! Please tag us in all glorious unboxing and gleeful showing off videos. <\/p>",
+            "link_label": "",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "row_JgkYcq",
-        "row_PLDrdn",
-        "row_7ip3WQ"
+        "column_x94Cxg",
+        "column_mYHCV9",
+        "column_YCjaqr",
+        "column_q6Jbq8",
+        "column_bK6KP7",
+        "column_titmky",
+        "column_9cXXt8",
+        "column_Drjdz7",
+        "column_DBE9fY"
       ],
       "settings": {
-        "image_height": "medium",
-        "desktop_image_width": "medium",
-        "heading_size": "h1",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "image_layout": "alternate-left",
-        "section_color_scheme": "",
-        "row_color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
+        "title": "How it works:",
+        "heading_size": "h2",
+        "image_width": "half",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "multicolumn_D4k4fE": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_GG88Hi": {
+          "type": "column",
+          "settings": {
+            "title": "Before",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_Q6UYFP": {
+          "type": "column",
+          "settings": {
+            "title": "After",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k7CLgn": {
+          "type": "column",
+          "settings": {
+            "title": "Before",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_JCLKAV": {
+          "type": "column",
+          "settings": {
+            "title": "After",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_whz99T": {
+          "type": "column",
+          "settings": {
+            "title": "Before",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_43Whbn": {
+          "type": "column",
+          "settings": {
+            "title": "After",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_wED6WA": {
+          "type": "column",
+          "settings": {
+            "title": "Before",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_t93kBF": {
+          "type": "column",
+          "settings": {
+            "title": "After",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_TLcepG": {
+          "type": "column",
+          "settings": {
+            "title": "Before",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_k6EAgk": {
+          "type": "column",
+          "settings": {
+            "title": "After",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_GG88Hi",
+        "column_Q6UYFP",
+        "column_k7CLgn",
+        "column_JCLKAV",
+        "column_whz99T",
+        "column_43Whbn",
+        "column_wED6WA",
+        "column_t93kBF",
+        "column_TLcepG",
+        "column_k6EAgk"
+      ],
+      "settings": {
+        "title": "Before & Afters",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TVJz4F": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_PMAXep": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Your Revival",
+            "heading_size": "h2"
+          }
+        },
+        "button_QFHx6U": {
+          "type": "button",
+          "settings": {
+            "button_label": "Heirloom Revival Deposit",
+            "button_link": "shopify:\/\/products\/heirloom-revival-deposit",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PMAXep",
+        "button_QFHx6U"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
-    "custom_liquid_FgnU86",
     "main",
     "rich_text_PHGikT",
-    "multirow_PH7Q9t"
+    "multicolumn_kjnTqa",
+    "multicolumn_D4k4fE",
+    "rich_text_TVJz4F"
   ]
 }

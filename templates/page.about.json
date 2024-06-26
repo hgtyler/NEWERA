@@ -1,0 +1,206 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_37NdK4": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/about-page_e0ea262c-c7fd-4710-97c2-c248ec92b97c.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_HQwp7e": {
+      "type": "rich-text",
+      "blocks": {
+        "text_KTK976": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are moved by the light and color of gemstones. Inspired by every color-kissed gemstone that is as individual as the person who chooses to twine their life with that of the stone. And in awe of how gemstones flaunt their beauty in naturally occurring inclusions that catch light to singularly striking results. <\/p><p>We find beauty in the inclusions, the unique fingerprints inside gems. Some consider these flaws but we design jewelry to accentuate these galaxies that live inside crystals, bring it out and complement it in every way with timeless settings.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_KTK976"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 8
+      }
+    },
+    "collage_JHrNWg": {
+      "type": "collage",
+      "blocks": {
+        "image_pCQhWj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MKSADLER-9109.jpg"
+          }
+        },
+        "image_kF3yCq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MKSADLER-0186_1.jpg"
+          }
+        },
+        "image_h3UmH4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/round-carnelian-charm-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_pCQhWj",
+        "image_kF3yCq",
+        "image_h3UmH4"
+      ],
+      "custom_css": [
+
+      ],
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_WYdYbQ": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Lx6H3G": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Starling brings the past, present and future together in a manner of making that is naturally circular with precious materials that are endlessly recyclable. Crafted in California, Starling Jewelry contributes to a responsible future that honors our materials, our community of makers and fine jewelry’s connective force.<\/p><p>Designing in conversation with the customer and the materials, we seek out the rare and extraordinary to represent the loves, commitments and major moments of your story—the twinkly points on the timeline—in thoughtfully unexpected ways. <\/p><p>We believe the best pieces are the ones that are well-worn and well-loved. They’re made with devotion to exquisite materials, design and craftsmanship that tell your story and connect with you deeply. They are simply made to be — ever yours.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_Lx6H3G"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_QmddcN": {
+      "type": "rich-text",
+      "blocks": {
+        "text_XFamHA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>They use the word “timeless” to mean unchanging.<\/p><p>But that’s not what it’s about.<\/p><p>It’s reimagining traditions so they live on<\/p><p>In a future with the luxury of time-testing.<\/p><p>Timeless is bringing out the beauty in life,<\/p><p>And making it our own.<\/p><p>It’s the fine jewelry second skin<\/p><p>that goes and grows with us.<\/p><p>And generations past, present and future.<\/p><p>Timeless is the earth as creator,<\/p><p>Always regenerating, churning & experimenting with its materials.<\/p><p>It’s the power of history to spark imagination.<\/p><p>And the naturally curious person,<\/p><p>always learning,<\/p><p>With their love leading them forward.<\/p><p>As a house of fine jewelry,<\/p><p>We illuminate all that endures.<\/p><p>And what we’ve learned through<\/p><p>the years is that<\/p><p>Timeless is not a static thing,<\/p><p>Because timeless is always becoming.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_XFamHA"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_xqMXpR": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_tgTbzb": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>All Starling jewelry is entirely made by hand in Los Angeles, California by a  close-knit family of creative collaborators and craftspeople. Our team is composed of the best skilled artisans in the city, with many of our metalsmiths, stone setters and casters 3rd and 4th generation jewelers. Our founder, Chelsey Bartrum, a jeweler and graduate gemologist from the Gemological Institute of America, sources only the highest quality stones and metals, at the fairest price. Bartrum also personally inspects each and every stone, allowing for unparalleled quality control.<\/h3>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_tgTbzb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/starling-team.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_P7j69X": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_yRnbcj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“I believe that we are intrinsically attracted to what we need. Picking out a piece of jewelry is instinctual, a gut feeling, a gasp of recognition. The line between you finding it—and it finding you—is wonderfully blurry.” — Chelsey Bartum, Founder Starling Jewelry<\/p><p> <\/p><p>As far as Chelsey can remember, it was Queen Cleopatra that has held creative significance in the evolution of how she interprets beauty. Among many proclivities, Cleopatra loved jewelry, particularly emeralds, which were once believed to hold all manner of mystical properties. Much like what we do today, Cleopatra made a habit of melting down existing gold jewelry and remaking it into its next incarnation. However the stone—and all the energy and magic within—remained. So it’s no wonder at all that Chelsey's curiosity and eventual choice to work with precious stones via Starling became both passion and livelihood.  <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_yRnbcj"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/starling_3_1420x-1.webp",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_37NdK4",
+    "rich_text_HQwp7e",
+    "collage_JHrNWg",
+    "rich_text_WYdYbQ",
+    "rich_text_QmddcN",
+    "image_with_text_xqMXpR",
+    "image_with_text_P7j69X"
+  ]
+}
