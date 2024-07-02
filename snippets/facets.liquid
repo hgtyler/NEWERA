@@ -16,6 +16,30 @@
 {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
 {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
 
+<style>
+  .facets__heading {
+    font-family: 'AubergeScriptBasicFive';
+    font-size: 3rem;
+  }
+
+  .facet-filters__label {
+    font-family: 'AubergeScriptBasicFive';
+    font-size: 3.5rem;
+  }
+
+  .facets__summary-label {
+    text-transform: uppercase;
+  }
+
+  .facet-filters__field {
+   align-items: baseline;
+  }
+
+  .facets__wrapper {
+  align-items: baseline;
+  }
+</style>
+
 {%- liquid
   assign sort_by = results.sort_by | default: results.default_sort_by
   assign total_active_values = 0
@@ -427,7 +451,7 @@
               </div>
             </div>
           {%- endif -%}
-          <div class="product-count light" role="status">
+          {% comment %} <div class="product-count light" role="status">
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
@@ -443,7 +467,7 @@
               </span>
             </h2>
             {%- render 'loading-spinner' -%}
-          </div>
+          </div> {% endcomment %}
         {%- endif -%}
       </form>
     </facet-filters-form>
@@ -577,7 +601,7 @@
 
                               {%- capture text_value -%}
                                 <span class="facet-checkbox__text" aria-hidden="true">
-                                  <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
+                                  <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> 
                                 </span>
                                 <span class="visually-hidden">
                                   {{- value.label | escape }} (
