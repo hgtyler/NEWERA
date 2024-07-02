@@ -1,0 +1,56 @@
+{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .card__heading {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+</style>
+
+{% assign banner_categories_raw = collection.metafields.custom.banner | split: ',' %}
+{% assign cleaned_handles = '' %}
+
+{% for handle in banner_categories_raw %}
+  {% assign cleaned_handle = handle | remove: '["' | remove: '"]' | remove: '"' | strip %}
+  {% assign cleaned_handles = cleaned_handles | append: cleaned_handle | append: ',' %}
+{% endfor %}
+{% assign collection_handles = cleaned_handles | split: ',' | uniq %}
+
+{% if collection_handles.size > 0 %}
+  <ul class="collection-list grid grid--5-col-desktop grid--2-col-tablet">
+    {% for handle in collection_handles %}
+      {% if handle != '' %}
+        {% assign banner_collection = collections[handle] %}
+        {% if banner_collection %}
+          <li class = "collection-list__item grid__item">
+            <a href="{{ banner_collection.url }}"></a>
+            {% render 'card-collection',
+                card_collection: banner_collection,
+                media_aspect_ratio: section.settings.image_ratio,
+                columns: 6
+              %}
+          </li>
+        {% else %}
+          <li>Collection not found for handle: {{ handle }}</li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No collections found.</p>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+  

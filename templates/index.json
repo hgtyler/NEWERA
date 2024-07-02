@@ -57,6 +57,69 @@
         "padding_bottom": 52
       }
     },
+    "image_banner_ggyVkk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_tApmN7": {
+          "type": "heading",
+          "settings": {
+            "heading": "hello",
+            "heading_size": "h2"
+          }
+        },
+        "buttons_qaHtYc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "shopify:\/\/products\/20-75ct-kunzite-collage-charm",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "heading_2_6DYDB6": {
+          "type": "heading_2",
+          "settings": {
+            "heading_2": "test",
+            "heading_size_2": "h2"
+          }
+        },
+        "buttons_2_BJPrMb": {
+          "type": "buttons_2",
+          "settings": {
+            "button_label_3": "test",
+            "button_link_3": "shopify:\/\/products\/21-50ct-citrine-collage-charm",
+            "button_style_secondary_3": false,
+            "button_label_4": "",
+            "button_link_4": "",
+            "button_style_secondary_4": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_tApmN7",
+        "buttons_qaHtYc",
+        "heading_2_6DYDB6",
+        "buttons_2_BJPrMb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
+        "image_2": "shopify:\/\/shop_images\/aquamarine-bezel-set-ring-3_d5eefb1e-130a-4d93-a530-4faf7dd56116.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-right",
+        "image_1_content_position": "bottom-left",
+        "image_2_content_position": "bottom-right",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
     "featured_collection_wXJbwk": {
       "type": "featured-collection",
       "settings": {
@@ -72,7 +135,7 @@
         "show_view_all": true,
         "view_all_style": "link",
         "enable_desktop_slider": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -85,83 +148,22 @@
         "padding_bottom": 36
       }
     },
-    "image_banner_ggyVkk": {
+    "image_banner_fwMtA3": {
       "type": "image-banner",
-      "blocks": {
-        "heading_tApmN7": {
-          "type": "heading",
-          "settings": {
-            "heading": "hello",
-            "heading_size": "h2"
-          }
-        },
-        "text_MDHAih": {
-          "type": "text",
-          "settings": {
-            "text": "test",
-            "text_style": "body"
-          }
-        },
-        "buttons_qaHtYc": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "heading_2_6DYDB6": {
-          "type": "heading_2",
-          "settings": {
-            "heading_2": "test",
-            "heading_size_2": "h2"
-          }
-        },
-        "text_2_UKJiLK": {
-          "type": "text_2",
-          "settings": {
-            "text_2": "test",
-            "text_style_2": "body"
-          }
-        },
-        "buttons_2_BJPrMb": {
-          "type": "buttons_2",
-          "settings": {
-            "button_label_3": "test",
-            "button_link_3": "",
-            "button_style_secondary_3": false,
-            "button_label_4": "",
-            "button_link_4": "",
-            "button_style_secondary_4": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_tApmN7",
-        "text_MDHAih",
-        "buttons_qaHtYc",
-        "heading_2_6DYDB6",
-        "text_2_UKJiLK",
-        "buttons_2_BJPrMb"
-      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
-        "image_2": "shopify:\/\/shop_images\/aquamarine-bezel-set-ring-3_d5eefb1e-130a-4d93-a530-4faf7dd56116.jpg",
+        "image": "shopify:\/\/shop_images\/MKSADLER-1406_1_74333830-8ee5-4844-97db-c05ca05954cb.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
-        "desktop_content_position": "bottom-right",
-        "image_1_content_position": "bottom-left",
-        "image_2_content_position": "bottom-right",
+        "desktop_content_position": "middle-center",
+        "image_1_content_position": "middle-center",
+        "image_2_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-fe4bd60d-5954-4f0b-8c61-ef257bb14f87",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "image_with_text_qtyTbe": {
@@ -194,6 +196,47 @@
         "padding_bottom": 36
       }
     },
+    "image_banner_wamzta": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
+        "image_2": "shopify:\/\/shop_images\/MKSADLER-0186_1.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "image_1_content_position": "bottom-left",
+        "image_2_content_position": "bottom-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_CQMPmR": {
+      "type": "rich-text",
+      "blocks": {
+        "text_dpUcHj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Designing in conversation with the customer and the materials, we seek out the rare and extraordinary to represent the loves, commitments and major moments of your story—the twinkly points on the timeline—in thoughtfully unexpected ways. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_dpUcHj"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "1714838859db24a20c": {
       "type": "apps",
       "blocks": {
@@ -214,119 +257,18 @@
       "settings": {
         "include_margins": false
       }
-    },
-    "image_banner_wamzta": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_je898x": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_MVrx7E": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_g9tPV4": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_je898x",
-        "text_MVrx7E",
-        "buttons_g9tPV4"
-      ],
-      "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "image_1_content_position": "bottom-left",
-        "image_2_content_position": "bottom-left",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
-    "slideshow_BWPh34": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_Qi7hH8": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_tFUajB": {
-          "type": "slide",
-          "settings": {
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_Qi7hH8",
-        "slide_tFUajB"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
-      }
     }
   },
   "order": [
     "video_DxiFyk",
     "image_banner_ybm3Gt",
     "rich_text_6FhJgi",
-    "featured_collection_wXJbwk",
     "image_banner_ggyVkk",
+    "featured_collection_wXJbwk",
+    "image_banner_fwMtA3",
     "image_with_text_qtyTbe",
-    "1714838859db24a20c",
     "image_banner_wamzta",
-    "slideshow_BWPh34"
+    "rich_text_CQMPmR",
+    "1714838859db24a20c"
   ]
 }

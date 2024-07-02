@@ -6,7 +6,7 @@
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
     "body_scale": 100,
-    "page_width": 1200,
+    "page_width": 1600,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 8,
     "spacing_grid_vertical": 8,
@@ -209,6 +209,17 @@
           "secondary_button_label": "#772330",
           "shadow": "#772330"
         }
+      },
+      "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4": {
+        "settings": {
+          "background": "#561c24",
+          "background_gradient": "",
+          "text": "#ffffff",
+          "button": "#561c24",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#561c24",
+          "shadow": "#561c24"
+        }
       }
     }
   },
@@ -272,11 +283,11 @@
           }
         }
       },
-      "type_header_font": "assistant_n4",
+      "type_header_font": "BeirutDisplayWeb-Book",
       "heading_scale": 100,
-      "type_body_font": "assistant_n4",
+      "type_body_font": "ABCWhyte-Book",
       "body_scale": 100,
-      "page_width": 1200,
+      "page_width": 1600,
       "spacing_sections": 0,
       "spacing_grid_horizontal": 8,
       "spacing_grid_vertical": 8,

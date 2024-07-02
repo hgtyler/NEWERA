@@ -97,9 +97,6 @@
                 {%- else -%}
                   {{ 'onboarding.collection_title' | t }}
                 {%- endif -%}
-                {%- if card_collection.description == blank -%}
-                  <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                {%- endif %}
               </a>
             </h3>
             {%- if card_collection.description != blank -%}
@@ -129,9 +126,6 @@
               {%- else -%}
                 {{ 'onboarding.collection_title' | t }}
               {%- endif -%}
-              {%- if card_collection.featured_image or card_collection.description == blank -%}
-                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-              {%- endif %}
             </a>
           </h3>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
