@@ -74,8 +74,8 @@ product-info {
     }
     .product--medium:not(.product--no-media) .product__info-wrapper,
     .product--small:not(.product--no-media) .product__media-wrapper {
-        max-width: 45%;
-        width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
+        max-width: 35%;
+        width: calc(35% - var(--grid-desktop-horizontal-spacing) / 2);
     }
 }
 
@@ -239,6 +239,13 @@ a.product__text {
 .product__title {
     word-break: break-word;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
+    text-transform: uppercase;
 }
 
 .product__title>* {

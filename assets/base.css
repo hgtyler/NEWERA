@@ -3528,8 +3528,8 @@ details-disclosure>details {
 
 .font-face {
     font-family: 'BeirutDisplayWeb-Book';
-    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayWeb-Book.woff?v=1704912705') format('otf');
+    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayWeb-Book.woff?v=1704912705') format('woff');
     /* Adjust format as needed */
-    font-weight: normal;
     font-style: normal;
+    font-kerning: normal;
 }

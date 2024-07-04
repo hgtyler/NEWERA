@@ -3,6 +3,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "text_3RrXcc": {
+          "type": "text",
+          "settings": {
+            "text": "LINK | LINK",
+            "text_style": "uppercase"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -13,7 +20,7 @@
           "settings": {
           }
         },
-        "variant_picker": {
+        "variant_picker_E6Qecn": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
@@ -27,32 +34,10 @@
             "show_gift_card_recipient": true
           }
         },
-        "custom_liquid_AyLNcx": {
+        "custom_liquid_eU8EVb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'product-desc' %}"
-          }
-        },
-        "text_rrMqMt": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Estimated Ship Date:",
-            "text_style": "body"
-          }
-        },
-        "custom_liquid_pDfbiD": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% render 'shipping-estimate' %}"
-          }
-        },
-        "popup_MimNPG": {
-          "type": "popup",
-          "disabled": true,
-          "settings": {
-            "text": "Size Guide",
-            "page": "size-guide"
+            "custom_liquid": "{% render 'desc' %}"
           }
         },
         "popup_Fxpnxf": {
@@ -74,20 +59,26 @@
           "settings": {
             "custom_liquid": ""
           }
+        },
+        "text_marVHj": {
+          "type": "text",
+          "settings": {
+            "text": "Estimated Shipping:",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
+        "text_3RrXcc",
         "title",
         "price",
-        "variant_picker",
+        "variant_picker_E6Qecn",
         "buy_buttons",
-        "custom_liquid_AyLNcx",
-        "text_rrMqMt",
-        "custom_liquid_pDfbiD",
-        "popup_MimNPG",
+        "custom_liquid_eU8EVb",
         "popup_Fxpnxf",
         "popup_CgRnTT",
-        "custom_liquid_Y78Bkk"
+        "custom_liquid_Y78Bkk",
+        "text_marVHj"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -95,12 +86,12 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "stacked",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
         "hide_variants": true,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 36,
         "padding_bottom": 12
       }
@@ -173,50 +164,82 @@
         "padding_bottom": 36
       }
     },
-    "multirow_FAUNnQ": {
-      "type": "multirow",
+    "rich_text_yE9qrT": {
+      "type": "rich-text",
       "blocks": {
-        "row_pRMcmc": {
-          "type": "row",
+        "text_rqppUH": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/HOWITSMADE-SQ_5c96efdf-35f2-4751-8d80-7fac25a866f8.png",
-            "caption": "",
-            "heading": "",
-            "text": "<p>We are proud to say all of our jewelry is handmade in Downtown Los Angeles. Every little detail is done by hand, from refining old gold pieces, reclaiming diamonds, sketching, creating 3D CADs, printing wax models, making molds, lost wax casting with our recycled 14k gold, tumbling the metal casting, sanding, soldering, polishing, setting, engraving and finishing. Each piece is handled with care as it arrives to you, including folding every box, tying every ribbon, and shipping with services we trust.<\/p>",
-            "button_label": "",
-            "button_link": ""
+            "text": "<p>Caring for your<\/p>"
           }
         },
-        "row_iXytfc": {
-          "type": "row",
+        "heading_FWwrkR": {
+          "type": "heading",
           "settings": {
-            "image": "shopify:\/\/shop_images\/MKSADLER-1349_1_d6ad7b46-32ca-486b-abae-d3048341f6cb.jpg",
-            "caption": "CARE FOR YOUR",
             "heading": "{{ product.title }}",
-            "text": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>",
-            "button_label": "",
-            "button_link": ""
+            "heading_size": "h2"
+          }
+        },
+        "text_3XyaYM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>"
+          }
+        },
+        "text_hTGNjW": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"\/pages\/care\" target=\"_blank\" title=\"Care\">Learn More<\/a><\/p>"
           }
         }
       },
       "block_order": [
-        "row_pRMcmc",
-        "row_iXytfc"
-      ],
-      "custom_css": [
-        "h2 {font-family: \"assistant\";}"
+        "text_rqppUH",
+        "heading_FWwrkR",
+        "text_3XyaYM",
+        "text_hTGNjW"
       ],
       "settings": {
-        "image_height": "medium",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_ywUn6L": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_iNbJTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Its Made",
+            "heading_size": "h2"
+          }
+        },
+        "text_NKHbny": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_iNbJTa",
+        "text_NKHbny"
+      ],
+      "settings": {
+        "height": "adapt",
         "desktop_image_width": "medium",
-        "heading_size": "h2",
-        "text_style": "body",
-        "button_style": "secondary",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "center",
-        "image_layout": "alternate-left",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "section_color_scheme": "",
-        "row_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -268,7 +291,8 @@
     "main",
     "multicolumn_rHp6xc",
     "video_rpcBdD",
-    "multirow_FAUNnQ",
+    "rich_text_yE9qrT",
+    "image_with_text_ywUn6L",
     "related-products",
     "1714842290b890cc1d"
   ]

@@ -37,16 +37,18 @@
     "rich_text_6FhJgi": {
       "type": "rich-text",
       "blocks": {
-        "heading_qcrMnC": {
-          "type": "heading",
+        "text_njTwRV": {
+          "type": "text",
           "settings": {
-            "heading": "Fine jewelry moved by light and color. Made to be — ever yours.",
-            "heading_size": "h2"
+            "text": "<h3>Fine jewelry moved by light and color. <\/h3><h3>Made to be — ever yours.<\/h3>"
           }
         }
       },
       "block_order": [
-        "heading_qcrMnC"
+        "text_njTwRV"
+      ],
+      "custom_css": [
+        "h3 {font-family: \"BeirutDisplayWeb-Book\"; font-kerning: auto; line-height: 4px; font-stretch: expanded;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -54,7 +56,7 @@
         "color_scheme": "scheme-3",
         "full_width": true,
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 40
       }
     },
     "image_banner_ggyVkk": {

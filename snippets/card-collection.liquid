@@ -12,7 +12,17 @@
   Usage:
   {% render 'card-collection' %}
 {% endcomment %}
+<style>
+  .card__information {
+  color: #561C24;
+  text-transform: uppercase;
+  }
+  .card__heading {
+    color: #561C24;
+    text-transform: uppercase;
+  }
 
+</style>
 {%- liquid
   assign ratio = 1
   if card_collection.featured_image and media_aspect_ratio == 'portrait'
