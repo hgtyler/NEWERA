@@ -239,6 +239,16 @@
         "padding_bottom": 52
       }
     },
+    "double-image-banner": {
+      "type": "double-image-banner",
+      "settings": {
+        "banner_header_text": "new arrivals",
+        "image_1_url": "shopify:\/\/shop_images\/kunzite-babs-charm-4.jpg?v=1719425619",
+        "image_2_url": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg?v=1719877055",
+        "button_text": "Example Button",
+        "button_link": "#"
+      }
+    },
     "1714838859db24a20c": {
       "type": "apps",
       "blocks": {
@@ -271,6 +281,7 @@
     "image_with_text_qtyTbe",
     "image_banner_wamzta",
     "rich_text_CQMPmR",
+    "double-image-banner",
     "1714838859db24a20c"
   ]
 }

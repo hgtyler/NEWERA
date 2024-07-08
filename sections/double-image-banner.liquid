@@ -1,0 +1,48 @@
+{{ 'section-double-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="double-image-banner">
+    <h2 class="banner-header">{{ section.settings.banner_header_text }}</h2>
+    <div class="image-container">
+        <img src="{{ section.settings.image_1_url | img_url: 'master' }}" alt="Image 1" class="banner-image">
+        <img src="{{ section.settings.image_2_url | img_url: 'master' }}" alt="Image 2" class="banner-image">
+    </div>
+    <a href="{{ section.settings.button_link }}" class="banner-button">{{ section.settings.button_text }}</a>
+</div>
+
+  {% schema %}
+  { 
+
+"name": "t:sections.double-image-banner.name",
+  "tag": "section",
+  "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "banner_header_text",
+        "label": "t:sections.double-image-banner.settings.banner_header_text.label",
+        "default": "example text"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1_url",
+        "label": "t:sections.double-image-banner.settings.image_1_url.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2_url",
+        "label": "t:sections.double-image-banner.settings.image_2_url.label"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "t:sections.double-image-banner.settings.button_text.label",
+        "default": "Example Button"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "t:sections.double-image-banner.settings.button_link.label"
+      }
+    ]
+  }
+  {% endschema %}

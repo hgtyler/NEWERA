@@ -692,6 +692,29 @@
         "name": "Custom Liquid"
       }
     },
+    "double-image-banner": {
+      "name": "Double Image Banner",
+      "settings": {
+        "banner_header_text": {
+          "label": "Header Text"
+        },
+        "image_1_url":{
+          "label": "First image"
+        },
+        "image_2_url":{
+          "label": "Second image"
+        },
+        "button_text":{
+          "label": "Button Text"
+        },
+        "button_link":{
+          "label": "Button Link"
+        }
+      },
+       "presets": {
+        "name": "Double Image banner"
+      }
+    },
     "featured-blog": {
       "name": "Blog posts",
       "settings": {
@@ -1185,7 +1208,7 @@
           "info": "Customers will only see their avatar when they're signed in with Shop"
         }
       }
-    },
+   },
     "image-banner": {
       "name": "Image banner",
       "settings": {

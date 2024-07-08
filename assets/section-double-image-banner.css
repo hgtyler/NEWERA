@@ -1,0 +1,56 @@
+.double-image-banner {
+    text-align: center;
+    background-color: #3d0d0d;
+    /* background color matching your design */
+    padding: 20px;
+}
+
+.banner-header {
+    font-family: 'AubergeScriptBasicOne';
+    font-size: 6rem;
+    color: #ef4136;
+    /* text color matching your design */
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.banner-image {
+    max-width: 45%;
+    /* Adjust the size to fit your design */
+}
+
+.banner-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-family: 'ABCWhyte-Book', sans-serif;
+    font-size: 16px;
+    color: #ef4136;
+    /* button text color */
+    background-color: transparent;
+    /* button border color */
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+    color: #fff;
+}
+
+@media screen and (max-width: 750px) {
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .banner-image {
+        max-width: 100%
+        /* Adjust the size to fit your design */
+    }
+}
