@@ -7,7 +7,19 @@
   Usage:
   {% render 'header-search', input_id: 'My-Id'%}
 {% endcomment %}
-
+<style>
+  .extra-links {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  }
+  .extras {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  font-family: 'ABCWhyte-Book';
+  }
+</style>
 <details-modal class="header__search">
   <details>
     <summary
@@ -105,4 +117,8 @@
       </div>
     </div>
   </details>
+  <div class="extra-links">
+    <a href="" class="extras full-unstyled-link">HEIRLOOM REVIVAL</a>
+    <a href="" class="extras full-unstyled-link">ABOUT</a>
+  </div>
 </details-modal>
