@@ -6,42 +6,59 @@
   
   .recently-viewed-products h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
-  .recently-viewed-product {
-    display: inline-block;
+  .recently-viewed-products .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .recently-viewed-products .grid__item {
     width: 22%;
     margin: 1%;
-    vertical-align: top;
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
+    box-sizing: border-box;
   }
   
-  .recently-viewed-product img {
+  .card-product {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-product__image-wrapper {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  .card-product__image {
     width: 100%;
     height: auto;
   }
   
-  .recently-viewed-product .product-info {
-    margin-top: 10px;
+  .card-product__info {
+    text-align: center;
   }
   
-  .recently-viewed-product .product-info a {
-    color: #a00;
+  .card-product__title {
+    font-size: 13px;
+    display: block;
+    color: #561C24;
     text-decoration: none;
   }
+  .card-product__title:hover {
+    text-decoration: underline;
+  }
   
-  .recently-viewed-product .product-info p {
-    color: #a00;
-    margin: 5px 0 0;
+  .card-product__price {
+    font-size: 13px;
+    color: #561C24;
   }
   </style>
   
   <div class="recently-viewed-products">
     <h2>{{ section.settings.section_title }}</h2>
-    <div id="recently-viewed-container"></div>
+    <ul class="grid" id="recently-viewed-container"></ul>
   </div>
   
   <script>
@@ -62,20 +79,21 @@
         }).then(function(product) {
           console.log('Fetched product:', product); // Debugging line
   
-          // Manual price formatting
-          var productPrice = product.price ? (product.price / 100).toFixed(2) : 'Price not available';
-  
           if (product) {
             var productHtml = `
-              <div class="recently-viewed-product">
-                <a href="/products/${product.handle}">
-                  <img src="${product.featured_image}" alt="${product.title}">
-                </a>
-                <div class="product-info">
-                  <a href="/products/${product.handle}">${product.title}</a>
-                  <p>$${productPrice}</p>
+              <li class="grid__item">
+                <div class="card-product">
+                  <a href="/products/${product.handle}" class="card-product__image-wrapper">
+                    <img src="${product.featured_image}" alt="${product.title}" class="card-product__image">
+                  </a>
+                  <div class="card-product__info">
+                    <a href="/products/${product.handle}" class="card-product__title">${product.title}</a>
+                    <div class="card-product__price">
+                      ${product.price ? `$${(product.price / 100).toFixed(2)}` : 'Price not available'}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </li>
             `;
             container.insertAdjacentHTML('beforeend', productHtml);
           } else {
