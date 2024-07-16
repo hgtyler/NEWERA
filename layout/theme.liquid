@@ -358,5 +358,29 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {% if template == 'product' %}
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var viewedProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+          var currentProductHandle = "{{ product.handle }}";
+      
+          console.log('Current product handle:', currentProductHandle); // Debugging line
+      
+          if (!viewedProducts.includes(currentProductHandle)) {
+            viewedProducts.push(currentProductHandle);
+            if (viewedProducts.length > 10) { // Adjust the number based on your preference
+              viewedProducts.shift();
+            }
+            localStorage.setItem('recentlyViewedProducts', JSON.stringify(viewedProducts));
+          }
+      
+          console.log('Recently viewed products:', viewedProducts); // Debugging line
+        });
+      </script>
+      {% endif %}
+      
+
+      
   </body>
 </html>

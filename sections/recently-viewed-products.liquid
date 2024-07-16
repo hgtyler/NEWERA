@@ -1,0 +1,110 @@
+<style>
+  .recently-viewed-products {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .recently-viewed-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .recently-viewed-product {
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    vertical-align: top;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .recently-viewed-product img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .recently-viewed-product .product-info {
+    margin-top: 10px;
+  }
+  
+  .recently-viewed-product .product-info a {
+    color: #a00;
+    text-decoration: none;
+  }
+  
+  .recently-viewed-product .product-info p {
+    color: #a00;
+    margin: 5px 0 0;
+  }
+  </style>
+  
+  <div class="recently-viewed-products">
+    <h2>{{ section.settings.section_title }}</h2>
+    <div id="recently-viewed-container"></div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var container = document.getElementById('recently-viewed-container');
+      var recentlyViewedProducts = JSON.parse(localStorage.getItem('recentlyViewedProducts')) || [];
+      var maxProducts = {{ section.settings.max_products }};
+  
+      console.log('Recently viewed products:', recentlyViewedProducts); // Debugging line
+  
+      recentlyViewedProducts.slice(-maxProducts).forEach(function(productHandle) {
+        fetch('/products/' + productHandle + '.js').then(function(response) {
+          if (response.ok) {
+            return response.json();
+          } else {
+            throw new Error('Network response was not ok for product: ' + productHandle);
+          }
+        }).then(function(product) {
+          console.log('Fetched product:', product); // Debugging line
+  
+          // Manual price formatting
+          var productPrice = product.price ? (product.price / 100).toFixed(2) : 'Price not available';
+  
+          if (product) {
+            var productHtml = `
+              <div class="recently-viewed-product">
+                <a href="/products/${product.handle}">
+                  <img src="${product.featured_image}" alt="${product.title}">
+                </a>
+                <div class="product-info">
+                  <a href="/products/${product.handle}">${product.title}</a>
+                  <p>$${productPrice}</p>
+                </div>
+              </div>
+            `;
+            container.insertAdjacentHTML('beforeend', productHtml);
+          } else {
+            console.error('Product data is not valid:', product);
+          }
+        }).catch(function(error) {
+          console.error('Error fetching product:', productHandle, error);
+        });
+      });
+    });
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Recently Viewed Products",
+    "settings": [
+      {
+        "type": "number",
+        "id": "max_products",
+        "label": "Maximum number of products to show",
+        "default": 4
+      },
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Recently Viewed"
+      }
+    ]
+  }
+  {% endschema %}
+  

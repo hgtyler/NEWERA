@@ -3534,10 +3534,9 @@ details-disclosure>details {
     font-style: normal;
 }
 
-.font-face {
+@font-face {
     font-family: 'BeirutDisplayWeb-Book';
-    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayWeb-Book.woff?v=1704912705') format('woff');
-    /* Adjust format as needed */
+    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayWeb-Book.woff?v=1704912705') format('woff2');
+    font-weight: normal;
     font-style: normal;
-    font-kerning: normal;
 }

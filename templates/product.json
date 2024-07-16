@@ -164,50 +164,6 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_yE9qrT": {
-      "type": "rich-text",
-      "blocks": {
-        "text_rqppUH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Caring for your<\/p>"
-          }
-        },
-        "heading_FWwrkR": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ product.title }}",
-            "heading_size": "h2"
-          }
-        },
-        "text_3XyaYM": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ product.metafields.my_fields.care | metafield_tag }}<\/p>"
-          }
-        },
-        "text_hTGNjW": {
-          "type": "text",
-          "settings": {
-            "text": "<p><a href=\"\/pages\/care\" target=\"_blank\" title=\"Care\">Learn More<\/a><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_rqppUH",
-        "heading_FWwrkR",
-        "text_3XyaYM",
-        "text_hTGNjW"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "image_with_text_ywUn6L": {
       "type": "image-with-text",
       "blocks": {
@@ -245,6 +201,68 @@
         "padding_bottom": 36
       }
     },
+    "collapsible_content_6qE6Hw": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_84xEax": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_p7zgea": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Materials & Sourcing",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_trF4DW": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Our Packaging",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_afWT4R": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "About Starling",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_84xEax",
+        "collapsible_row_p7zgea",
+        "collapsible_row_trF4DW",
+        "collapsible_row_afWT4R"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "",
+        "heading_size": "h1",
+        "heading_alignment": "right",
+        "layout": "row",
+        "color_scheme": "",
+        "container_color_scheme": "scheme-5",
+        "open_first_collapsible_row": false,
+        "image": "shopify:\/\/shop_images\/emerald-beryl-citrine-earrings-2.jpg",
+        "image_ratio": "small",
+        "desktop_layout": "image_first",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -261,6 +279,13 @@
         "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
+      }
+    },
+    "recently-viewed-products":{
+      "type": "recently-viewed-products",
+      "settings": {
+        "max_products": 4,
+        "section_title": "Recently Viewed"  
       }
     },
     "1714842290b890cc1d": {
@@ -291,9 +316,10 @@
     "main",
     "multicolumn_rHp6xc",
     "video_rpcBdD",
-    "rich_text_yE9qrT",
     "image_with_text_ywUn6L",
+    "collapsible_content_6qE6Hw",
     "related-products",
+    "recently-viewed-products",
     "1714842290b890cc1d"
   ]
 }

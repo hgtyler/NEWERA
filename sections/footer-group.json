@@ -2,17 +2,18 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_GTN3FV": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'red-submark' %}",
+        "color_scheme": "scheme-3",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
-        "image_93RfRF": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Starling_submark_red_07c58594-8fee-4b85-a4fd-2298fb890880.png",
-            "image_width": 100,
-            "alignment": ""
-          }
-        },
         "link_list_hnrzV9": {
           "type": "link_list",
           "settings": {
@@ -36,13 +37,12 @@
         }
       },
       "block_order": [
-        "image_93RfRF",
         "link_list_hnrzV9",
         "link_list_tL9jHX",
         "link_list_gwEkdq"
       ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "newsletter_enable": true,
         "newsletter_heading": "Join our newsletter and get 10% off!",
         "enable_follow_on_shop": false,
@@ -58,6 +58,7 @@
     }
   },
   "order": [
+    "custom_liquid_GTN3FV",
     "footer"
   ]
 }
