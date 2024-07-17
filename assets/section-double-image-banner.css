@@ -1,6 +1,6 @@
 .double-image-banner {
     text-align: center;
-    background-color: #3d0d0d;
+    background-color: #561C24;
     /* background color matching your design */
     padding: 20px;
 }
@@ -8,7 +8,7 @@
 .banner-header {
     font-family: 'AubergeScriptBasicOne';
     font-size: 6rem;
-    color: #ef4136;
+    color: #D50032;
     /* text color matching your design */
     margin-bottom: 20px;
 }

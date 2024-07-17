@@ -903,7 +903,7 @@ a.product__text {
         grid-template-columns: repeat(4, 1fr);
     }
     .product--medium .thumbnail-list {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(1, 5fr);
     }
     .product--large .thumbnail-list {
         grid-template-columns: repeat(6, 1fr);
