@@ -451,7 +451,7 @@
               </div>
             </div>
           {%- endif -%}
-          {% comment %} <div class="product-count light" role="status">
+          <div class="product-count light" role="status">
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
@@ -467,7 +467,7 @@
               </span>
             </h2>
             {%- render 'loading-spinner' -%}
-          </div> {% endcomment %}
+          </div> 
         {%- endif -%}
       </form>
     </facet-filters-form>
@@ -923,7 +923,7 @@
       </span>
     </h2>
     {%- render 'loading-spinner' -%}
-  </div>
+  </div> 
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">

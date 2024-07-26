@@ -81,6 +81,20 @@
         "padding_bottom": 12
       }
     },
+    "video_rpcBdD": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": false,
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "collapsible_content_6qE6Hw": {
       "type": "collapsible-content",
       "blocks": {
@@ -143,55 +157,27 @@
         "padding_bottom": 0
       }
     },
-    "video_rpcBdD": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_ywUn6L": {
-      "type": "image-with-text",
+    "1714842290b890cc1d": {
+      "type": "apps",
       "blocks": {
-        "heading_iNbJTa": {
-          "type": "heading",
+        "stamped_product_reviews_ugc_main_widget_47VYV4": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
-            "heading": "How Its Made",
-            "heading_size": "h2"
-          }
-        },
-        "text_NKHbny": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
           }
         }
       },
       "block_order": [
-        "heading_iNbJTa",
-        "text_NKHbny"
+        "stamped_product_reviews_ugc_main_widget_47VYV4"
       ],
       "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "include_margins": true
       }
     },
     "related-products": {
@@ -218,38 +204,14 @@
         "max_products": 4,
         "section_title": "Recently Viewed"
       }
-    },
-    "1714842290b890cc1d": {
-      "type": "apps",
-      "blocks": {
-        "stamped_product_reviews_ugc_main_widget_47VYV4": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
-          "settings": {
-            "animation": true,
-            "tags_exclude": "",
-            "tags_include": "",
-            "search": "",
-            "linkify": true,
-            "use_metafields": false,
-            "sku_tagtype": "sku"
-          }
-        }
-      },
-      "block_order": [
-        "stamped_product_reviews_ugc_main_widget_47VYV4"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "collapsible_content_6qE6Hw",
     "video_rpcBdD",
-    "image_with_text_ywUn6L",
+    "collapsible_content_6qE6Hw",
+    "1714842290b890cc1d",
     "related-products",
-    "recently-viewed-products",
-    "1714842290b890cc1d"
+    "recently-viewed-products"
   ]
 }
