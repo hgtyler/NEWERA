@@ -63,7 +63,9 @@
     assign show_desktop_slider = true
   endif
 -%}
-
+{%  if section.settings.burgundy_line %}
+{%  render 'burgundy-line' %}
+{% endif %}
 <div
   class="color-{{ section.settings.color_scheme }} isolate gradient"
 >
@@ -193,6 +195,9 @@
     {%- endif -%}
   </div>
 </div>
+{%  if section.settings.burgundy_line %}
+  {%  render 'burgundy-line' %}
+  {% endif %}
 
 {% schema %}
 {
@@ -296,6 +301,12 @@
       "id": "full_width",
       "label": "t:sections.featured-collection.settings.full_width.label",
       "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "burgundy_line",
+      "label": "t:sections.featured-collection.settings.burgundy_line.label",
+      "default": true
     },
     {
       "type": "checkbox",

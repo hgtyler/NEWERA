@@ -635,6 +635,9 @@
         "columns_desktop": {
           "label": "Number of columns on desktop"
         },
+        "burgundy_line": {
+          "label": "Show burgundy borders"
+        },
         "show_view_all": {
           "label": "Enable \"View all\" button if list includes more collections than shown"
         },
@@ -1455,6 +1458,9 @@
             "label": "Right"
           },
           "label": "Mobile content alignment"
+        },
+        "burgundy_line": {
+          "label": "Show burgundy borders"
         }
       },
       "blocks": {
@@ -2939,6 +2945,9 @@
             "label": "Right"
           },
           "label": "Content alignment"
+        },
+        "burgundy_line": {
+          "label": "Show burgundy borders"
         },
         "full_width": {
           "label": "Make section full width"

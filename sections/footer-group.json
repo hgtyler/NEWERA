@@ -2,12 +2,37 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "custom_liquid_GTN3FV": {
-      "type": "custom-liquid",
+    "newsletter_NEPHx8": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_fTdD8L": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hello, Darling",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_nJBtnn": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h5>JOIN OUR NEWSLETTER AND GET 10% OFF!<\/h5>"
+          }
+        },
+        "email_form_GVC8gy": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "heading_fTdD8L",
+        "paragraph_nJBtnn",
+        "email_form_GVC8gy"
+      ],
       "settings": {
-        "custom_liquid": "{% render 'red-submark' %}",
-        "color_scheme": "scheme-3",
-        "padding_top": 0,
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
@@ -43,22 +68,22 @@
       ],
       "settings": {
         "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "newsletter_enable": false,
         "newsletter_heading": "Join our newsletter and get 10% off!",
         "enable_follow_on_shop": false,
         "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": false,
-        "show_policy": false,
+        "show_policy": true,
         "margin_top": 0,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "custom_liquid_GTN3FV",
+    "newsletter_NEPHx8",
     "footer"
   ]
 }

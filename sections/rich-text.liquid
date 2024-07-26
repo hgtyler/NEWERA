@@ -21,6 +21,10 @@
   }
 {%- endstyle -%}
 
+{%  if section.settings.burgundy_line %}
+  {%  render 'burgundy-line' %}
+  {% endif %}
+
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     <div class="rich-text__wrapper rich-text__wrapper--{{ section.settings.desktop_content_position }}{% if section.settings.full_width %} page-width{% endif %}">
@@ -100,6 +104,9 @@
     </div>
   </div>
 </div>
+{%  if section.settings.burgundy_line %}
+  {%  render 'burgundy-line' %}
+  {% endif %}
 
 {% schema %}
 {
@@ -162,6 +169,12 @@
       "id": "full_width",
       "default": true,
       "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "burgundy_line",
+      "label": "t:sections.rich-text.settings.burgundy_line.label",
+      "default": false
     },
     {
       "type": "header",
