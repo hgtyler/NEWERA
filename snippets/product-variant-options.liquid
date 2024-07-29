@@ -5,7 +5,7 @@
   - product: {Object} product object.
   - option: {Object} current product_option object.
   - block: {Object} block object.
-  - picker_type: {String} type of picker to dispay
+  - picker_type: {String} type of picker to display
 
 
   Usage:
@@ -22,15 +22,21 @@
 
 {%- for value in option.values -%}
   {%- liquid
+    assign swatch_value = null
     assign swatch_focal_point = null
-    if value.swatch.image
+
+    assign stone_metaobject = product.metafields.custom.stone.value
+    assign swatch_image = stone_metaobject.swatch_image
+
+    if swatch_image
+      assign image_url = swatch_image | image_url: width: 50
+      assign swatch_value = 'url(' | append: image_url | append: ')'
+    elsif value.swatch.image
       assign image_url = value.swatch.image | image_url: width: 50
       assign swatch_value = 'url(' | append: image_url | append: ')'
       assign swatch_focal_point = value.swatch.image.presentation.focal_point
     elsif value.swatch.color
       assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
-    else
-      assign swatch_value = null
     endif
 
     assign option_disabled = true
@@ -57,7 +63,6 @@
       {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
     </span>
   {%- endcapture -%}
-
   {%- if picker_type == 'swatch' -%}
     {%- capture help_text -%}
       <span class="visually-hidden">{{ value | escape }}</span>

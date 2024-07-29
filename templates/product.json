@@ -23,7 +23,7 @@
         "variant_picker_E6Qecn": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button",
+            "picker_type": "swatch",
             "swatch_shape": "circle"
           }
         },

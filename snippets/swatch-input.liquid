@@ -47,6 +47,12 @@
   title="{{ value }}"
   class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
 >
-  {% render 'swatch', swatch: swatch, shape: shape %}
+  {% assign stone_metaobject = product.metafields.custom.stone.value %}
+  {% assign swatch_image = stone_metaobject.swatch_image %}
+  {% if swatch_image %}
+    <img src="{{ swatch_image | image_url: width: 50 }}" alt="{{ value }}" class="swatch-input__image">
+  {% else %}
+    {% render 'swatch', swatch: swatch, shape: shape %}
+  {% endif %}
   {{ help_text }}
 </label>

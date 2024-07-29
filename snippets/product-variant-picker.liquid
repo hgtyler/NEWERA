@@ -63,7 +63,13 @@
                 data-selected-value
                 class="dropdown-swatch"
               >
-                {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                {% assign stone_metaobject = product.metafields.custom.stone.value %}
+                {% assign swatch_image = stone_metaobject.swatch_image %}
+                {% if swatch_image %}
+                  <img src="{{ swatch_image | image_url: width: 50 }}" alt="{{ option.selected_value }}" class="swatch-input__image" width=25px height=25px >
+                {% else %}
+                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                {% endif %}
               </span>
             {%- endif -%}
             <select
