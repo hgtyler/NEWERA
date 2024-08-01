@@ -701,20 +701,20 @@
         "banner_header_text": {
           "label": "Header Text"
         },
-        "image_1_url":{
+        "image_1_url": {
           "label": "First image"
         },
-        "image_2_url":{
+        "image_2_url": {
           "label": "Second image"
         },
-        "button_text":{
+        "button_text": {
           "label": "Button Text"
         },
-        "button_link":{
+        "button_link": {
           "label": "Button Link"
         }
       },
-       "presets": {
+      "presets": {
         "name": "Double Image banner"
       }
     },
@@ -1214,7 +1214,7 @@
           "info": "Customers will only see their avatar when they're signed in with Shop"
         }
       }
-   },
+    },
     "image-banner": {
       "name": "Image banner",
       "settings": {
@@ -2081,6 +2081,16 @@
               "options__3": {
                 "label": "None"
               }
+            },
+            "swatch_style": {
+              "label": "Swatch Type",
+              "info": "Select swatch style of image or color",
+              "options__1": {
+                "label": "Image"
+              },
+              "options__2": {
+                "label": "Color"
+              }
             }
           }
         },
@@ -2861,14 +2871,14 @@
     "recently-viewed-products": {
       "name": "Recently viewed products",
       "settings": {
-        "max_products":{
+        "max_products": {
           "label": "Maximum products to show"
         },
         "section_title": {
           "label": "Section Title"
         }
-    }
-  },
+      }
+    },
     "related-products": {
       "name": "Related products",
       "settings": {

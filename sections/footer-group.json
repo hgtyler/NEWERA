@@ -2,6 +2,15 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_liquid_4fR9Pd": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'burgundy-line' %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "newsletter_NEPHx8": {
       "type": "newsletter",
       "blocks": {
@@ -83,6 +92,7 @@
     }
   },
   "order": [
+    "custom_liquid_4fR9Pd",
     "newsletter_NEPHx8",
     "footer"
   ]

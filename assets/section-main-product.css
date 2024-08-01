@@ -4,7 +4,7 @@ product-info {
 
 .product {
     margin: 0;
-    margin-top: 60px;
+    margin-top: 80px;
 }
 
 .product.grid {
@@ -24,7 +24,7 @@ product-info {
     .product__column-sticky {
         display: block;
         position: sticky;
-        top: 3rem;
+        top: 6rem;
         z-index: 2;
     }
     .product--thumbnail .thumbnail-list {
@@ -32,7 +32,7 @@ product-info {
     }
     .product__info-wrapper {
         padding: 0 0 0 5rem;
-        margin-top: 60px;
+        margin-top: 80px;
     }
     .product__info-wrapper--extra-padding {
         padding: 0 0 0 8rem;

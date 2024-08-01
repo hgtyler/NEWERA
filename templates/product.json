@@ -20,11 +20,13 @@
           "settings": {
           }
         },
-        "variant_picker_E6Qecn": {
+        "variant_picker_RhW3MJ": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "swatch",
-            "swatch_shape": "circle"
+            "swatch_shape": "circle",
+            "swatch_style": "image",
+            "swatch_color": ""
           }
         },
         "buy_buttons": {
@@ -59,7 +61,7 @@
         "text_3RrXcc",
         "title",
         "price",
-        "variant_picker_E6Qecn",
+        "variant_picker_RhW3MJ",
         "buy_buttons",
         "custom_liquid_eU8EVb",
         "text_ETiAtj",

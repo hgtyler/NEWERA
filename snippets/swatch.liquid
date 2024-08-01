@@ -6,7 +6,7 @@
 
   Usage:
   {% render 'swatch',
-    swatch: value.swatch
+    swatch: value.swatch,
     shape: 'square'
   %}
 {% endcomment %}
@@ -15,16 +15,8 @@
   assign swatch_value = null
   assign swatch_focal_point = null
 
-  assign stone_metaobject = product.metafields.custom.stone.value
-  assign swatch_image = stone_metaobject.swatch_image
-
-  if swatch_image
-    assign image_url = swatch_image | image_url: width: 50
-    assign swatch_value = 'url(' | append: image_url | append: ')'
-  elsif swatch.image
-    assign image_url = swatch.image | image_url: width: 50
-    assign swatch_value = 'url(' | append: image_url | append: ')'
-    assign swatch_focal_point = swatch.image.presentation.focal_point
+  if swatch.image
+    assign swatch_value = swatch.image | img_url: '50x50'
   elsif swatch.color
     assign swatch_value = 'rgb(' | append: swatch.color.rgb | append: ')'
   endif
@@ -33,8 +25,8 @@
 <span
   {% if swatch_value %}
     class="swatch{% if shape == 'square' %} swatch--square{% endif %}"
-    style="--swatch--background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
+    style="--swatch-background: {{ swatch_value }};{% if swatch_focal_point %} --swatch-focal-point: {{ swatch_focal_point }};{% endif %}"
   {% else %}
     class="swatch swatch--unavailable{% if shape == 'square' %} swatch--square{% endif %}"
   {% endif %}
-></span>
+></span> 

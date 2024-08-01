@@ -27,6 +27,11 @@
             "swatch_shape": "circle"
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -34,15 +39,29 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
+        "collapsible_tab_qg6gir": {
+          "type": "collapsible_tab",
           "settings": {
+            "heading": "Details",
+            "icon": "star",
+            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
+            "page": ""
           }
         },
-        "share": {
-          "type": "share",
+        "collapsible_tab_XFRQem": {
+          "type": "collapsible_tab",
           "settings": {
-            "share_label": "Share"
+            "heading": "Shipping",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "text_XxTtjE": {
+          "type": "text",
+          "settings": {
+            "text": "<em>This piece is final sale!<\/em>",
+            "text_style": "body"
           }
         }
       },
@@ -51,9 +70,11 @@
         "subtitle",
         "price",
         "variant_picker",
-        "buy_buttons",
         "description",
-        "share"
+        "buy_buttons",
+        "collapsible_tab_qg6gir",
+        "collapsible_tab_XFRQem",
+        "text_XxTtjE"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -71,31 +92,58 @@
         "padding_bottom": 36
       }
     },
-    "a14bbbd3-0194-4391-b455-f7db928daa7c": {
+    "multicolumn_7zLYbU": {
       "type": "multicolumn",
       "blocks": {
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-1": {
+        "column_jeCxeA": {
           "type": "column",
           "settings": {
-            "title": "Materials",
-            "text": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p>",
+            "title": "Column",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-2": {
+        "column_fkciT6": {
           "type": "column",
           "settings": {
-            "title": "Dimensions",
-            "text": "<p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
+            "title": "Column",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-3": {
+        "column_en4Qe9": {
           "type": "column",
           "settings": {
-            "title": "Shipping + Care",
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_P7B9zj": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_yTqi6w": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_HdGnbT": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
             "text": "",
             "link_label": "",
             "link": ""
@@ -103,18 +151,21 @@
         }
       },
       "block_order": [
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-1",
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-2",
-        "template--17176796004611__a14bbbd3-0194-4391-b455-f7db928daa7c-column-3"
+        "column_jeCxeA",
+        "column_fkciT6",
+        "column_en4Qe9",
+        "column_P7B9zj",
+        "column_yTqi6w",
+        "column_HdGnbT"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
+        "title": "Settings",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "square",
+        "columns_desktop": 6,
+        "column_alignment": "center",
+        "background_style": "none",
         "button_label": "",
         "button_link": "",
         "color_scheme": "",
@@ -130,6 +181,8 @@
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
+        "image_1_content_position": "middle-center",
+        "image_2_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
@@ -160,7 +213,7 @@
   },
   "order": [
     "main",
-    "a14bbbd3-0194-4391-b455-f7db928daa7c",
+    "multicolumn_7zLYbU",
     "6d66d2c3-2304-463d-9d07-02ce5c433be2",
     "related-products"
   ]

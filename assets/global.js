@@ -1049,6 +1049,65 @@ class SlideshowComponent extends SliderComponent {
 
 customElements.define('slideshow-component', SlideshowComponent);
 
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event triggered');
+    // Ensure event listeners are attached to the swatch inputs
+    document.querySelectorAll('.product-form__input--swatch .swatch-input__input').forEach(input => {
+        input.addEventListener('change', onVariantChange);
+        console.log('Event listener added to:', input);
+    });
+
+    // Function to update the selected swatch value
+    function updateSelectedSwatchValue(event) {
+        const target = event.target;
+        const selectedValue = target.value;
+        console.log('updateSelectedSwatchValue called with value:', selectedValue);
+        const swatchElement = target.closest('.js').querySelector('[data-selected-value]');
+
+        if (swatchElement) {
+            if (target.dataset.optionSwatchValue) {
+                swatchElement.innerHTML = `<img src="${target.dataset.optionSwatchValue}" alt="${selectedValue}" class="swatch-input__image">`;
+                console.log('Swatch element updated with image:', target.dataset.optionSwatchValue);
+            } else {
+                swatchElement.textContent = selectedValue;
+                console.log('Swatch element updated with text:', selectedValue);
+            }
+        }
+
+        // Update the legend's selected value
+        const legendElement = target.closest('fieldset').querySelector('legend span[data-selected-value]');
+        if (legendElement) {
+            legendElement.textContent = selectedValue;
+            console.log('Legend element updated with value:', selectedValue);
+        } else {
+            console.log('Legend element not found');
+        }
+    }
+
+    // Function to handle variant change
+    function onVariantChange(event) {
+        const form = event.target.closest('form');
+        console.log('onVariantChange called with form:', form);
+        const selectedOptions = Array.from(form.querySelectorAll('input[type="radio"]:checked, select')).map(input => input.value);
+        console.log('Selected options:', selectedOptions);
+
+        // Find the variant matching the selected options
+        const selectedVariantData = JSON.parse(form.querySelector('[data-selected-variant]').textContent);
+        console.log('Selected variant data:', selectedVariantData);
+        const matchingVariant = selectedVariantData.product.variants.find(variant => {
+            return variant.options.every((option, index) => option === selectedOptions[index]);
+        });
+
+        if (matchingVariant) {
+            form.querySelector('input[name="id"]').value = matchingVariant.id;
+            console.log('Matching variant found:', matchingVariant);
+            updateSelectedSwatchValue(event);
+        } else {
+            console.log('No matching variant found');
+        }
+    }
+});
+
 class VariantSelects extends HTMLElement {
     constructor() {
         super();
@@ -1057,7 +1116,9 @@ class VariantSelects extends HTMLElement {
     connectedCallback() {
         this.addEventListener('change', (event) => {
             const target = this.getInputForEventTarget(event.target);
+            console.log('VariantSelects change event triggered with target:', target);
             this.updateSelectionMetadata(event);
+            onVariantChange(event);
 
             publish(PUB_SUB_EVENTS.optionValueSelectionChange, {
                 data: {
@@ -1069,26 +1130,28 @@ class VariantSelects extends HTMLElement {
         });
     }
 
-    updateSelectionMetadata({ target }) {
+    updateSelectionMetadata(event) {
+        const target = event.target;
         const { value, tagName } = target;
+        console.log('updateSelectionMetadata called with value:', value, 'tagName:', tagName);
 
         if (tagName === 'SELECT' && target.selectedOptions.length) {
             Array.from(target.options)
-                .find((option) => option.getAttribute('selected'))
+                .find(option => option.getAttribute('selected'))
                 .removeAttribute('selected');
             target.selectedOptions[0].setAttribute('selected', 'selected');
 
             const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
-            const selectedDropdownSwatchValue = target
-                .closest('.product-form__input')
-                .querySelector('[data-selected-value] > .swatch');
+            const selectedDropdownSwatchValue = target.closest('.product-form__input').querySelector('[data-selected-value] > .swatch');
             if (!selectedDropdownSwatchValue) return;
             if (swatchValue) {
                 selectedDropdownSwatchValue.style.setProperty('--swatch--background', swatchValue);
                 selectedDropdownSwatchValue.classList.remove('swatch--unavailable');
+                console.log('Swatch background set to:', swatchValue);
             } else {
                 selectedDropdownSwatchValue.style.setProperty('--swatch--background', 'unset');
                 selectedDropdownSwatchValue.classList.add('swatch--unavailable');
+                console.log('Swatch background unset');
             }
 
             selectedDropdownSwatchValue.style.setProperty(
@@ -1096,8 +1159,9 @@ class VariantSelects extends HTMLElement {
                 target.selectedOptions[0].dataset.optionSwatchFocalPoint || 'unset'
             );
         } else if (tagName === 'INPUT' && target.type === 'radio') {
-            const selectedSwatchValue = target.closest(`.product-form__input`).querySelector('[data-selected-value]');
+            const selectedSwatchValue = target.closest('.product-form__input').querySelector('[data-selected-value]');
             if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
+            console.log('Selected swatch value updated to:', value);
         }
     }
 

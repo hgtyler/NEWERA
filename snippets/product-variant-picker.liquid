@@ -18,7 +18,6 @@
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
-
         if swatch_count > 0 and block.settings.swatch_shape != 'none'
           if block.settings.picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
@@ -27,7 +26,7 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' -%}
+      {%- if picker_type == 'swatch' and option.name == "Stone" -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
@@ -35,22 +34,39 @@
               {{- option.selected_value -}}
             </span>
           </legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
+          {% for value in option.values %}
+            <input
+              type="radio"
+              id="Option-{{ option.position }}-{{ forloop.index0 }}"
+              name="options[{{ option.name | escape }}]"
+              value="{{ value | escape }}"
+              class="swatch-input__input"
+              data-option-swatch-value="{{ value.variant.metafields.custom.stone_swatch.value }}"
+              {% if value.selected %} checked {% endif %}
+              {% if value.disabled %} disabled {% endif %}
+            >
+            <label
+              for="Option-{{ option.position }}-{{ forloop.index0 }}"
+              class="swatch-input__label"
+            >
+              <img src="{{ value.variant.metafields.custom.stone_swatch.value | prepend: 'https://starlingjewelry.com/cdn/shop/' }}" alt="{{ value }}" class="swatch-input__image">
+            </label>
+          {% endfor %}
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
           <legend class="form__label">{{ option.name }}</legend>
-          {% render 'product-variant-options',
-            product: product,
-            option: option,
-            block: block,
-            picker_type: picker_type
-          %}
+          {% for value in option.values %}
+            <input
+              type="radio"
+              id="Option-{{ option.position }}-{{ forloop.index0 }}"
+              name="options[{{ option.name | escape }}]"
+              value="{{ value | escape }}"
+              {% if value.selected %} checked {% endif %}
+              {% if value.disabled %} disabled {% endif %}
+            >
+            <label for="Option-{{ option.position }}-{{ forloop.index0 }}">{{ value }}</label>
+          {% endfor %}
         </fieldset>
       {%- else -%}
         <div class="product-form__input product-form__input--dropdown">
@@ -58,18 +74,12 @@
             {{ option.name }}
           </label>
           <div class="select">
-            {%- if picker_type == 'swatch_dropdown' -%}
+            {%- if picker_type == 'swatch_dropdown' and option.name == "Stone" -%}
               <span
                 data-selected-value
                 class="dropdown-swatch"
               >
-                {% assign stone_metaobject = product.metafields.custom.stone.value %}
-                {% assign swatch_image = stone_metaobject.swatch_image %}
-                {% if swatch_image %}
-                  <img src="{{ swatch_image | image_url: width: 50 }}" alt="{{ option.selected_value }}" class="swatch-input__image" width=25px height=25px >
-                {% else %}
                   {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-                {% endif %}
               </span>
             {%- endif -%}
             <select
@@ -78,12 +88,17 @@
               name="options[{{ option.name | escape }}]"
               form="{{ product_form_id }}"
             >
-              {% render 'product-variant-options',
-                product: product,
-                option: option,
-                block: block,
-                picker_type: picker_type
-              %}
+              {% for value in option.values %}
+                <option
+                  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                  value="{{ value | escape }}"
+                  data-option-swatch-value="{{ value.variant.metafields.custom.stone_swatch.value }}"
+                  {% if value.selected %} selected {% endif %}
+                  {% if value.disabled %} disabled {% endif %}
+                >
+                  {{ value }}
+                </option>
+              {% endfor %}
             </select>
             {% render 'icon-caret' %}
           </div>
