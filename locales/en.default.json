@@ -54,7 +54,9 @@
       "of": "of",
       "next_slide": "Slide right",
       "previous_slide": "Slide left",
-      "name": "Slider"
+      "name": "Slider",
+      "up_slide": "Slide up",
+      "down_slide": "Slide down"
     }
   },
   "newsletter": {

@@ -32,34 +32,56 @@
   .media-gallery-container {
     display: flex;
     align-items: flex-start;
+    padding: 10px;
   }
   
   .thumbnail-slider {
     flex: 1;
     max-width: 100px;
     margin-right: 10px;
+    overflow: hidden; /* Ensure thumbnails are hidden in the slider */
+    position: relative; /* Position relative for buttons positioning */
+  }
+  
+  .thumbnail-list {
+    flex-direction: column;
+    max-height: 400px; /* Set a fixed height for the thumbnail container */
+    overflow-y: auto; /* Enable vertical scrolling */
   }
   
   .slider-mobile-gutter {
     flex: 4;
+    padding: 0 10px;
+  }
+
+  .slider-button {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+
+  .slider-button--prev {
+    top: 0;
+  }
+
+  .slider-button--next {
+    bottom: 0;
   }
 </style>
 
-<div class="media-gallery-container" style="display: flex;">
+<div class="media-gallery-container">
   <!-- Thumbnail slider component -->
   {%- if media_count > 1 -%}
-    <slider-component
-      id="GalleryThumbnails-{{ section.id }}"
-      class="thumbnail-slider slider-mobile-gutter quick-add-hidden"
-      style="flex: 1; max-width: 100px; margin-right: 20px;"
-    >
+    <div class="thumbnail-slider quick-add-hidden">
       <button
         type="button"
-        class="slider-button slider-button--prev"
+        class="slider-button slider-button--up"
         name="previous"
-        aria-label="{{ 'general.slider.previous_slide' | t }}"
+        aria-label="{{ 'general.slider.up_slide' | t }}"
         aria-controls="GalleryThumbnails-{{ section.id }}"
-        data-step="3"
+        onclick="scrollThumbnails('prev')"
       >
         {% render 'icon-caret' %}
       </button>
@@ -87,35 +109,6 @@
             endcapture
             assign media_index = media_index | plus: 1
           -%}
-          <li
-            id="Slide-Thumbnails-{{ section.id }}-0"
-            class="thumbnail-list__item slider__slide{% if section.settings.hide_variants and variant_images contains featured_media.src %} thumbnail-list_item--variant{% endif %}"
-            data-target="{{ section.id }}-{{ featured_media.id }}"
-            data-media-position="{{ media_index }}"
-          >
-            {%- capture thumbnail_id -%}
-              Thumbnail-{{ section.id }}-0
-            {%- endcapture -%}
-            <button
-              class="thumbnail global-media-settings global-media-settings--no-shadow"
-              aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
-              aria-current="true"
-              aria-controls="GalleryViewer-{{ section.id }}"
-              aria-describedby="{{ thumbnail_id }}"
-            >
-              {{
-                featured_media.preview_image
-                | image_url: width: 416
-                | image_tag:
-                  loading: 'lazy',
-                  sizes: sizes,
-                  widths: '54, 74, 104, 162, 208, 324, 416',
-                  id: thumbnail_id,
-                  alt: featured_media.alt
-                | escape
-              }}
-            </button>
-          </li>
         {%- endif -%}
         {%- for media in product.media -%}
           {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
@@ -179,19 +172,19 @@
       </ul>
       <button
         type="button"
-        class="slider-button slider-button--next"
+        class="slider-button slider-button--down"
         name="next"
-        aria-label="{{ 'general.slider.next_slide' | t }}"
+        aria-label="{{ 'general.slider.down_slide' | t }}"
         aria-controls="GalleryThumbnails-{{ section.id }}"
-        data-step="3"
+        onclick="scrollThumbnails('next')"
       >
         {% render 'icon-caret' %}
       </button>
-    </slider-component>
+    </div>
   {%- endif -%}
 
   <!-- Main slider component -->
-  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter" style="flex: 4;">
+  <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
@@ -304,4 +297,17 @@
     {% render 'icon-3d-model' %}
     {{ 'products.product.xr_button' | t }}
   </button>
-{%- endif -%}
+{%- endif %}
+
+<script>
+  function scrollThumbnails(direction) {
+    const thumbnailList = document.querySelector('.thumbnail-list');
+    const scrollAmount = thumbnailList.clientHeight;
+
+    if (direction === 'prev') {
+      thumbnailList.scrollBy({ top: -scrollAmount, behavior: 'smooth' });
+    } else if (direction === 'next') {
+      thumbnailList.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+    }
+  }
+</script>

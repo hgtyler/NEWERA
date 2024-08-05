@@ -16,7 +16,7 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' and option.name == "Stone" -%}
+      {%- if picker_type == 'swatch' and option.name == "Stone" or option.name == "STONE" -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
