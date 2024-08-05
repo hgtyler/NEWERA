@@ -1,13 +1,3 @@
-{% comment %}
-  Renders product variant-picker
-
-  Accepts:
-  - product: {Object} product object.
-  - block: {Object} passing the block information.
-  - product_form_id: {String} Id of the product form to which the variant picker is associated.
-  Usage:
-  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-{% endcomment %}
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
@@ -35,6 +25,7 @@
             </span>
           </legend>
           {% for value in option.values %}
+            {% if value.variant.metafields.custom.stone_swatch.value %}
             <input
               type="radio"
               id="Option-{{ option.position }}-{{ forloop.index0 }}"
@@ -51,61 +42,59 @@
             >
               <img src="{{ value.variant.metafields.custom.stone_swatch.value | prepend: 'https://starlingjewelry.com/cdn/shop/' }}" alt="{{ value }}" class="swatch-input__image">
             </label>
+            {% else %}
+            {% render 'product-variant-options' product: product, option: option, optionIndex: forloop.index0 %}
+          {% endif %}
           {% endfor %}
         </fieldset>
-      {%- elsif picker_type == 'button' -%}
-        <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
-          {% for value in option.values %}
-            <input
-              type="radio"
-              id="Option-{{ option.position }}-{{ forloop.index0 }}"
-              name="options[{{ option.name | escape }}]"
-              value="{{ value | escape }}"
-              {% if value.selected %} checked {% endif %}
-              {% if value.disabled %} disabled {% endif %}
-            >
-            <label for="Option-{{ option.position }}-{{ forloop.index0 }}">{{ value }}</label>
-          {% endfor %}
-        </fieldset>
+
       {%- else -%}
-        <div class="product-form__input product-form__input--dropdown">
-          <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
-            {{ option.name }}
-          </label>
-          <div class="select">
-            {%- if picker_type == 'swatch_dropdown' and option.name == "Stone" -%}
-              <span
-                data-selected-value
-                class="dropdown-swatch"
+      <div class="product-form__input product-form__input--dropdown">
+        <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+          {{ option.name }}
+        </label>
+        <div class="select">
+          <select
+            id="Option-{{ section.id }}-{{ forloop.index0 }}"
+            class="select__select"
+            name="options[{{ option.name | escape }}]"
+            form="{{ product_form_id }}"
+          >
+            {% for value in option.values %}
+              <option
+                id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                value="{{ value | escape }}"
+                data-option-swatch-value="{{ value.variant.metafields.custom.stone_swatch.value }}"
+                {% if value.selected %} selected {% endif %}
+                {% if value.disabled %} disabled {% endif %}
               >
-                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
-              </span>
-            {%- endif -%}
-            <select
-              id="Option-{{ section.id }}-{{ forloop.index0 }}"
-              class="select__select"
-              name="options[{{ option.name | escape }}]"
-              form="{{ product_form_id }}"
-            >
-              {% for value in option.values %}
-                <option
-                  id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                  value="{{ value | escape }}"
-                  data-option-swatch-value="{{ value.variant.metafields.custom.stone_swatch.value }}"
-                  {% if value.selected %} selected {% endif %}
-                  {% if value.disabled %} disabled {% endif %}
-                >
-                  {{ value }}
-                </option>
-              {% endfor %}
-            </select>
-            {% render 'icon-caret' %}
-          </div>
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+          {% render 'icon-caret' %}
         </div>
+      </div>      
       {%- endif -%}
     {%- endfor -%}
-
-    <script type="application/json" data-selected-variant>{{ product.selected_or_first_available_variant | json }}</script>
+    <script type="application/json" data-selected-variant>
+      {
+        "product": {
+          "variants": [
+            {% for variant in product.variants %}
+              {
+                "id": "{{ variant.id }}",
+                "options": [
+                  "{{ variant.option1 }}",
+                  "{{ variant.option2 }}",
+                  "{{ variant.option3 }}"
+                ]
+              }{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+          ]
+        }
+      }
+    </script>
   </variant-selects>
 {%- endunless -%}
+

@@ -1052,7 +1052,7 @@ customElements.define('slideshow-component', SlideshowComponent);
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded event triggered');
     // Ensure event listeners are attached to the swatch inputs
-    document.querySelectorAll('.product-form__input--swatch .swatch-input__input').forEach(input => {
+    document.querySelectorAll('.product-form__input--swatch .swatch-input__input .product-form__input--dropdown .swatch-input__image').forEach(input => {
         input.addEventListener('change', onVariantChange);
         console.log('Event listener added to:', input);
     });
