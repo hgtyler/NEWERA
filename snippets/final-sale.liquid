@@ -1,0 +1,11 @@
+<style>
+    .final-sale {
+        font-family: 'AubergeScriptBasicOne';
+        font-size: 35px;
+        color: #D50032;
+    }
+</style>
+
+{% if product.tags contains "final-sale" %}
+    <h3 class="final-sale"> this item is final sale! </h3>
+{%  endif %}

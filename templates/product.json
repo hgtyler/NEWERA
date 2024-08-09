@@ -3,11 +3,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "text_3RrXcc": {
-          "type": "text",
+        "custom_liquid_pyT8wz": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "LINK | LINK",
-            "text_style": "uppercase"
+            "custom_liquid": "{% render 'breadcrumb' %}"
           }
         },
         "title": {
@@ -25,8 +24,14 @@
           "settings": {
             "picker_type": "swatch",
             "swatch_shape": "circle",
-            "swatch_style": "image",
-            "swatch_color": ""
+            "swatch_style": "image"
+          }
+        },
+        "text_marVHj": {
+          "type": "text",
+          "settings": {
+            "text": "Estimated Ship Date",
+            "text_style": "body"
           }
         },
         "buy_buttons": {
@@ -42,30 +47,52 @@
             "custom_liquid": "{% render 'desc' %}"
           }
         },
-        "text_ETiAtj": {
-          "type": "text",
+        "custom_liquid_9rmtjY": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "Details:",
-            "text_style": "body"
+            "custom_liquid": "{% render 'final-sale' %}"
           }
         },
-        "text_marVHj": {
-          "type": "text",
+        "collapsible_tab_AHfN3b": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "Estimated Shipping:",
-            "text_style": "body"
+            "heading": "Gemstone & Metal:",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_PcNEWU": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Dimensions:",
+            "icon": "none",
+            "content": "<p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_z3c34T": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Happiness Guarantee:",
+            "icon": "none",
+            "content": "",
+            "page": ""
           }
         }
       },
       "block_order": [
-        "text_3RrXcc",
+        "custom_liquid_pyT8wz",
         "title",
         "price",
         "variant_picker_RhW3MJ",
+        "text_marVHj",
         "buy_buttons",
         "custom_liquid_eU8EVb",
-        "text_ETiAtj",
-        "text_marVHj"
+        "custom_liquid_9rmtjY",
+        "collapsible_tab_AHfN3b",
+        "collapsible_tab_PcNEWU",
+        "collapsible_tab_z3c34T"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -106,7 +133,7 @@
             "heading": "Shipping & Returns",
             "icon": "none",
             "row_content": "",
-            "page": ""
+            "page": "shipping-policy"
           }
         },
         "collapsible_row_p7zgea": {
@@ -115,7 +142,7 @@
             "heading": "Materials & Sourcing",
             "icon": "none",
             "row_content": "",
-            "page": ""
+            "page": "materials"
           }
         },
         "collapsible_row_trF4DW": {
@@ -132,7 +159,7 @@
           "settings": {
             "heading": "About Starling",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>We are moved by the light and color of gemstones. Inspired by every color-kissed gemstone that is as individual as the person who chooses to twine their life with that of the stone. And in awe of how gemstones flaunt their beauty in naturally occurring inclusions that catch light and color to singularly striking results.<\/p><p><a href=\"\/pages\/about-us\" title=\"About Us\">Learn More<\/a><\/p><p>L<\/p>",
             "page": ""
           }
         }
@@ -144,16 +171,15 @@
         "collapsible_row_afWT4R"
       ],
       "settings": {
-        "caption": "",
-        "heading": "",
+        "caption": "Starling brings the past, present and future together in a manner of making that is naturally circular with precious materials that are endlessly recyclable. Crafted in California, Starling Jewelry contributes to a responsible future that honors our materials, our community of makers and fine jewelry’s connective force.",
+        "heading": "house of starling",
         "heading_size": "h1",
-        "heading_alignment": "right",
+        "heading_alignment": "left",
         "layout": "row",
         "color_scheme": "",
         "container_color_scheme": "scheme-5",
         "open_first_collapsible_row": false,
-        "image": "shopify:\/\/shop_images\/emerald-beryl-citrine-earrings-2.jpg",
-        "image_ratio": "small",
+        "image_ratio": "adapt",
         "desktop_layout": "image_first",
         "padding_top": 0,
         "padding_bottom": 0

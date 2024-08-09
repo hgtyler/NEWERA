@@ -4,24 +4,63 @@
       "type": "main-page",
       "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "image_banner_37NdK4": {
+    "image_banner_gc7MzJ": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/about-page_e0ea262c-c7fd-4710-97c2-c248ec92b97c.jpg",
+        "image_2": "shopify:\/\/shop_images\/starling-bespoke-colorful-rings_a7ecb753-274f-4810-a909-a3f17823a9b7.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
+        "image_height": "large",
         "desktop_content_position": "middle-center",
-        "show_text_box": false,
+        "image_1_content_position": "middle-center",
+        "image_2_content_position": "middle-center",
+        "show_text_box": true,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
+      }
+    },
+    "rich_text_fxLXmk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_xAhLWL": {
+          "type": "heading",
+          "settings": {
+            "heading": "house of starling",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_xAhLWL"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 45px;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "",
+        "full_width": true,
+        "burgundy_line": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "custom_liquid_akf3bH": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% render 'icon-hos' %}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_HQwp7e": {
@@ -39,11 +78,30 @@
       ],
       "settings": {
         "desktop_content_position": "center",
-        "content_alignment": "center",
+        "content_alignment": "left",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 8
+        "burgundy_line": false,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "image_banner_37NdK4": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/testbanner.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "image_1_content_position": "middle-center",
+        "image_2_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "collage_JHrNWg": {
@@ -73,6 +131,7 @@
         "image_kF3yCq",
         "image_h3UmH4"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -105,8 +164,71 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
+        "burgundy_line": false,
         "padding_top": 40,
         "padding_bottom": 52
+      }
+    },
+    "image_with_text_xqMXpR": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_tgTbzb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All Starling jewelry is entirely made by hand in Los Angeles, California by a  close-knit family of creative collaborators and craftspeople. Our team is composed of the best skilled artisans in the city, with many of our metalsmiths, stone setters and casters 3rd and 4th generation jewelers. Our founder, Chelsey Bartrum, a jeweler and graduate gemologist from the Gemological Institute of America, sources only the highest quality stones and metals, at the fairest price. Bartrum also personally inspects each and every stone, allowing for unparalleled quality control.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_tgTbzb"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/starling-team.webp",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "right",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "burgundy_line": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_P7j69X": {
+      "type": "image-with-text",
+      "blocks": {
+        "text_yRnbcj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“I believe that we are intrinsically attracted to what we need. Picking out a piece of jewelry is instinctual, a gut feeling, a gasp of recognition. The line between you finding it—and it finding you—is wonderfully blurry.” — Chelsey Bartum, Founder Starling Jewelry<\/p><p> <\/p><p>As far as Chelsey can remember, it was Queen Cleopatra that has held creative significance in the evolution of how she interprets beauty. Among many proclivities, Cleopatra loved jewelry, particularly emeralds, which were once believed to hold all manner of mystical properties. Much like what we do today, Cleopatra made a habit of melting down existing gold jewelry and remaking it into its next incarnation. However the stone—and all the energy and magic within—remained. So it’s no wonder at all that Chelsey's curiosity and eventual choice to work with precious stones via Starling became both passion and livelihood.  <\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_yRnbcj"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/chelseyheadshot.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "burgundy_line": false,
+        "padding_top": 0,
+        "padding_bottom": 36
       }
     },
     "rich_text_QmddcN": {
@@ -128,79 +250,23 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
+        "burgundy_line": true,
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "image_with_text_xqMXpR": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_tgTbzb": {
-          "type": "text",
-          "settings": {
-            "text": "<h3>All Starling jewelry is entirely made by hand in Los Angeles, California by a  close-knit family of creative collaborators and craftspeople. Our team is composed of the best skilled artisans in the city, with many of our metalsmiths, stone setters and casters 3rd and 4th generation jewelers. Our founder, Chelsey Bartrum, a jeweler and graduate gemologist from the Gemological Institute of America, sources only the highest quality stones and metals, at the fairest price. Bartrum also personally inspects each and every stone, allowing for unparalleled quality control.<\/h3>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_tgTbzb"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/starling-team.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_P7j69X": {
-      "type": "image-with-text",
-      "blocks": {
-        "text_yRnbcj": {
-          "type": "text",
-          "settings": {
-            "text": "<p>“I believe that we are intrinsically attracted to what we need. Picking out a piece of jewelry is instinctual, a gut feeling, a gasp of recognition. The line between you finding it—and it finding you—is wonderfully blurry.” — Chelsey Bartum, Founder Starling Jewelry<\/p><p> <\/p><p>As far as Chelsey can remember, it was Queen Cleopatra that has held creative significance in the evolution of how she interprets beauty. Among many proclivities, Cleopatra loved jewelry, particularly emeralds, which were once believed to hold all manner of mystical properties. Much like what we do today, Cleopatra made a habit of melting down existing gold jewelry and remaking it into its next incarnation. However the stone—and all the energy and magic within—remained. So it’s no wonder at all that Chelsey's curiosity and eventual choice to work with precious stones via Starling became both passion and livelihood.  <\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "text_yRnbcj"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/starling_3_1420x-1.webp",
-        "height": "small",
-        "desktop_image_width": "small",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     }
   },
   "order": [
     "main",
-    "image_banner_37NdK4",
+    "image_banner_gc7MzJ",
+    "rich_text_fxLXmk",
+    "custom_liquid_akf3bH",
     "rich_text_HQwp7e",
+    "image_banner_37NdK4",
     "collage_JHrNWg",
     "rich_text_WYdYbQ",
-    "rich_text_QmddcN",
     "image_with_text_xqMXpR",
-    "image_with_text_P7j69X"
+    "image_with_text_P7j69X",
+    "rich_text_QmddcN"
   ]
 }

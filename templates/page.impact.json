@@ -2,10 +2,9 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_FCdTLa": {
@@ -27,7 +26,8 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "burgundy_line": false,
+        "padding_top": 0,
         "padding_bottom": 52
       }
     },
@@ -64,43 +64,7 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "image_with_text_7rtaDh": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_na79RB": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Materials",
-            "heading_size": "h2"
-          }
-        },
-        "text_Hkq8Hx": {
-          "type": "text",
-          "settings": {
-            "text": "<p> All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p><p> <\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_na79RB",
-        "text_Hkq8Hx"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
+        "burgundy_line": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -139,6 +103,7 @@
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "burgundy_line": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -162,6 +127,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
+        "burgundy_line": false,
         "padding_top": 40,
         "padding_bottom": 0
       }
@@ -290,7 +256,6 @@
     "main",
     "rich_text_FCdTLa",
     "image_with_text_DX9Ldg",
-    "image_with_text_7rtaDh",
     "image_with_text_MAEUzN",
     "rich_text_reMJmT",
     "multicolumn_Qfhbhk",

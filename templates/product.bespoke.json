@@ -24,12 +24,15 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "swatch",
-            "swatch_shape": "circle"
+            "swatch_shape": "circle",
+            "swatch_style": "color"
           }
         },
-        "description": {
-          "type": "description",
+        "text_LdeJyi": {
+          "type": "text",
           "settings": {
+            "text": "Complimentary 2-Day Shipping Included!",
+            "text_style": "body"
           }
         },
         "buy_buttons": {
@@ -39,11 +42,23 @@
             "show_gift_card_recipient": true
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "text_3jtxD9": {
+          "type": "text",
+          "settings": {
+            "text": "Estimated Ship Date",
+            "text_style": "body"
+          }
+        },
         "collapsible_tab_qg6gir": {
           "type": "collapsible_tab",
           "settings": {
             "heading": "Details",
-            "icon": "star",
+            "icon": "none",
             "content": "<p>{{ product.metafields.my_fields.gemstone | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.metal | metafield_tag }}<\/p><p>{{ product.metafields.my_fields.dimensions | metafield_tag }}<\/p>",
             "page": ""
           }
@@ -51,17 +66,10 @@
         "collapsible_tab_XFRQem": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Shipping",
-            "icon": "truck",
-            "content": "",
+            "heading": "How It Works",
+            "icon": "none",
+            "content": "<p>Choose between a ring or charm in either a prong, bezel, or cloud setting style, and your preferred gold color.<\/p><p>Ring is made to fit you - if you don’t know your ring size, select “I Don’t Know” as a size option and we will ship you a free ring sizer. If you would like to add side stones, let us know.<\/p><p>After ordering, you will receive a 3D CAD design of your selections within 5-10 days, before we make the final ring.<\/p><p>Bespoke rings and charms take 6-8 weeks to make.<\/p>",
             "page": ""
-          }
-        },
-        "text_XxTtjE": {
-          "type": "text",
-          "settings": {
-            "text": "<em>This piece is final sale!<\/em>",
-            "text_style": "body"
           }
         }
       },
@@ -70,11 +78,12 @@
         "subtitle",
         "price",
         "variant_picker",
-        "description",
+        "text_LdeJyi",
         "buy_buttons",
+        "description",
+        "text_3jtxD9",
         "collapsible_tab_qg6gir",
-        "collapsible_tab_XFRQem",
-        "text_XxTtjE"
+        "collapsible_tab_XFRQem"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -82,7 +91,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -98,7 +107,8 @@
         "column_jeCxeA": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/prong-setting.png",
+            "title": "Prong Setting",
             "text": "",
             "link_label": "",
             "link": ""
@@ -107,7 +117,8 @@
         "column_fkciT6": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/bezel-setting.png",
+            "title": "Bezel Setting",
             "text": "",
             "link_label": "",
             "link": ""
@@ -116,7 +127,8 @@
         "column_en4Qe9": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/ripple-setting.png",
+            "title": "Ripple Setting",
             "text": "",
             "link_label": "",
             "link": ""
@@ -125,25 +137,8 @@
         "column_P7B9zj": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_yTqi6w": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_HdGnbT": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/cloud-setting.png",
+            "title": "Cloud Setting",
             "text": "",
             "link_label": "",
             "link": ""
@@ -154,16 +149,19 @@
         "column_jeCxeA",
         "column_fkciT6",
         "column_en4Qe9",
-        "column_P7B9zj",
-        "column_yTqi6w",
-        "column_HdGnbT"
+        "column_P7B9zj"
+      ],
+      "custom_css": [
+        ".multicolumn__title {text-align: center;}",
+        ".title {text-align: center;}",
+        ".multicolumn__title {text-align: center;}"
       ],
       "settings": {
         "title": "Settings",
         "heading_size": "h2",
-        "image_width": "third",
+        "image_width": "half",
         "image_ratio": "square",
-        "columns_desktop": 6,
+        "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
@@ -209,12 +207,51 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "rich_text_xBCJKB": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4FwRM6": {
+          "type": "heading",
+          "settings": {
+            "heading": "How Bespoke Gems Work",
+            "heading_size": "h2"
+          }
+        },
+        "text_hqXD8q": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "text_yHadVc": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"\/pages\/bespoke-contact\" target=\"_blank\" title=\"Bespoke Gems Inquiry\">Learn More<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4FwRM6",
+        "text_hqXD8q",
+        "text_yHadVc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "burgundy_line": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_7zLYbU",
     "6d66d2c3-2304-463d-9d07-02ce5c433be2",
-    "related-products"
+    "related-products",
+    "rich_text_xBCJKB"
   ]
 }

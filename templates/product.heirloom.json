@@ -24,7 +24,8 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "dropdown",
-            "swatch_shape": "circle"
+            "swatch_shape": "circle",
+            "swatch_style": "color"
           }
         },
         "buy_buttons": {
@@ -34,9 +35,26 @@
             "show_gift_card_recipient": true
           }
         },
+        "text_LQX7e4": {
+          "type": "text",
+          "settings": {
+            "text": "This listing is for customers that we have already spoken with in regards to starting Heirloom Revival projects! The deposit is non-refundable and goes towards your Heirloom Revival balance or any future Starling piece. Once we receive the deposit we will automatically mail you a UPS shipping kit to send in your revival piece. Please use the prepaid shipping label within 1 week of receiving and follow the included packing instructions. If you need more time or have any questions reach out via email!",
+            "text_style": "body"
+          }
+        },
         "description_gjBTRn": {
           "type": "description",
+          "disabled": true,
           "settings": {
+          }
+        },
+        "collapsible_tab_NjpbD4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "How It Works",
+            "icon": "none",
+            "content": "<p>We remake pieces using your gemstones and adding in new stones if you wish. Once we receive your piece in the mail we inspect it before removing stones. If we think there will be any issue in the removal or resetting process we will let you know. We are not responsible for items that are damaged in the shipping process. <\/p><p>We work in 14k, 18k or 22k gold. Price estimates do not include trade value for melting your old gold. We determine that in person and will email you the credit amount. If you want to use your exact metal in your new piece let us know, it is sometimes possible. <\/p>",
+            "page": ""
           }
         }
       },
@@ -46,7 +64,9 @@
         "price",
         "variant_picker",
         "buy_buttons",
-        "description_gjBTRn"
+        "text_LQX7e4",
+        "description_gjBTRn",
+        "collapsible_tab_NjpbD4"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -54,12 +74,12 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "thumbnail_slider",
+        "gallery_layout": "thumbnail",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": false,
-        "enable_video_looping": false,
+        "enable_video_looping": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -77,23 +97,14 @@
         "text_Lc6CxJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p><p><a href=\"\/pages\/heirloom-revival-inquiry\" target=\"_blank\" title=\"Heirloom Revival Inquiry\">View More<\/a><\/p>",
             "text_style": "body"
-          }
-        },
-        "button_KPH4cn": {
-          "type": "button",
-          "settings": {
-            "button_label": "View All",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_R4rFFn",
-        "text_Lc6CxJ",
-        "button_KPH4cn"
+        "text_Lc6CxJ"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/petite-cloud-rings_c39dfdc9-0f9e-4ab4-9ca0-4b4208245c52.jpg",

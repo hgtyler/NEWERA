@@ -1,0 +1,41 @@
+<style>
+    ul.breadcrumb {
+        list-style: none;
+        text-align: left;
+        padding-inline-start: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    /* Display list items side by side */
+    ul.breadcrumb li {
+        display: inline;
+        font-size: 12px;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li+li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+
+    /* Add a color to all links inside the list */
+    ul.breadcrumb li a {
+        color: #561C24;
+        text-decoration: none;
+    }
+
+    /* Add a color on mouse-over */
+    ul.breadcrumb li a:hover {
+        color: #D50032;
+        text-decoration: underline;
+    }
+</style>
+
+<ul class="breadcrumb">
+    <li><a href="/collections/all">ALL</a></li>
+    <li><a href="javascript:history.back()">BACK</a></li>
+</ul>

@@ -2,10 +2,9 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "disabled": true,
       "settings": {
-        "padding_top": 100,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "rich_text_PHGikT": {
@@ -14,7 +13,7 @@
         "heading_AWChb6": {
           "type": "heading",
           "settings": {
-            "heading": "Heirloom Revival",
+            "heading": "heirloom revival",
             "heading_size": "h2"
           }
         },
@@ -23,30 +22,22 @@
           "settings": {
             "text": "<p>We believe jewelry is meant to be worn and are here to help you revive your jewelry box. The Heirloom Revival mission is: wear more, buy less. The largest diamond mine is in our homes. Let's start putting those stones to use. It's our responsibility as citizens of earth, the future of fine jewelry and so sentimental. Heirloom Revival is here to help you recycle and remake your most precious objects.<\/p><p><\/p><p>Read more about our process below! <\/p><p><\/p><p><\/p>"
           }
-        },
-        "button_PN7JKY": {
-          "type": "button",
-          "settings": {
-            "button_label": "Start Your Revival",
-            "button_link": "shopify:\/\/products\/heirloom-revival-deposit",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
         }
       },
       "block_order": [
         "heading_AWChb6",
-        "text_yThdWT",
-        "button_PN7JKY"
+        "text_yThdWT"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 45px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "padding_top": 40,
+        "burgundy_line": false,
+        "padding_top": 0,
         "padding_bottom": 52
       }
     },
@@ -168,6 +159,16 @@
         "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_form_KqVrkz": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Start Your Revival",
+        "heading_size": "h2",
+        "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -326,6 +327,7 @@
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
+        "burgundy_line": false,
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -335,6 +337,7 @@
     "main",
     "rich_text_PHGikT",
     "multicolumn_kjnTqa",
+    "contact_form_KqVrkz",
     "multicolumn_D4k4fE",
     "rich_text_TVJz4F"
   ]
