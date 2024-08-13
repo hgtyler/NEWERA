@@ -249,54 +249,40 @@
         padding: 5rem;
     }
     .banner__content--top-left {
-        position: absolute;
-        top: 0;
-        left: 0;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
     .banner__content--top-center {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        align-items: flex-start;
+        justify-content: center;
     }
     .banner__content--top-right {
-        position: absolute;
-        top: 0;
-        right: 0;
+        align-items: flex-start;
+        justify-content: flex-end;
     }
     .banner__content--middle-left {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
+        align-items: center;
+        justify-content: flex-start;
     }
     .banner__content--middle-center {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: center;
     }
     .banner__content--middle-right {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
+        align-items: center;
+        justify-content: flex-end;
     }
     .banner__content--bottom-left {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        align-items: flex-end;
+        justify-content: flex-start;
     }
     .banner__content--bottom-center {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        align-items: flex-end;
+        justify-content: center;
     }
     .banner__content--bottom-right {
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
 
@@ -416,8 +402,6 @@
     gap: 1rem;
     max-width: 45rem;
     word-break: break-word;
-    text-decoration: underline;
-    text-underline-offset: 3px;
 }
 
 @media screen and (max-width: 749px) {
@@ -441,7 +425,7 @@
 }
 
 .banner__box>*+.banner__buttons {
-    margin-top: 0.5rem;
+    margin-top: 2rem;
 }
 
 @media screen and (max-width: 749px) {
@@ -458,9 +442,4 @@
     .banner--desktop-transparent .rte a:hover {
         color: currentColor;
     }
-}
-
-.underline-button {
-    font-size: 2rem;
-    text-underline-offset: 4px;
 }

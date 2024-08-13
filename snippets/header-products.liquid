@@ -1,0 +1,74 @@
+{% comment %}
+  Renders product card display in mega menu
+
+  Usage:
+  {% render 'header-products',  %}
+{% endcomment %}
+
+
+
+<style>
+    .header-menu-with-products {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .header-menu-with-products--container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .header-products {
+      flex: 4;
+      display: flex;
+      justify-content: space-between;
+    }
+    .header-menu-product {
+      text-align: center;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 23%;
+    }
+  </style>
+  
+  {% assign collection = collections[link_handle] %}
+  {% if collection %}
+  <div class="header-products">
+    <div class="header-menu-with-products--container">
+      {% for product in collection.products limit:4 %}
+        <li class="header-menu-product">
+          {% render 'card-product', card_product: product %}
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+
+
+  {% comment %} <div class="header-products">
+    <div class="product-card">
+      <img src="image1.jpg" alt="Product Image 1"> 
+      <h3 class="product-title">PRODUCT TITLE</h3>
+      <p class="product-price">$PRICE$</p>
+    </div>
+    <div class="product-card">
+      <img src="image2.jpg" alt="Product Image 2"> 
+      <h3 class="product-title">PRODUCT TITLE</h3>
+      <p class="product-price">$PRICE$</p>
+    </div>
+    <div class="product-card">
+      <img src="image3.jpg" alt="Product Image 3"> 
+      <h3 class="product-title">PRODUCT TITLE</h3>
+      <p class="product-price">$PRICE$</p>
+    </div>
+    <div class="product-card">
+      <img src="image4.jpg" alt="Product Image 4"> 
+      <h3 class="product-title">PRODUCT TITLE</h3>
+      <p class="product-price">$PRICE$</p>
+    </div>
+  </div> {% endcomment %}

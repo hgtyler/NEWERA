@@ -712,6 +712,25 @@
         },
         "button_link": {
           "label": "Button Link"
+        },
+        "image_overlay_opacity": {
+          "label": "Image overlay opacity"
+        },
+        "image_height": {
+          "label": "Banner height",
+          "options__1": {
+            "label": "Adapt to first image"
+          },
+          "options__2": {
+            "label": "Small"
+          },
+          "options__3": {
+            "label": "Medium"
+          },
+          "options__4": {
+            "label": "Large"
+          },
+          "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https:\/\/help.shopify.com\/manual\/shopify-admin\/productivity-tools\/image-editor#understanding-image-aspect-ratio)"
         }
       },
       "presets": {
@@ -1315,8 +1334,7 @@
           "name": "Heading",
           "settings": {
             "heading": {
-              "label": "Heading",
-              "default": "Image banner"
+              "label": "Heading"
             }
           }
         },
@@ -1324,8 +1342,7 @@
           "name": "Text",
           "settings": {
             "text": {
-              "label": "Description",
-              "default": "Give customers details about the banner image(s) or content on the template."
+              "label": "Description"
             },
             "text_style": {
               "options__1": {
@@ -1346,8 +1363,7 @@
           "settings": {
             "button_label_1": {
               "label": "First button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
+              "info": "Leave the label blank to hide the button."
             },
             "button_link_1": {
               "label": "First button link"
@@ -1357,8 +1373,7 @@
             },
             "button_label_2": {
               "label": "Second button label",
-              "info": "Leave the label blank to hide the button.",
-              "default": "Button label"
+              "info": "Leave the label blank to hide the button."
             },
             "button_link_2": {
               "label": "Second button link"

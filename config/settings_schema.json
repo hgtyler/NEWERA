@@ -1414,38 +1414,6 @@
     ]
   },
   {
-    "name": "t:sections.double-image-banner.name",
-    "settings": [
-      {
-        "type": "text",
-        "id": "banner_header_text",
-        "label": "t:sections.double-image-banner.settings.banner_header_text.label",
-        "default": "example text"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_1_url",
-        "label": "t:sections.double-image-banner.settings.image_1_url.label"
-      },
-      {
-        "type": "image_picker",
-        "id": "image_2_url",
-        "label": "t:sections.double-image-banner.settings.image_2_url.label"
-      },
-      {
-        "type": "text",
-        "id": "button_text",
-        "label": "t:sections.double-image-banner.settings.button_text.label",
-        "default": "Example Button"
-      },
-      {
-        "type": "url",
-        "id": "button_link",
-        "label": "t:sections.double-image-banner.settings.button_link.label"
-      }
-    ]
-  }, 
-  {
     "name": "t:settings_schema.cart.name",
     "settings": [
       {

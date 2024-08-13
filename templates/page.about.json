@@ -26,34 +26,6 @@
         "show_text_below": true
       }
     },
-    "rich_text_fxLXmk": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xAhLWL": {
-          "type": "heading",
-          "settings": {
-            "heading": "house of starling",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_xAhLWL"
-      ],
-      "disabled": true,
-      "custom_css": [
-        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 45px;}"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "left",
-        "color_scheme": "",
-        "full_width": true,
-        "burgundy_line": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_akf3bH": {
       "type": "custom-liquid",
       "settings": {
@@ -259,7 +231,6 @@
   "order": [
     "main",
     "image_banner_gc7MzJ",
-    "rich_text_fxLXmk",
     "custom_liquid_akf3bH",
     "rich_text_HQwp7e",
     "image_banner_37NdK4",

@@ -1,0 +1,47 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1723234989f4a80c30": {
+      "type": "apps",
+      "blocks": {
+        "stamped_product_reviews_ugc_full_page_QqagJg": {
+          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/full-page\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "product_image": true,
+            "take": 30,
+            "label_substitute": "",
+            "color_star": "#d50032",
+            "color_verified": "#4c1326",
+            "color_text": "#4c1326",
+            "color_link": "#4c1326",
+            "review_ids": "",
+            "product_ids": "",
+            "category": "",
+            "product_brand": "",
+            "tags": "",
+            "min_rating": "none",
+            "fill_empty": false,
+            "random": false,
+            "with_photos": false
+          }
+        }
+      },
+      "block_order": [
+        "stamped_product_reviews_ugc_full_page_QqagJg"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1723234989f4a80c30"
+  ]
+}

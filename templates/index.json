@@ -23,8 +23,6 @@
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
-        "image_1_content_position": "bottom-left",
-        "image_2_content_position": "bottom-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
@@ -55,71 +53,20 @@
         "content_alignment": "center",
         "color_scheme": "scheme-3",
         "full_width": true,
+        "burgundy_line": false,
         "padding_top": 40,
         "padding_bottom": 40
       }
     },
-    "image_banner_ggyVkk": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_tApmN7": {
-          "type": "heading",
-          "settings": {
-            "heading": "hello",
-            "heading_size": "h2"
-          }
-        },
-        "buttons_qaHtYc": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "shopify:\/\/products\/20-75ct-kunzite-collage-charm",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        },
-        "heading_2_6DYDB6": {
-          "type": "heading_2",
-          "settings": {
-            "heading_2": "test",
-            "heading_size_2": "h2"
-          }
-        },
-        "buttons_2_BJPrMb": {
-          "type": "buttons_2",
-          "settings": {
-            "button_label_3": "test",
-            "button_link_3": "shopify:\/\/products\/21-50ct-citrine-collage-charm",
-            "button_style_secondary_3": false,
-            "button_label_4": "",
-            "button_link_4": "",
-            "button_style_secondary_4": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_tApmN7",
-        "buttons_qaHtYc",
-        "heading_2_6DYDB6",
-        "buttons_2_BJPrMb"
-      ],
+    "double_image_banner_kpRaem": {
+      "type": "double-image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
-        "image_2": "shopify:\/\/shop_images\/aquamarine-bezel-set-ring-3_d5eefb1e-130a-4d93-a530-4faf7dd56116.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "bottom-right",
-        "image_1_content_position": "bottom-left",
-        "image_2_content_position": "bottom-right",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": false
+        "color_scheme": "scheme-1",
+        "banner_header_text": "",
+        "image_1_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-22_1_2a77dbca-8b04-47c3-b015-ac0770a42376.jpg",
+        "image_2_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-63.jpg",
+        "button_text": "Example Button",
+        "button_link": ""
       }
     },
     "featured_collection_wXJbwk": {
@@ -134,6 +81,7 @@
         "products_to_show": 10,
         "columns_desktop": 4,
         "full_width": false,
+        "burgundy_line": true,
         "show_view_all": true,
         "view_all_style": "link",
         "enable_desktop_slider": true,
@@ -157,8 +105,6 @@
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "image_1_content_position": "middle-center",
-        "image_2_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "",
@@ -194,6 +140,7 @@
         "color_scheme": "scheme-4",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
+        "burgundy_line": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -202,12 +149,10 @@
       "type": "image-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
-        "image_2": "shopify:\/\/shop_images\/MKSADLER-0186_1.jpg",
+        "image_2": "shopify:\/\/shop_images\/group1_aaba2922-686e-4281-a6ee-5549340002a0.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
-        "image_1_content_position": "bottom-left",
-        "image_2_content_position": "bottom-left",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "",
@@ -217,176 +162,10 @@
         "show_text_below": true
       }
     },
-    "multicolumn_ePKDjM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_MzEY9q": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_MYPxi9": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_46tRM9": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_MzEY9q",
-        "column_MYPxi9",
-        "column_46tRM9"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "Press",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_XXt8Wq": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_myUYAV": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons-red_1.png",
-            "title": "100% Recycled Materials",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_GCyxTP": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons-red_2.png",
-            "title": "Quality Guarantee",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_WYxAWb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons-red_3.png",
-            "title": "Handmade in California",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_myUYAV",
-        "column_GCyxTP",
-        "column_WYxAWb"
-      ],
-      "disabled": true,
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-3",
-        "columns_mobile": "1",
-        "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn_QUdXYP": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_PN4TAn": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons_1.png",
-            "title": "100% Recycled Materials",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_zpVVWN": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons_2.png",
-            "title": "Quality Guarantee",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_qWzDtw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Icons_3.png",
-            "title": "Handmade in Los Angeles, CA",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_PN4TAn",
-        "column_zpVVWN",
-        "column_qWzDtw"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "double-image-banner": {
       "type": "double-image-banner",
       "settings": {
+        "color_scheme": "",
         "banner_header_text": "new arrivals",
         "image_1_url": "shopify:\/\/shop_images\/kunzite-babs-charm-4.jpg",
         "image_2_url": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
@@ -404,6 +183,7 @@
             "title_color": "#4c1326",
             "title_size": 20,
             "alignment": "center",
+            "background_color": "",
             "html_area": ""
           }
         }
@@ -420,14 +200,11 @@
     "video_DxiFyk",
     "image_banner_ybm3Gt",
     "rich_text_6FhJgi",
-    "image_banner_ggyVkk",
+    "double_image_banner_kpRaem",
     "featured_collection_wXJbwk",
     "image_banner_fwMtA3",
     "image_with_text_qtyTbe",
     "image_banner_wamzta",
-    "multicolumn_ePKDjM",
-    "multicolumn_XXt8Wq",
-    "multicolumn_QUdXYP",
     "double-image-banner",
     "1714838859db24a20c"
   ]

@@ -1,6 +1,6 @@
 {{ 'section-double-image-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="double-image-banner">
+<div class="double-image-banner color-{{ section.settings.color_scheme }} gradient">
     <h2 class="banner-header">{{ section.settings.banner_header_text }}</h2>
     <div class="image-container">
         <img src="{{ section.settings.image_1_url | img_url: 'master' }}" alt="Image 1" class="banner-image">
@@ -15,7 +15,16 @@
 "name": "t:sections.double-image-banner.name",
   "tag": "section",
   "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
     "settings": [
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
       {
         "type": "text",
         "id": "banner_header_text",
@@ -43,6 +52,10 @@
         "id": "button_link",
         "label": "t:sections.double-image-banner.settings.button_link.label"
       }
-    ]
+    ],
+    "presets": [
+      {
+        "name": "t:sections.double-image-banner.presets.name" } 
+      ]
   }
   {% endschema %}
