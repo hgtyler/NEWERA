@@ -5,8 +5,6 @@
   {% render 'header-products',  %}
 {% endcomment %}
 
-
-
 <style>
     .header-menu-with-products {
       display: flex;
@@ -20,6 +18,7 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
+      justify-content: flex-end;
     }
     .header-products {
       flex: 4;
@@ -28,9 +27,7 @@
     }
     .header-menu-product {
       text-align: center;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
+      margin: 10px;
       width: 23%;
     }
   </style>
@@ -48,27 +45,3 @@
   </div>
   {% endif %}
   
-
-
-  {% comment %} <div class="header-products">
-    <div class="product-card">
-      <img src="image1.jpg" alt="Product Image 1"> 
-      <h3 class="product-title">PRODUCT TITLE</h3>
-      <p class="product-price">$PRICE$</p>
-    </div>
-    <div class="product-card">
-      <img src="image2.jpg" alt="Product Image 2"> 
-      <h3 class="product-title">PRODUCT TITLE</h3>
-      <p class="product-price">$PRICE$</p>
-    </div>
-    <div class="product-card">
-      <img src="image3.jpg" alt="Product Image 3"> 
-      <h3 class="product-title">PRODUCT TITLE</h3>
-      <p class="product-price">$PRICE$</p>
-    </div>
-    <div class="product-card">
-      <img src="image4.jpg" alt="Product Image 4"> 
-      <h3 class="product-title">PRODUCT TITLE</h3>
-      <p class="product-price">$PRICE$</p>
-    </div>
-  </div> {% endcomment %}

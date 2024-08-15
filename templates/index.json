@@ -19,7 +19,7 @@
     "image_banner_ybm3Gt": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_297261aa-fc26-4b9a-8621-063be423c03b.jpg",
+        "image": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-200.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -38,7 +38,7 @@
         "text_njTwRV": {
           "type": "text",
           "settings": {
-            "text": "<h3>Fine jewelry moved by light and color. <\/h3><h3>Made to be — ever yours.<\/h3>"
+            "text": "<h2>Fine jewelry moved by light and color. <\/h2><h2>Made to be — ever yours.<\/h2>"
           }
         }
       },
@@ -46,14 +46,14 @@
         "text_njTwRV"
       ],
       "custom_css": [
-        "h3 {font-family: \"BeirutDisplayWeb-Book\"; font-kerning: auto; line-height: 4px; font-stretch: expanded;}"
+        "h2 {font-family: \"BeirutDisplayWeb-Book\"; font-stretch: expanded; font-kerning: auto; line-height: 5px; font-size: 18px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "full_width": true,
-        "burgundy_line": false,
+        "burgundy_line": true,
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -61,7 +61,7 @@
     "double_image_banner_kpRaem": {
       "type": "double-image-banner",
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3",
         "banner_header_text": "",
         "image_1_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-22_1_2a77dbca-8b04-47c3-b015-ac0770a42376.jpg",
         "image_2_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-63.jpg",
@@ -72,8 +72,8 @@
     "featured_collection_wXJbwk": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured Collection",
-        "heading_size": "h2",
+        "title": "best sellers",
+        "heading_size": "h3",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -81,9 +81,9 @@
         "products_to_show": 10,
         "columns_desktop": 4,
         "full_width": false,
-        "burgundy_line": true,
         "show_view_all": true,
         "view_all_style": "link",
+        "shop_collection": true,
         "enable_desktop_slider": true,
         "color_scheme": "scheme-5",
         "image_ratio": "adapt",
@@ -93,7 +93,7 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -169,7 +169,7 @@
         "banner_header_text": "new arrivals",
         "image_1_url": "shopify:\/\/shop_images\/kunzite-babs-charm-4.jpg",
         "image_2_url": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
-        "button_text": "Example Button",
+        "button_text": "Shop Now",
         "button_link": "#"
       }
     },

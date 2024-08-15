@@ -1,0 +1,47 @@
+<style>
+  .product-media-gallery {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .thumbnail-scroll {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .gallery-view {
+    flex: 1;
+  }
+  
+  .gallery-view img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+
+<div class="product-media-gallery">
+  <div class="thumbnail-scroll">
+    <img src="https://cdn.shopify.com/s/files/1/0021/7474/6681/files/7.92ct-topaz-1.jpg?v=1723065200" class="thumbnail" onclick="openGalleryView('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/7.92ct-topaz-1.jpg?v=1723065200')" />
+    <img src="image2.jpg" class="thumbnail" onclick="openGalleryView('image2.jpg')" />
+    <img src="image3.jpg" class="thumbnail" onclick="openGalleryView('image3.jpg')" />
+    <!-- Add more thumbnails as needed -->
+  </div>
+  <div class="gallery-view">
+    <img id="galleryImage" src="image1.jpg" />
+  </div>
+</div>
+
+<script>
+  function openGalleryView(imageSrc) {
+    document.getElementById('galleryImage').src = imageSrc;
+  }
+</script>  

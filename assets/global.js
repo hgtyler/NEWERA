@@ -7,21 +7,21 @@ function getFocusableElements(container) {
 }
 
 class SectionId {
-    static# separator = '__';
+    static separator = '__';
 
     // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section id (e.g. 'template--22224696705326')
     static parseId(qualifiedSectionId) {
-        return qualifiedSectionId.split(SectionId.#separator)[0];
+        return qualifiedSectionId.split(SectionId.separator)[0];
     }
 
     // for a qualified section id (e.g. 'template--22224696705326__main'), return just the section name (e.g. 'main')
     static parseSectionName(qualifiedSectionId) {
-        return qualifiedSectionId.split(SectionId.#separator)[1];
+        return qualifiedSectionId.split(SectionId.separator)[1];
     }
 
     // for a section id (e.g. 'template--22224696705326') and a section name (e.g. 'recommended-products'), return a qualified section id (e.g. 'template--22224696705326__recommended-products')
     static getIdForSection(sectionId, sectionName) {
-        return `${sectionId}${SectionId.#separator}${sectionName}`;
+        return `${sectionId}${SectionId.separator}${sectionName}`;
     }
 }
 
@@ -33,9 +33,9 @@ class HTMLUpdateUtility {
      * The function currently uses a double buffer approach, but this should be replaced by a view transition once it is more widely supported https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API
      */
     static viewTransition(oldNode, newContent, preProcessCallbacks = [], postProcessCallbacks = []) {
-        preProcessCallbacks ? .forEach((callback) => callback(newContent));
+        preProcessCallbacks ? forEach((callback) => callback(newContent)) :
 
-        const newNodeWrapper = document.createElement('div');
+            const newNodeWrapper = document.createElement('div');
         HTMLUpdateUtility.setInnerHTML(newNodeWrapper, newContent.outerHTML);
         const newNode = newNodeWrapper.firstChild;
 
@@ -49,9 +49,9 @@ class HTMLUpdateUtility {
         oldNode.parentNode.insertBefore(newNode, oldNode);
         oldNode.style.display = 'none';
 
-        postProcessCallbacks ? .forEach((callback) => callback(newNode));
+        postProcessCallbacks ? forEach((callback) => callback(newNode)) :
 
-        setTimeout(() => oldNode.remove(), 500);
+            setTimeout(() => oldNode.remove(), 500);
     }
 
     // Sets inner HTML and reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
@@ -503,7 +503,7 @@ class MenuDrawer extends HTMLElement {
         removeTrapFocus(elementToFocus);
         this.closeAnimation(this.mainDetailsToggle);
 
-        if (event instanceof KeyboardEvent) elementToFocus ? .setAttribute('aria-expanded', false);
+        if (event instanceof KeyboardEvent) elementToFocus ? setAttribute('aria-expanded', false) :
     }
 
     onFocusOut() {
@@ -715,106 +715,121 @@ class DeferredMedia extends HTMLElement {
 
 customElements.define('deferred-media', DeferredMedia);
 
-class SliderComponent extends HTMLElement {
-    constructor() {
-        super();
-        this.slider = this.querySelector('[id^="Slider-"]');
-        this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-        this.enableSliderLooping = false;
-        this.currentPageElement = this.querySelector('.slider-counter--current');
-        this.pageTotalElement = this.querySelector('.slider-counter--total');
-        this.prevButton = this.querySelector('button[name="previous"]');
-        this.nextButton = this.querySelector('button[name="next"]');
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('global.js script loaded'); // Debugging log
 
-        if (!this.slider || !this.nextButton) return;
+    class SliderComponent extends HTMLElement {
+        constructor() {
+            super();
+            console.log('SliderComponent constructor called'); // Debugging log
+            this.slider = this.querySelector('[id^="Slider-"]');
+            this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+            this.enableSliderLooping = false;
+            this.currentPageElement = this.querySelector('.slider-counter--current');
+            this.pageTotalElement = this.querySelector('.slider-counter--total');
+            this.prevButton = this.querySelector('button[name="previous"]');
+            this.nextButton = this.querySelector('button[name="next"]');
 
-        this.initPages();
-        const resizeObserver = new ResizeObserver((entries) => this.initPages());
-        resizeObserver.observe(this.slider);
+            console.log('Slider:', this.slider); // Debugging log
+            console.log('Prev Button:', this.prevButton); // Debugging log
+            console.log('Next Button:', this.nextButton); // Debugging log
 
-        this.slider.addEventListener('scroll', this.update.bind(this));
-        this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-        this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
-    }
+            if (!this.slider || !this.nextButton) return;
 
-    initPages() {
-        this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
-        if (this.sliderItemsToShow.length < 2) return;
-        this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
-        this.slidesPerPage = Math.floor(
-            (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
-        );
-        this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-        this.update();
-    }
+            this.initPages();
+            const resizeObserver = new ResizeObserver((entries) => this.initPages());
+            resizeObserver.observe(this.slider);
 
-    resetPages() {
-        this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
-        this.initPages();
-    }
+            this.slider.addEventListener('scroll', this.update.bind(this));
+            this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
+            this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
 
-    update() {
-        // Temporarily prevents unneeded updates resulting from variant changes
-        // This should be refactored as part of https://github.com/Shopify/dawn/issues/2057
-        if (!this.slider || !this.nextButton) return;
-
-        const previousPage = this.currentPage;
-        this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
-
-        if (this.currentPageElement && this.pageTotalElement) {
-            this.currentPageElement.textContent = this.currentPage;
-            this.pageTotalElement.textContent = this.totalPages;
+            console.log('Event listeners added'); // Debugging log
         }
 
-        if (this.currentPage != previousPage) {
-            this.dispatchEvent(
-                new CustomEvent('slideChanged', {
-                    detail: {
-                        currentPage: this.currentPage,
-                        currentElement: this.sliderItemsToShow[this.currentPage - 1],
-                    },
-                })
+        initPages() {
+            this.sliderItemsToShow = Array.from(this.sliderItems).filter((element) => element.clientWidth > 0);
+            if (this.sliderItemsToShow.length < 2) return;
+            this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
+            this.slidesPerPage = Math.floor(
+                (this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset
             );
+            this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
+            this.update();
         }
 
-        if (this.enableSliderLooping) return;
-
-        if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
-            this.prevButton.setAttribute('disabled', 'disabled');
-        } else {
-            this.prevButton.removeAttribute('disabled');
+        resetPages() {
+            this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+            this.initPages();
         }
 
-        if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
-            this.nextButton.setAttribute('disabled', 'disabled');
-        } else {
-            this.nextButton.removeAttribute('disabled');
+        update() {
+            if (!this.slider || !this.nextButton) return;
+
+            const previousPage = this.currentPage;
+            this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
+
+            if (this.currentPageElement && this.pageTotalElement) {
+                this.currentPageElement.textContent = this.currentPage;
+                this.pageTotalElement.textContent = this.totalPages;
+            }
+
+            if (this.currentPage != previousPage) {
+                this.dispatchEvent(
+                    new CustomEvent('slideChanged', {
+                        detail: {
+                            currentPage: this.currentPage,
+                            currentElement: this.sliderItemsToShow[this.currentPage - 1],
+                        },
+                    })
+                );
+            }
+
+            if (this.enableSliderLooping) return;
+
+            if (this.isSlideVisible(this.sliderItemsToShow[0]) && this.slider.scrollLeft === 0) {
+                this.prevButton.setAttribute('disabled', 'disabled');
+            } else {
+                this.prevButton.removeAttribute('disabled');
+            }
+
+            if (this.isSlideVisible(this.sliderItemsToShow[this.sliderItemsToShow.length - 1])) {
+                this.nextButton.setAttribute('disabled', 'disabled');
+            } else {
+                this.nextButton.removeAttribute('disabled');
+            }
+        }
+
+        isSlideVisible(element, offset = 0) {
+            const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
+            return element.offsetLeft + element.clientWidth <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
+        }
+
+        onButtonClick(event) {
+            event.preventDefault();
+            console.log('Button clicked:', event.currentTarget.name); // Debugging log
+            const step = event.currentTarget.dataset.step || 1;
+            console.log('Step value:', step); // Debugging log
+            this.slideScrollPosition =
+                event.currentTarget.name === 'next' ?
+                this.slider.scrollLeft + step * this.sliderItemOffset :
+                this.slider.scrollLeft - step * this.sliderItemOffset;
+            console.log('Slide scroll position:', this.slideScrollPosition); // Debugging log
+            this.setSlidePosition(this.slideScrollPosition);
+        }
+
+        setSlidePosition(position) {
+            this.slider.scrollTo({
+                left: position,
+            });
+            console.log('Set slide position:', position); // Debugging log
         }
     }
 
-    isSlideVisible(element, offset = 0) {
-        const lastVisibleSlide = this.slider.clientWidth + this.slider.scrollLeft - offset;
-        return element.offsetLeft + element.clientWidth <= lastVisibleSlide && element.offsetLeft >= this.slider.scrollLeft;
-    }
+    customElements.define('slider-component', SliderComponent);
+    console.log('SliderComponent defined'); // Debugging log
+});
 
-    onButtonClick(event) {
-        event.preventDefault();
-        const step = event.currentTarget.dataset.step || 1;
-        this.slideScrollPosition =
-            event.currentTarget.name === 'next' ?
-            this.slider.scrollLeft + step * this.sliderItemOffset :
-            this.slider.scrollLeft - step * this.sliderItemOffset;
-        this.setSlidePosition(this.slideScrollPosition);
-    }
-
-    setSlidePosition(position) {
-        this.slider.scrollTo({
-            left: position,
-        });
-    }
-}
-
-customElements.define('slider-component', SliderComponent);
 
 class SlideshowComponent extends SliderComponent {
     constructor() {
