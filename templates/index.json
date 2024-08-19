@@ -46,7 +46,7 @@
         "text_njTwRV"
       ],
       "custom_css": [
-        "h2 {font-family: \"BeirutDisplayWeb-Book\"; font-stretch: expanded; font-kerning: auto; line-height: 5px; font-size: 18px;}"
+        ""
       ],
       "settings": {
         "desktop_content_position": "center",

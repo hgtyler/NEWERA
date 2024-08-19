@@ -6,7 +6,6 @@ if (!customElements.get('media-gallery')) {
             timeout = setTimeout(() => func.apply(this, args), wait);
         };
     }
-
     customElements.define(
         'media-gallery',
         class MediaGallery extends HTMLElement {

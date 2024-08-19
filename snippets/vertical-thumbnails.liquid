@@ -1,0 +1,87 @@
+<style>
+    .vertical-product-gallery {
+        display: flex;
+        align-items: center;
+        max-width: 80%;
+        margin: auto;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .vertical-thumbnail-slider {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .vertical-thumbnail-slider img {
+        width: 80px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    .vertical-thumbnail img {
+        width: 80px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    
+    .vertical-thumbnail-slider img.active,
+    .vertical-thumbnail-slider img:hover {
+        border-color: #d4af37;
+    }
+    
+    .vertical-gallery-viewer {
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .vertical-gallery-viewer img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+</style>
+
+<media-gallery id="MediaGallery-{{ section.id }}" role="region" aria-label="{{ 'products.product.media.gallery_viewer' | t }}">
+    <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+    <slider-component id="GalleryViewer-{{ section.id }}" class="vertical-product-gallery">
+    <ul id="Slider-Gallery-{{ section.id }}" class="vertical-thumbnail-slider list-unstyled">
+        <li id="Slide-{{ section.id }}-{{ featured_media.id }}" class="vertical-thumbnail-img" data-media-id="{{ section.id }}-{{ featured_media.id }}">
+            {%- assign media_position = 1 -%}
+          {% render 'product-thumbnail',
+            media: featured_media,
+            media_count: media_count,
+            position: media_position,
+            desktop_layout: section.settings.gallery_layout,
+            mobile_layout: section.settings.mobile_thumbnails,
+            loop: section.settings.enable_video_looping,
+            modal_id: section.id,
+            xr_button: true,
+            media_width: media_width,
+            media_fit: section.settings.media_fit,
+            constrain_to_viewport: section.settings.constrain_to_viewport,
+            lazy_load: false %}
+          </li>
+    </ul>
+    <div class="vertical-gallery-viewer">
+        <img src="image1.jpg" alt="Main Image" id="mainImage">
+    </div>
+</slider-component>
+</media-gallery>
+
+<script>
+    function changeImage(imageSrc) {
+        document.getElementById('mainImage').src = imageSrc;
+    }
+</script>

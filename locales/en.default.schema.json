@@ -2449,6 +2449,9 @@
           },
           "options__4": {
             "label": "Thumbnail carousel"
+          },
+          "options__5": {
+            "label": "Left vertical thumbnails"
           }
         },
         "constrain_to_viewport": {
