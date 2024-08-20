@@ -1,8 +1,8 @@
-slider-component {
+/* slider-component {
     --desktop-margin-left-first-item: max( 5rem, calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2));
     position: relative;
     display: block;
-}
+} */
 
 slider-component.slider-component-full-width {
     --desktop-margin-left-first-item: 1.5rem;

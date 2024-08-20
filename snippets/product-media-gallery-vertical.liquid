@@ -1,0 +1,142 @@
+{% comment %}
+  Renders a vertical thumbnail product media gallery. Should be used with 'media-gallery.js'
+  Also see 'product-media-modal'
+
+  Accepts:
+  - product: {Object} Product liquid object
+  - variant_images: {Array} Product images associated with a variant
+  - limit: {Number} (optional) When passed, limits the number of media items to render
+
+  Usage:
+  {% render 'product-media-gallery-vertical' %}
+{% endcomment %}
+<style>
+    .product__media-vertical-thumbnails {
+        display: flex;
+        flex-direction: row;
+        /* Thumbnail list and main image side by side */
+    }
+    
+    .product__media-thumbnails-vertical {
+        width: 20%;
+        /* Adjust the width of the thumbnail list */
+        margin-right: 2%;
+        /* Space between thumbnails and main image */
+    }
+    
+    .product__media-gallery-viewer {
+        width: 80%;
+        /* Adjust the width of the main image area */
+    }
+    
+    .thumbnail-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .thumbnail-list__item {
+        width: 100%;
+        padding-bottom: 10%;
+        position: relative;
+    }
+    
+    .thumbnail-list__item button.thumbnail {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+    
+    .thumbnail-list__item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .product__media-gallery-viewer .product__media-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        /* or cover, depending on your preference */
+    }
+    
+    .product__media-item {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+</style>
+
+{%- liquid
+    if section.settings.hide_variants and variant_images.size == product.media.size
+      assign single_media_visible = true
+    endif
+  
+    if limit == 1
+      assign single_media_visible = true
+    endif
+  
+    assign media_count = product.media.size
+    if section.settings.hide_variants and media_count > 1 and variant_images.size > 0
+      assign media_count = media_count | minus: variant_images.size | plus: 1
+    endif
+  
+    if media_count == 1 or single_media_visible
+      assign single_media_visible_mobile = true
+    endif
+  
+    if media_count == 0 or single_media_visible_mobile or section.settings.mobile_thumbnails == 'show' or section.settings.mobile_thumbnails == 'columns' and media_count < 3
+      assign hide_mobile_slider = true
+    endif
+  
+    if section.settings.media_size == 'large'
+      assign media_width = 0.65
+    elsif section.settings.media_size == 'medium'
+      assign media_width = 0.55
+    elsif section.settings.media_size == 'small'
+      assign media_width = 0.45
+    endif
+  -%}
+  
+  {%- liquid
+    assign media_count = product.media.size
+    assign media_width = 0.55 
+  -%}
+  
+  <media-gallery
+    id="MediaGallery-{{ section.id }}"
+    class="product__media-vertical-thumbnails" 
+    data-desktop-layout="vertical-thumbnails"
+    role="region"
+    aria-label="{{ 'products.product.media.gallery_viewer' | t }}"
+  >
+    <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+    <div class="product__media-thumbnails-vertical">
+      <ul id="Vertical-Thumbnails-{{ section.id }}" class="thumbnail-list list-unstyled">
+        {%- for media in product.media -%}
+          <li id="Slide-{{ section.id }}-{{ media.id }}" class="thumbnail-list__item">
+            <button class="thumbnail global-media-settings" aria-controls="GalleryViewer-{{ section.id }}">
+              {{ media.preview_image | image_url: width: 104, height: 104 | image_tag }}
+            </button>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+<div class="product__media-gallery-viewer">
+  <slider-component id="GalleryViewer-{{ section.id }}">
+    <ul id="Slider-Gallery-{{ section.id }}" class="product__media-list slider">
+      {%- for media in product.media -%}
+        <li id="Slide-{{ section.id }}-{{ media.id }}" class="product__media-item">
+          <img src="{{ media | img_url: 'master' }}" alt="{{ media.alt | escape }}" />
+        </li>
+      {%- endfor -%}
+    </ul>
+  </slider-component>
+</div>
+  </media-gallery>
+  

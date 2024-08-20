@@ -41,6 +41,7 @@
     font-size: 5rem;
     font-family: 'AubergeScriptBasicOne';
     text-transform: lowercase;
+    font-weight: normal;
 }
 
 .collection-hero__title+.collection-hero__description {

@@ -46,7 +46,7 @@
         "text_njTwRV"
       ],
       "custom_css": [
-        ""
+
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -136,8 +136,8 @@
         "desktop_content_position": "middle",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
-        "section_color_scheme": "scheme-4",
-        "color_scheme": "scheme-4",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-5",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "burgundy_line": true,
