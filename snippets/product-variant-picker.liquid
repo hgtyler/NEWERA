@@ -16,19 +16,17 @@
           endif
         endif
       -%}
-      {%- if picker_type == 'swatch' and option.name == "Stone" or option.name == "STONE" -%}
+      {%- if picker_type == 'swatch' and option.name contains "Stone" -%}
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
-            <span data-selected-value>
-              {{- option.selected_value -}}
-            </span>
+            <span data-selected-value>{{- option.selected_value -}}</span>
           </legend>
           {% for value in option.values %}
             {% if value.variant.metafields.custom.stone_swatch.value %}
             <input
               type="radio"
-              id="Option-{{ option.position }}-{{ forloop.index0 }}"
+              id="Option-{{ input_id }}-{{ forloop.index0 }}"
               name="options[{{ option.name | escape }}]"
               value="{{ value | escape }}"
               class="swatch-input__input"
@@ -43,11 +41,10 @@
               <img src="{{ value.variant.metafields.custom.stone_swatch.value | prepend: 'https://starlingjewelry.com/cdn/shop/' }}" alt="{{ value }}" class="swatch-input__image">
             </label>
             {% else %}
-            {% render 'product-variant-options' product: product, option: option, optionIndex: forloop.index0 %}
+            {% render 'product-variant-options', product: product, option: option, optionIndex: forloop.index0 %}
           {% endif %}
           {% endfor %}
         </fieldset>
-
       {%- else -%}
       <div class="product-form__input product-form__input--dropdown">
         <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
@@ -59,6 +56,11 @@
             class="select__select"
             name="options[{{ option.name | escape }}]"
             form="{{ product_form_id }}"
+            {% if product.variants.size > 50 %} data-async {% endif %}
+            {% if product.variants.size > 100 %}
+              data-async="{{ 'true' }}"
+              data-variants-url="{{ routes.products_variant_json_url }}"
+            {% endif %}
           >
             {% for value in option.values %}
               <option
@@ -95,6 +97,11 @@
         }
       }
     </script>
+    {% if product.variants.size > 100 %}
+      <script>
+        // Implement async loading of variants here
+        fetchVariantsAsync('{{ routes.products_variant_json_url }}');
+      </script>
+    {% endif %}
   </variant-selects>
 {%- endunless -%}
-

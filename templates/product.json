@@ -5,6 +5,7 @@
       "blocks": {
         "custom_liquid_pyT8wz": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "{% render 'breadcrumb' %}"
           }
@@ -29,8 +30,9 @@
         },
         "text_marVHj": {
           "type": "text",
+          "disabled": true,
           "settings": {
-            "text": "Estimated Ship Date",
+            "text": "Estimated to ship{{ product.metafields.custom.shipping_estimate.value }}",
             "text_style": "body"
           }
         },
@@ -95,7 +97,7 @@
         "collapsible_tab_z3c34T"
       ],
       "settings": {
-        "enable_sticky_info": false,
+        "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
@@ -130,16 +132,25 @@
         "collapsible_row_84xEax": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Shipping & Returns",
+            "heading": "Shipping",
             "icon": "none",
             "row_content": "",
             "page": "shipping-policy"
           }
         },
+        "collapsible_row_cx6nHB": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Returns",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
         "collapsible_row_p7zgea": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Materials & Sourcing",
+            "heading": "Materials",
             "icon": "none",
             "row_content": "",
             "page": "materials"
@@ -148,30 +159,21 @@
         "collapsible_row_trF4DW": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Our Packaging",
+            "heading": "Packaging",
             "icon": "none",
             "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_afWT4R": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "About Starling",
-            "icon": "none",
-            "row_content": "<p>We are moved by the light and color of gemstones. Inspired by every color-kissed gemstone that is as individual as the person who chooses to twine their life with that of the stone. And in awe of how gemstones flaunt their beauty in naturally occurring inclusions that catch light and color to singularly striking results.<\/p><p><a href=\"\/pages\/about-us\" title=\"About Us\">Learn More<\/a><\/p><p>L<\/p>",
             "page": ""
           }
         }
       },
       "block_order": [
         "collapsible_row_84xEax",
+        "collapsible_row_cx6nHB",
         "collapsible_row_p7zgea",
-        "collapsible_row_trF4DW",
-        "collapsible_row_afWT4R"
+        "collapsible_row_trF4DW"
       ],
       "settings": {
-        "caption": "Starling brings the past, present and future together in a manner of making that is naturally circular with precious materials that are endlessly recyclable. Crafted in California, Starling Jewelry contributes to a responsible future that honors our materials, our community of makers and fine jewelry’s connective force.",
+        "caption": "Starling brings the past, present and future together in a manner of making that is naturally circular with precious materials that are endlessly recyclable. Crafted in California, Starling Jewelry contributes to a responsible future that honors our materials, our community of makers and fine jewelry’s connective force.  Learn More",
         "heading": "house of starling",
         "heading_size": "h1",
         "heading_alignment": "left",
@@ -189,7 +191,7 @@
       "type": "apps",
       "blocks": {
         "stamped_product_reviews_ugc_main_widget_47VYV4": {
-          "type": "shopify:\/\/apps\/stamped-product-reviews-ugc\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
+          "type": "shopify:\/\/apps\/stamped-reviews\/blocks\/main-widget\/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
             "animation": true,
             "tags_exclude": "",
@@ -206,6 +208,13 @@
       ],
       "settings": {
         "include_margins": true
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently-viewed-products",
+      "settings": {
+        "max_products": 4,
+        "section_title": "Recently Viewed"
       }
     },
     "related-products": {
@@ -225,13 +234,6 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "recently-viewed-products": {
-      "type": "recently-viewed-products",
-      "settings": {
-        "max_products": 4,
-        "section_title": "Recently Viewed"
-      }
     }
   },
   "order": [
@@ -239,7 +241,7 @@
     "video_rpcBdD",
     "collapsible_content_6qE6Hw",
     "1714842290b890cc1d",
-    "related-products",
-    "recently-viewed-products"
+    "recently-viewed-products",
+    "related-products"
   ]
 }

@@ -3,6 +3,7 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   padding-top: 1rem;
+  font-family: 'ABCWhyte-Book';
 }
 
 .active-facets-mobile {

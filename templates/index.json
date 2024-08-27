@@ -2,13 +2,12 @@
   "sections": {
     "video_DxiFyk": {
       "type": "video",
-      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
         "video": "shopify:\/\/files\/videos\/BANNER.mp4",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_url": "",
         "description": "",
         "full_width": true,
         "color_scheme": "",
@@ -18,8 +17,9 @@
     },
     "image_banner_ybm3Gt": {
       "type": "image-banner",
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-200.jpg",
+        "image": "shopify:\/\/shop_images\/testbanner.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -38,7 +38,7 @@
         "text_njTwRV": {
           "type": "text",
           "settings": {
-            "text": "<h2>Fine jewelry moved by light and color. <\/h2><h2>Made to be — ever yours.<\/h2>"
+            "text": "<h2>fine jewelry moved by light and color<\/h2><h2>made to be — ever yours<\/h2>"
           }
         }
       },
@@ -46,7 +46,7 @@
         "text_njTwRV"
       ],
       "custom_css": [
-
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 35px;}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -80,7 +80,7 @@
         "collection": "best-sellers",
         "products_to_show": 10,
         "columns_desktop": 4,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": true,
         "view_all_style": "link",
         "shop_collection": true,

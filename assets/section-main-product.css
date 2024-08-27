@@ -222,6 +222,8 @@ product-info {
 
 .product__text {
     margin-bottom: 0;
+    font-family: 'ABCWhyte-Book';
+    font-size: 1.4rem;
 }
 
 a.product__text {
@@ -285,6 +287,9 @@ a.product__text {
     }
     .product__info-container>*:first-child {
         margin-top: 0;
+    }
+    .product__title {
+        font-size: 1.7rem;
     }
 }
 
@@ -1439,6 +1444,7 @@ a.product__text {
     /* Space between thumbnails and main image */
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .gallery-viewer {

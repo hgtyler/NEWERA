@@ -2590,6 +2590,9 @@
           "label": "Heading",
           "default": "Multicolumn"
         },
+        "title_center": {
+          "label": "Center Title"
+        },
         "image_width": {
           "label": "Image width",
           "options__1": {

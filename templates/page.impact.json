@@ -2,9 +2,25 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 0,
         "padding_bottom": 0
+      }
+    },
+    "image_banner_DkDncU": {
+      "type": "image-banner",
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "rich_text_FCdTLa": {
@@ -27,31 +43,23 @@
         "color_scheme": "",
         "full_width": true,
         "burgundy_line": false,
-        "padding_top": 0,
-        "padding_bottom": 52
+        "padding_top": 28,
+        "padding_bottom": 32
       }
     },
-    "image_with_text_DX9Ldg": {
+    "image_with_text_Tc4XUf": {
       "type": "image-with-text",
       "blocks": {
-        "heading_KdjxNM": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Materials",
-            "heading_size": "h2"
-          }
-        },
-        "text_jdqhmQ": {
+        "text_rY99VB": {
           "type": "text",
           "settings": {
-            "text": "<p>The future is circular! Starling Jewelry is one of the only companies to have SCS Certification for post-consumer recycled materials and stones! Why is this so important? Because greenwashing is rampant and you shouldn’t have to just take a jewelry company’s word that they use “sustainable” “recycled” “reclaimed” materials. They should be able to provide the receipts. The SCS certification is 3rd party verification of our claims and we are very proud of that. All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. <\/p><p> <\/p>",
+            "text": "<p>In the heart of Downtown Los Angeles, Starling is a beacon of sustainability in the world of fine jewelry design. Guided by the principles of ethical craftsmanship and environmental responsibility, we stand out by embracing a commitment to sustainability that can be found in every facet of our production and design process.<\/p>",
             "text_style": "body"
           }
         }
       },
       "block_order": [
-        "heading_KdjxNM",
-        "text_jdqhmQ"
+        "text_rY99VB"
       ],
       "settings": {
         "height": "adapt",
@@ -69,58 +77,18 @@
         "padding_bottom": 36
       }
     },
-    "image_with_text_MAEUzN": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_HJewpG": {
-          "type": "heading",
-          "settings": {
-            "heading": "Our Materials",
-            "heading_size": "h2"
-          }
-        },
-        "text_NwR8iR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Mine-to-market gems are marked in the gemstone description. This means we have purchased these stones directly from the mine and have full traceability on the exact origins. <\/p><p>If mine-to-market or post-consumer recycled stones are important to you, please let us know so we can help guide your journey to the perfect gemstone. <\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "heading_HJewpG",
-        "text_NwR8iR"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/StarlingHeirloomRevival_SCS-RC-07108_BW.jpg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "burgundy_line": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_reMJmT": {
+    "rich_text_mr6UkT": {
       "type": "rich-text",
       "blocks": {
-        "heading_aFEW9M": {
-          "type": "heading",
+        "text_iy3tRM": {
+          "type": "text",
           "settings": {
-            "heading": "<em>Organizations close to our heart that we donate to include: <\/em>",
-            "heading_size": "h2"
+            "text": "<p>Here at Starling, sustainability isn’t just a buzzword; it’s a guiding philosophy that influences every piece we create. A fundamental pillar of Starling's approach is our use of post-consumer recycled 14k gold. All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. By recycling customer materials and incorporating them into new designs, we not only preserve precious resources but also reduce the environmental footprint associated with traditional mining. This commitment extends to our refining and Heirloom Revival process, which demands far less energy than extracting new materials, thereby minimizing pollution and habitat destruction. <\/p>"
           }
         }
       },
       "block_order": [
-        "heading_aFEW9M"
+        "text_iy3tRM"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -129,111 +97,72 @@
         "full_width": true,
         "burgundy_line": false,
         "padding_top": 40,
-        "padding_bottom": 0
+        "padding_bottom": 52
       }
     },
-    "multicolumn_Qfhbhk": {
-      "type": "multicolumn",
+    "double_image_banner_rKDRfa": {
+      "type": "double-image-banner",
+      "settings": {
+        "color_scheme": "",
+        "banner_header_text": "",
+        "image_1_url": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-4.jpg",
+        "image_2_url": "shopify:\/\/shop_images\/kunzite-babs-charm-4.jpg",
+        "button_text": "",
+        "button_link": ""
+      }
+    },
+    "rich_text_ceVPXf": {
+      "type": "rich-text",
       "blocks": {
-        "column_WQ97h9": {
-          "type": "column",
+        "text_7yKw9J": {
+          "type": "text",
           "settings": {
-            "image": "shopify:\/\/shop_images\/CHLA_Butterfly_Logo_No_Tagline.png",
-            "title": "Children's Hospital Los Angeles",
-            "text": "<p>100% of proceeds from the Rose Quartz Beaded Bracelet Set<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_UVkQyQ": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/index.png",
-            "title": "St. Luke Foundation For Haiti",
-            "text": "<p>15% of proceeds from the Conscious Commerce Sundial Charm<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_3VHDPf": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/download.png",
-            "title": "Family Promise Foundation",
-            "text": "<p>15% of proceeds from the Malachite & Gold Bead Bracelet<\/p>",
-            "link_label": "",
-            "link": ""
+            "text": "<p>We prioritize ethical practices across our supply chain. From responsibly sourced materials with mine traceability, to supporting local businesses in LA’s renowned Jewelry District, we ensure that each piece not only tells a story but also upholds the highest standards of ethical production. This dedication to quality craftsmanship and sustainable practices not only enhances the longevity and uniqueness of each creation, but also aligns with the values of mindful consumption and customer satisfaction.<\/p>"
           }
         }
       },
       "block_order": [
-        "column_WQ97h9",
-        "column_UVkQyQ",
-        "column_3VHDPf"
-      ],
-      "disabled": true,
-      "custom_css": [
-        ".title .inline-richtext .h2 {text-align: center;}",
-        ".multicolumn__title {text-align: center;}"
+        "text_7yKw9J"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "half",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "full_width": true,
+        "burgundy_line": false,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
-    "multirow_Mf4nXm": {
+    "multirow_BjmKbR": {
       "type": "multirow",
       "blocks": {
-        "row_mX74pN": {
+        "row_zCQbFT": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/melissa_mccarthy_starling_jewelry.jpg",
+            "image": "shopify:\/\/shop_images\/JUNE-BESPOKE_aa3c1d17-7761-41e4-a941-31b03a1de917.jpg",
             "caption": "",
-            "heading": "Children's Hospital Los Angeles",
-            "text": "<p>100% of proceeds from the Melissa McCarthy Rose Quartz Beaded Bracelet Set<\/p>",
+            "heading": "",
+            "text": "<p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. Mine-to-market gems are marked in the gemstone description. This means we have purchased these stones directly from the mine and have full traceability on the exact origins. If mine-to-market or post-consumer recycled stones are important to you, please let us know so we can help guide your journey to the perfect gemstone. <\/p>",
             "button_label": "",
             "button_link": ""
           }
         },
-        "row_fy9dEx": {
+        "row_CKgmwp": {
           "type": "row",
           "settings": {
-            "image": "shopify:\/\/shop_images\/sundial_charm_olivia_wilde_jewelry_sustainable_babs_8b0db6ba-453b-4a28-9993-b3fe86dc7ddf.jpg",
+            "image": "shopify:\/\/shop_images\/collapsible-hos.png",
             "caption": "",
-            "heading": "St. Luke Foundation For Haiti",
-            "text": "<p>15% of proceeds from the Conscious Commerce Sundial Charm collaboration with Olivia Wilde & Babs Burchfield of Concious Commerce<\/p>",
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/products\/sundial-charm"
-          }
-        },
-        "row_taXUk4": {
-          "type": "row",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/malachite_bead_bracelet_starling.jpg",
-            "caption": "",
-            "heading": "Family Promise Foundation",
-            "text": "<p>15% of proceeds from the Malachite & Gold Bead Bracelet<\/p>",
+            "heading": "",
+            "text": "<p>As a small business, Starling embodies the spirit of innovation and responsibility in the jewelry industry. By offering bespoke, made-to-order pieces that are crafted to last generations, we empower customers to create their own narratives through heirloom-quality jewelry while continuing to minimize waste and maximize the efficient use of resources. Choosing Starling isn’t just about acquiring jewelry; it’s about investing in a future where beauty, craftsmanship, and sustainability intertwine seamlessly. <\/p>",
             "button_label": "",
             "button_link": ""
           }
         }
       },
       "block_order": [
-        "row_mX74pN",
-        "row_fy9dEx",
-        "row_taXUk4"
+        "row_zCQbFT",
+        "row_CKgmwp"
       ],
       "settings": {
         "image_height": "medium",
@@ -242,7 +171,7 @@
         "text_style": "body",
         "button_style": "secondary",
         "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "image_layout": "alternate-left",
         "section_color_scheme": "",
         "row_color_scheme": "",
@@ -250,15 +179,95 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_76hJ6X": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_k6r3Ch": {
+          "type": "heading",
+          "settings": {
+            "heading": "Organizations close to our heart",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_k6r3Ch"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "burgundy_line": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "multicolumn_DWW7Wf": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_fLKkJp": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_36DPik": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_pbfC46": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_fLKkJp",
+        "column_36DPik",
+        "column_pbfC46"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
+    "image_banner_DkDncU",
     "rich_text_FCdTLa",
-    "image_with_text_DX9Ldg",
-    "image_with_text_MAEUzN",
-    "rich_text_reMJmT",
-    "multicolumn_Qfhbhk",
-    "multirow_Mf4nXm"
+    "image_with_text_Tc4XUf",
+    "rich_text_mr6UkT",
+    "double_image_banner_rKDRfa",
+    "rich_text_ceVPXf",
+    "multirow_BjmKbR",
+    "rich_text_76hJ6X",
+    "multicolumn_DWW7Wf"
   ]
 }

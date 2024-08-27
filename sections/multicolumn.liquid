@@ -31,7 +31,7 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+      <div class="title-wrapper-with-link {% if section.settings.title_center %} center {% endif %} title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
         <h2 class="title inline-richtext {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
@@ -232,6 +232,12 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+    "type": "checkbox",
+    "id": "title_center",
+    "default": false,
+    "label": "t:sections.multicolumn.settings.title_center.label"
+      },    
+      {
       "type": "select",
       "id": "image_width",
       "options": [

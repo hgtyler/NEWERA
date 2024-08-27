@@ -1135,7 +1135,8 @@ class VariantSelects extends HTMLElement {
             this.updateSelectionMetadata(event);
             onVariantChange(event);
 
-            publish(PUB_SUB_EVENTS.optionValueSelectionChange, {
+            publish(
+                PUB_SUB_EVENTS.optionValueSelectionChange, {
                 data: {
                     event,
                     target,
@@ -1206,7 +1207,7 @@ class ProductRecommendations extends HTMLElement {
     }
 
     initializeRecommendations(productId) {
-        this.observer ? .unobserve(this);
+        this.observer?.unobserve(this);
         this.observer = new IntersectionObserver(
             (entries, observer) => {
                 if (!entries[0].isIntersecting) return;
@@ -1225,7 +1226,7 @@ class ProductRecommendations extends HTMLElement {
                 html.innerHTML = text;
                 const recommendations = html.querySelector('product-recommendations');
 
-                if (recommendations ? .innerHTML.trim().length) {
+                if (recommendations?.innerHTML.trim().length) {
                     this.innerHTML = recommendations.innerHTML;
                 }
 
@@ -1257,8 +1258,8 @@ class AccountIcon extends HTMLElement {
     }
 
     handleStorefrontSignInCompleted(event) {
-        if (event ? .detail ? .avatar) {
-            this.icon ? .replaceWith(event.detail.avatar.cloneNode());
+        if (event?.detail?.avatar) {
+            this.icon?.replaceWith(event.detail.avatar.cloneNode());
         }
     }
 }

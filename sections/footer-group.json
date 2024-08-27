@@ -68,12 +68,20 @@
             "heading": "Help:",
             "menu": "help"
           }
+        },
+        "text_bYBBdX": {
+          "type": "text",
+          "settings": {
+            "heading": "Connect:",
+            "subtext": "<p>hello@starlingjewelry.com<\/p>"
+          }
         }
       },
       "block_order": [
         "link_list_hnrzV9",
         "link_list_tL9jHX",
-        "link_list_gwEkdq"
+        "link_list_gwEkdq",
+        "text_bYBBdX"
       ],
       "settings": {
         "color_scheme": "scheme-1",

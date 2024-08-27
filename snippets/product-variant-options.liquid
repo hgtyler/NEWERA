@@ -27,8 +27,9 @@
   {%- endcapture -%}
 
   {%- capture input_dataset -%}
-    data-product-url="{{ value.product_url }}"
-    data-option-value-id="{{ value.id }}"
+  data-product-url="{{ option_value.product_url }}"
+  data-variant-id="{{ option_value.variant.id }}"
+  data-option-value-id="{{ option_value.id }}"
   {%- endcapture -%}
 
   {%- capture label_unavailable -%}
@@ -37,26 +38,27 @@
     </span>
   {%- endcapture -%}
 
+  {%- capture help_text -%}
+    <span class="visually-hidden">{{ value | escape }}</span>
+    {{ label_unavailable }}
+  {%- endcapture -%}
 
-    {%- capture help_text -%}
-      <span class="visually-hidden">{{ value | escape }}</span>
-      {{ label_unavailable }}
-    {%- endcapture -%}
-    {%
-      render 'swatch-input',
-      id: input_id,
-      name: input_name,
-      value: value | escape,
-      swatch: value.swatch,
-      swatch_style: block.settings.swatch_style,
-      product_form_id: product_form_id,
-      checked: value.selected,
-      visually_disabled: option_disabled,
-      shape: block.settings.swatch_shape,
-      help_text: help_text,
-      additional_props: input_dataset,
-      swatch_tag: swatch_tag
-    %} 
+  {%
+    render 'swatch-input',
+    id: input_id,
+    name: input_name,
+    value: value | escape,
+    swatch: value.swatch,
+    swatch_style: block.settings.swatch_style,
+    product_form_id: product_form_id,
+    checked: value.selected,
+    visually_disabled: option_disabled,
+    shape: block.settings.swatch_shape,
+    help_text: help_text,
+    additional_props: input_dataset,
+    swatch_tag: swatch_tag
+  %}
+
   {%- if picker_type == 'button' -%}
     <input
       type="radio"
@@ -76,6 +78,7 @@
       {{ value -}}
       {{ label_unavailable }}
     </label>
+
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       id="{{ input_id }}"
@@ -86,7 +89,7 @@
       {% if stone_swatch and picker_type == 'swatch_dropdown' %}
         data-option-swatch-value="{{ stone_swatch }}"
         {% if swatch_focal_point %}
-          data-option-swatch-focal-point="{{ swatch_focal_point }}
+          data-option-swatch-focal-point="{{ swatch_focal_point }}"
         {% endif %}
       {% endif %}
       {{ input_dataset }}
@@ -98,4 +101,12 @@
       {%- endif %}
     </option>
   {%- endif -%}
+
+  {% if product.variants.size > 100 %}
+    <script>
+      // Optionally implement async variant loading here
+      // fetchVariantsAsync function can be used if needed
+    </script>
+  {% endif %}
+  
 {%- endfor -%}

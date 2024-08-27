@@ -31,12 +31,26 @@
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
     }
 
+    .product__title h4 {
+        font-size: 2rem;
+        font-family: 'ABCWhyte-Book';
+    }
+
+    .price__regular {
+      font-size 2rem;
+    }
+
     @media screen and (min-width: 750px) {
       .section-{{ section.id }}-padding {
         margin-top: 55px;
         padding-top: 150px;
         padding-bottom: {{ section.settings.padding_bottom }}px;
       }
+
+      .product__title h4 {
+        font-size: 1.5rem;
+        font-family: 'ABCWhyte-Book';
+    }
     }
 
   {%- endstyle -%}
@@ -105,17 +119,16 @@
                       {{ product.title | escape }}
                     </h2>
                   </a>
-                
-              {%- when 'price' -%}
-                <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price',
-                    product: product,
-                    use_variant: true,
-                    show_badges: true,
-                    price_class: 'price--large'
-                  -%}
+                  {%- when 'price' -%}
+                  <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
+                    {%- render 'price',
+                      product: product,
+                      use_variant: true,
+                      show_badges: true,
+                      price_class: 'price--large'
+                    -%}
+                  </div>
                 </div>
-              </div>
                 {%- if product.quantity_price_breaks_configured? -%}
                   <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
