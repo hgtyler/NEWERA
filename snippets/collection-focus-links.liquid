@@ -1,0 +1,65 @@
+<style>
+    .focus-links-container {
+        margin-left: .5rem;
+    }
+
+    @media screen and (max-width: 750;) {
+        .focus-links-container {
+            display: none;
+        }
+    }
+
+    .focus-links {
+        text-transform: uppercase;
+        font-family: 'ABCWhyte-Book';
+        display: inline-flex;
+        font-size: 12px;
+    }
+
+    .focus-link {
+        padding-right: 1.5px;
+        display: inline-flex;
+    }
+
+    .focus-link a {
+        padding-right: 1.5px;
+        text-decoration: none;
+    }
+
+    .focus-link:hover {
+        text-decoration: underline;
+    }
+
+    .focus-divider {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
+</style>
+
+<div class="focus-links-container">
+    <ul class="focus-links full-unstyled-link">
+        <li class="focus-link full-unstyled-link"> 
+            <a class="full-unstyled-link" href="/collections/all">
+                Shop All 
+            </a>
+        </li> 
+        {%- assign parent_collection_handle = collection.metafields.custom.parent_collection -%}
+        {%- assign parent_collection = collections[parent_collection_handle] -%}
+        {%- if parent_collection != blank -%}
+            <span class="focus-divider">/</span>
+            <li class="focus-link full-unstyled-link"> 
+                <a class="full-unstyled-link" href="/collections/{{ parent_collection_handle }}">
+                     {{ parent_collection.title }}
+                </a>
+            </li> 
+        {%- endif -%}
+        {%- if parent_collection != blank and collection.title != parent_collection -%}
+            <span class="focus-divider">/</span>
+            <li class="focus-link full-unstyled-link"> 
+                <a class="full-unstyled-link" href="/collections/{{ collection.handle }}">
+                    {{ collection.title }}
+                </a>
+            </li> 
+        {%- endif -%}
+    </ul>
+</div>

@@ -3467,3 +3467,28 @@
                       font-weight: normal;
                       font-style: normal;
                   }
+
+                        /* Fullscreen overlay for loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Slightly transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* High z-index to ensure it covers all content */
+  }
+  
+  /* Centered spinner */
+  .loading__stars {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+  }
+  
+  /* Hide loading screen by default */
+  #loading-screen.hidden {
+    display: none;
+  }
