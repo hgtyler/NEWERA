@@ -12,6 +12,9 @@
     .collection-list {
     justify-content: center;
     }
+    .banner-categories {
+    margin-top: 10px;
+    }
 </style>
 
 {% assign banner_categories_raw = collection.metafields.custom.banner | split: ',' %}
@@ -23,6 +26,7 @@
 {% endfor %}
 {% assign collection_handles = cleaned_handles | split: ',' | uniq %}
 
+<div class="banner-categories">
 {% if collection_handles.size > 0 %}
   <ul class="collection-list grid grid--6-col-desktop grid--2-col-tablet">
     {% for handle in collection_handles %}
@@ -43,9 +47,8 @@
       {% endif %}
     {% endfor %}
   </ul>
-{% else %}
-  <p>No collections found.</p>
 {% endif %}
+</div>
 
 
 

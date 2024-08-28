@@ -1,6 +1,7 @@
 .collection-hero__inner {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .collection-hero--with-image .collection-hero__inner {
@@ -18,15 +19,13 @@
     }
 }
 
-.collection-hero__text-wrapper {
-    flex-basis: 100%;
-}
 
 @media screen and (min-width: 750px) {
     .collection-hero {
         padding: 0;
         background-color: white;
-        margin-bottom: 0px;
+        margin-bottom: 20px;
+        margin-top: 120px;
     }
     .collection-hero__inner {
         align-items: center;
@@ -38,10 +37,23 @@
 .collection-hero__title {
     text-align: center;
     margin-top: 120px;
-    font-size: 5rem;
+    font-size: 7rem;
     font-family: 'AubergeScriptBasicOne';
     text-transform: lowercase;
     font-weight: normal;
+    position: absolute; /* Position the title absolutely */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the top and left to perfectly center */
+    z-index: 2; /* Ensure it appears above other content */
+}
+
+.white {
+    color: white;
+}
+
+.burgundy {
+    color: #561C24;
 }
 
 .collection-hero__title+.collection-hero__description {
@@ -74,9 +86,10 @@
 }
 
 .collection-hero__image-container {
-    border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
     border-radius: var(--media-radius);
     box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-shadow), var(--media-shadow-opacity));
+    position: relative; /* Make sure this is relative so that the title can be positioned over it */
+    width: 100%;
 }
 
 @media screen and (max-width: 749px) {
@@ -92,8 +105,6 @@
     }
     .collection-hero__image-container {
         align-self: stretch;
-        flex: 1 0 50%;
-        margin-left: 3rem;
-        min-height: 20rem;
+        min-height: 25rem;
     }
 }

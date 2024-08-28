@@ -9,29 +9,21 @@
     }
   }
   .collection-hero__title {
-    color: #561C24;
     margin-bottom: 5px;
   }
+
 {%- endstyle -%}
 
-<div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
-  <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
-    <div class="collection-hero__text-wrapper">
-      <h3 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
-      </h3> 
-      {%  if collection.metafields.custom.banner != blank %}
-      {%  render 'banner-categories' %}
-      {% endif %}
-      {%- if section.settings.show_collection_description -%}
-        <div class="collection-hero__description rte">{{ collection.description }}</div>
-      {%- endif -%}
-    </div>
-
-
-    {%- if section.settings.show_collection_image and collection.image -%}
+<div class="collection-hero collection-hero--with-image color-{{ section.settings.color_scheme }} gradient">
+  <div class="collection-hero__inner {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {%- if collection.image -%}
       <div class="collection-hero__image-container media gradient">
+        <div class="collection-hero__text-wrapper">
+          <h3 class="collection-hero__title white">
+            <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+            {{- collection.title | escape -}}
+          </h3> 
+        </div> 
         <img
           srcset="
             {%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -49,9 +41,18 @@
           height="{{ collection.image.height }}"
         >
       </div>
+      {% else  %}
+      <div class="collection-hero__text-wrapper">
+        <h3 class="collection-hero__title burgundy">
+          <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+          {{- collection.title | escape -}}
+        </h3> 
+      </div> 
     {%- endif -%}
   </div>
+  {% render 'banner-categories' %}
 </div>
+
 
 {% schema %}
 {
