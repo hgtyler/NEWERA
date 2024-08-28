@@ -680,6 +680,19 @@
         "title": {
           "default": "Contact form",
           "label": "Heading"
+        },
+        "email_field": {
+          "label": "Email field"
+        },
+        "phone_field": {
+          "label": "Phone field"
+        },
+        "message_field": {
+          "label": "Message field"
+        },
+        "custom_form": {
+          "default": "Custom form",
+          "label": "Custom form box"
         }
       }
     },

@@ -64,6 +64,7 @@
           >
           <label class="field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
         </div>
+        {% if section.settings.email_field %}
         <div class="field field--with-error">
           <input
             autocomplete="email"
@@ -96,7 +97,9 @@
             </small>
           {%- endif -%}
         </div>
+      {% endif %}
       </div>
+      {% if section.settings.phone_field %}
       <div class="field">
         <input
           type="tel"
@@ -110,6 +113,8 @@
         >
         <label class="field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
       </div>
+    {% endif %}
+    {% if section.settings.message_field %}
       <div class="field">
         <textarea
           rows="10"
@@ -124,6 +129,23 @@
           {{- 'templates.contact.form.comment' | t -}}
         </label>
       </div>
+    {% endif %}
+    {% if section.settings.custom_form != blank %}
+      <div class="field">
+        <textarea
+          rows="10"
+          id="ContactForm-body"
+          class="text-area field__input"
+          name="contact[{{ 'templates.contact.form.custom_form' | t }}]"
+          placeholder="{{ 'templates.contact.form.custom_form' | t }}"
+        >
+          {{- form.body -}}
+        </textarea>
+        <label class="form__label field__label" for="ContactForm-body">
+          {{ section.settings.custom_form  }}
+        </label>
+      </div>
+    {% endif %}
       <div class="contact__button">
         <button type="submit" class="button">
           {{ 'templates.contact.form.send' | t }}
@@ -175,6 +197,30 @@
       ],
       "default": "h1",
       "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "email_field",
+      "default": true,
+      "label": "t:sections.contact-form.settings.email_field.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "phone_field",
+      "default": true,
+      "label": "t:sections.contact-form.settings.phone_field.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "message_field",
+      "default": true,
+      "label": "t:sections.contact-form.settings.message_field.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "custom_form",
+      "default": "t:sections.contact-form.settings.custom_form.default",
+      "label": "t:sections.contact-form.settings.custom_form.label"
     },
     {
       "type": "color_scheme",
