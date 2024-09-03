@@ -1,3 +1,14 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
 {%- unless product.has_only_default_variant -%}
   <variant-selects
     id="variant-selects-{{ section.id }}"
@@ -5,9 +16,13 @@
     {{ block.shopify_attributes }}
   >
     {%- for option in product.options_with_values -%}
+      <script>
+        console.log("Option Values:", {{ option.values | json }});
+      </script>
       {%- liquid
         assign swatch_count = option.values | map: 'swatch' | compact | size
         assign picker_type = block.settings.picker_type
+
         if swatch_count > 0 and block.settings.swatch_shape != 'none'
           if block.settings.picker_type == 'dropdown'
             assign picker_type = 'swatch_dropdown'
@@ -20,30 +35,26 @@
         <fieldset class="js product-form__input product-form__input--swatch">
           <legend class="form__label">
             {{ option.name }}:
-            <span data-selected-value>{{- option.selected_value -}}</span>
+            <span data-selected-value>
+              {{- option.selected_value -}}
+            </span>
           </legend>
-          {% for value in option.values %}
-            {% if value.variant.metafields.custom.stone_swatch.value %}
-            <input
-              type="radio"
-              id="Option-{{ input_id }}-{{ forloop.index0 }}"
-              name="options[{{ option.name | escape }}]"
-              value="{{ value | escape }}"
-              class="swatch-input__input"
-              data-option-swatch-value="{{ value.variant.metafields.custom.stone_swatch.value }}"
-              {% if value.selected %} checked {% endif %}
-              {% if value.disabled %} disabled {% endif %}
-            >
-            <label
-              for="Option-{{ option.position }}-{{ forloop.index0 }}"
-              class="swatch-input__label"
-            >
-              <img src="{{ value.variant.metafields.custom.stone_swatch.value | prepend: 'https://starlingjewelry.com/cdn/shop/' }}" alt="{{ value }}" class="swatch-input__image">
-            </label>
-            {% else %}
-            {% render 'product-variant-options', product: product, option: option, optionIndex: forloop.index0 %}
-          {% endif %}
-          {% endfor %}
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+        </fieldset>
+      {%- elsif picker_type == 'button' -%}
+        <fieldset class="js product-form__input product-form__input--pill">
+          <legend class="form__label">{{ option.name }}</legend>
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
         </fieldset>
       {%- else -%}
       <div class="product-form__input product-form__input--dropdown">
@@ -79,6 +90,7 @@
       </div>      
       {%- endif -%}
     {%- endfor -%}
+
     <script type="application/json" data-selected-variant>
       {
         "product": {

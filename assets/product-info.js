@@ -17,7 +17,7 @@ if (!customElements.get("product-info")) {
       }
 
       connectedCallback() {
-        console.log("Setting up variant change listener...");
+        console.log("ProductInfo connectedCallback called...");
         this.initializeProductSwapUtility();
 
         this.onVariantChangeUnsubscriber = subscribe(
@@ -270,6 +270,27 @@ if (!customElements.get("product-info")) {
               console.error(error);
             }
           });
+      }
+
+      handleUpdateProductInfo(productUrl) {
+        return (html) => {
+          const productInfoElement = html.querySelector("product-info");
+          if (productInfoElement) {
+            // Replace current product info with the new HTML content
+            this.innerHTML = productInfoElement.innerHTML;
+
+            // Re-initialize any scripts or elements that need to be reset
+            this.initializeProductSwapUtility();
+            this.initQuantityHandlers();
+
+            console.log(
+              "Product information updated with content from:",
+              productUrl,
+            );
+          } else {
+            console.error("Failed to find product-info in the returned HTML.");
+          }
+        };
       }
 
       getSelectedVariant(productInfoNode) {

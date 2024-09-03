@@ -35,10 +35,9 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "email_field" : "",
-        "phone_field" : "",
-        "message_field" : "",
-        "custom_field" : "",
+        "email_field": "",
+        "phone_field": "",
+        "message_field": "",
         "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 36

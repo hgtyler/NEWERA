@@ -78,7 +78,7 @@
           "settings": {
             "heading": "Happiness Guarantee:",
             "icon": "none",
-            "content": "",
+            "content": "<p>Fine jewelry, like people, can be both delicate and strong. Here at Starling, we stand behind the quality of our products and offer a Happiness Guarantee on all of our handmade jewelry. <\/p><p><a href=\"\/pages\/happiness-guarantee\" target=\"_blank\" title=\"Happiness Guarantee\">Read More<\/a><\/p>",
             "page": ""
           }
         }
@@ -117,7 +117,8 @@
       "settings": {
         "heading": "",
         "heading_size": "h1",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/Aug24_Web_Video_Vr2.MOV",
         "video_url": "",
         "description": "",
         "full_width": false,

@@ -87,9 +87,6 @@
       onload="this.media='all'"
     >
   {%- endif -%}
-  <div id="loading-screen">
-    {% render 'loading-stars' %}
-  </div>
   
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
@@ -736,13 +733,6 @@
 
     <script type="application/ld+json data-selected-variant">
       {{ product | structured_data }}
-    </script>
-    <script>
-      // Show the loading screen when the page starts loading
-      window.addEventListener('load', function () {
-        // Hide the loading screen once the page is fully loaded
-        document.getElementById('loading-screen').classList.add('hidden');
-      });
     </script>
   </div>
 </product-info>
