@@ -53,7 +53,7 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "burgundy_line": true,
+        "burgundy_line": false,
         "padding_top": 40,
         "padding_bottom": 40
       }

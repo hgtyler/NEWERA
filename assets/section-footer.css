@@ -118,6 +118,7 @@
     .footer-block {
         display: block;
         margin-top: 0;
+        text-align: center;
     }
 }
 

@@ -73,6 +73,7 @@
 
 .collection__title .title:not(:only-child) {
   margin-bottom: 1rem;
+  font-size: 50px;
 }
 
 @media screen and (min-width: 990px) {
