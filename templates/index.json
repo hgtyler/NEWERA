@@ -6,7 +6,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "video": "shopify:\/\/files\/videos\/BANNER.mp4",
+        "video": "shopify:\/\/files\/videos\/Rebrand_Red Jacket_Banner_nologo.mp4",
         "video_url": "",
         "description": "",
         "full_width": true,
@@ -46,7 +46,8 @@
         "text_njTwRV"
       ],
       "custom_css": [
-        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 35px;}"
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 35px;}",
+        "@media screen and (max-width: 750px) {h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 25px; }}"
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -61,12 +62,12 @@
     "double_image_banner_kpRaem": {
       "type": "double-image-banner",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
         "banner_header_text": "",
-        "image_1_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-22_1_2a77dbca-8b04-47c3-b015-ac0770a42376.jpg",
-        "image_2_url": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-63.jpg",
-        "button_text": "Example Button",
-        "button_link": ""
+        "image_1_url": "shopify:\/\/shop_images\/banner_1_8d7ebe01-03c8-4d50-b63d-5f8f9aacc429.jpg",
+        "image_2_url": "shopify:\/\/shop_images\/banner_2_cc625d05-3a57-462b-b67a-edae3ef01910.jpg",
+        "button_text": "Shop September Bespoke Gems",
+        "button_link": "shopify:\/\/collections\/bespoke-gems"
       }
     },
     "featured_collection_wXJbwk": {
@@ -100,18 +101,42 @@
     },
     "image_banner_fwMtA3": {
       "type": "image-banner",
+      "blocks": {
+        "heading_kbiRmn": {
+          "type": "heading",
+          "settings": {
+            "heading": "sapphires for september",
+            "heading_size": "h0"
+          }
+        },
+        "text_MeeThJ": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/collections\/stone-sapphire\" title=\"Sapphire\"><strong>Shop Now<\/strong><\/a>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_kbiRmn",
+        "text_MeeThJ"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 75px;}",
+        "@media screen and (max-width: 750px) {h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 45px; }}"
+      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/MKSADLER-1406_1_74333830-8ee5-4844-97db-c05ca05954cb.jpg",
+        "image": "shopify:\/\/shop_images\/starling-jewelry-sapphires.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "image_with_text_qtyTbe": {
@@ -147,14 +172,27 @@
     },
     "image_banner_wamzta": {
       "type": "image-banner",
+      "blocks": {
+        "text_7RUJDy": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "text_7RUJDy"
+      ],
+      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
+        "image": "shopify:\/\/shop_images\/starling-jewelry-sapphires.jpg",
         "image_2": "shopify:\/\/shop_images\/group1_aaba2922-686e-4281-a6ee-5549340002a0.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
@@ -165,12 +203,12 @@
     "double-image-banner": {
       "type": "double-image-banner",
       "settings": {
-        "color_scheme": "",
-        "banner_header_text": "new arrivals",
+        "color_scheme": "scheme-3",
+        "banner_header_text": "one of a kind",
         "image_1_url": "shopify:\/\/shop_images\/kunzite-babs-charm-4.jpg",
         "image_2_url": "shopify:\/\/shop_images\/emerald-ripple-signet-ring-3.jpg",
         "button_text": "Shop Now",
-        "button_link": "#"
+        "button_link": "shopify:\/\/collections\/one-of-a-kind-collection"
       }
     },
     "1714838859db24a20c": {
@@ -183,6 +221,7 @@
             "title_color": "#4c1326",
             "title_size": 20,
             "alignment": "center",
+            "margin_bottom": 0,
             "background_color": "",
             "html_area": ""
           }

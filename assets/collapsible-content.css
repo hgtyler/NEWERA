@@ -4,6 +4,14 @@
     margin-left: 150px;
     margin-right: 150px;
 }
+@media screen and (max-width: 750px) {
+    .collapsible-content {
+        position: relative;
+        z-index: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
 
 .collapsible-section-layout {
     padding-bottom: 5rem;

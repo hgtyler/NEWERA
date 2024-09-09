@@ -1247,16 +1247,24 @@ class VariantSelects extends HTMLElement {
     const { value, tagName } = target;
 
     if (tagName === "SELECT" && target.selectedOptions.length) {
-      Array.from(target.options)
-        .find((option) => option.getAttribute("selected"))
-        .removeAttribute("selected");
+      const selectedOption = Array.from(target.options).find((option) =>
+        option.getAttribute("selected"),
+      );
+
+      // Ensure the selectedOption exists before trying to remove the attribute
+      if (selectedOption) {
+        selectedOption.removeAttribute("selected");
+      }
+
       target.selectedOptions[0].setAttribute("selected", "selected");
 
       const swatchValue = target.selectedOptions[0].dataset.optionSwatchValue;
       const selectedDropdownSwatchValue = target
         .closest(".product-form__input")
         .querySelector("[data-selected-value] > .swatch");
+
       if (!selectedDropdownSwatchValue) return;
+
       if (swatchValue) {
         selectedDropdownSwatchValue.style.setProperty(
           "--swatch--background",
@@ -1279,6 +1287,7 @@ class VariantSelects extends HTMLElement {
       const selectedSwatchValue = target
         .closest(`.product-form__input`)
         .querySelector("[data-selected-value]");
+
       if (selectedSwatchValue) selectedSwatchValue.innerHTML = value;
     }
   }

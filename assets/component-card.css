@@ -289,6 +289,7 @@
     font-weight: normal;
     font-family: 'ABCWhyte-Book';
     font-size: 13px;
+    text-transform: uppercase;
 }
 
 .card__heading:last-child {

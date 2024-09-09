@@ -7,75 +7,31 @@
         "padding_bottom": 28
       }
     },
-    "collapsible_content_knEpRh": {
-      "type": "collapsible-content",
+    "rich_text_LANWTJ": {
+      "type": "rich-text",
       "blocks": {
-        "collapsible_row_R3kDJy": {
-          "type": "collapsible_row",
+        "heading_XgnyhF": {
+          "type": "heading",
           "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "none",
-            "row_content": "<p>Shipping Policy:<br\/><br\/>Return Policy:<\/p>",
-            "page": ""
-          }
-        },
-        "collapsible_row_aLqMmG": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Repairs",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_eRgVGE": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Jewelry Care",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_hU7Tft": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Custom Projects",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
-          }
-        },
-        "collapsible_row_QpzRFk": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Collaborations",
-            "icon": "none",
-            "row_content": "",
-            "page": ""
+            "heading": "frequently asked questions",
+            "heading_size": "h1"
           }
         }
       },
       "block_order": [
-        "collapsible_row_R3kDJy",
-        "collapsible_row_aLqMmG",
-        "collapsible_row_eRgVGE",
-        "collapsible_row_hU7Tft",
-        "collapsible_row_QpzRFk"
+        "heading_XgnyhF"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\";}"
       ],
       "settings": {
-        "caption": "",
-        "heading": "frequently asked questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "scheme-1",
-        "container_color_scheme": "",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_first",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "burgundy_line": false,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "rich_text_6xyD6L": {
@@ -84,7 +40,7 @@
         "heading_LzQJJA": {
           "type": "heading",
           "settings": {
-            "heading": "Still have questions?",
+            "heading": "still have questions?",
             "heading_size": "h1"
           }
         },
@@ -106,6 +62,9 @@
         "text_eVdkqf",
         "text_VFnGde"
       ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\";}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -119,7 +78,7 @@
   },
   "order": [
     "main",
-    "collapsible_content_knEpRh",
+    "rich_text_LANWTJ",
     "rich_text_6xyD6L"
   ]
 }

@@ -135,8 +135,8 @@
           "settings": {
             "heading": "Shipping",
             "icon": "none",
-            "row_content": "",
-            "page": "shipping-policy"
+            "row_content": "<p>Shipping Policy:<\/p><p>- Free USPS (5 business days) shipping on domestic orders $500+  <\/p><p>- International shipping available to select countries!<\/p><p>- Orders over $200 require signature for delivery.<\/p><p>- Most of our pieces are handmade to order just for you. Our stock pieces usually take 1-2 weeks to make. Any order with engraving or personalized stone arrangements usually take 2-3 weeks to make. Bespoke Gems and custom orders typically take 6-8 weeks before shipping.<\/p><p>Rush orders or in stock items may ship faster, please email hello@starlingjewelry.com for availability.  <\/p>",
+            "page": ""
           }
         },
         "collapsible_row_cx6nHB": {
@@ -144,7 +144,7 @@
           "settings": {
             "heading": "Returns",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Return Policy:<\/p><p>- All engraved or custom pieces, bespoke gems, one of a kind pieces, compass charms, sample sale or international orders are final sale.<\/p><p>- 10-Day Returns\/Exchanges For Domestic Orders ($10 return shipping fee)<\/p><p>For more detailed information on our shipping & returns policy, click <a href=\"https:\/\/www.starlingjewelry.com\/pages\/faq\"><span style=\"text-decoration:underline\">here!<\/span><\/a><\/p><p><br\/><\/p>",
             "page": ""
           }
         },
@@ -153,7 +153,7 @@
           "settings": {
             "heading": "Materials",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>All of our 14k yellow gold and sterling silver is 100% post-consumer recycled metal. *Excluding chain and findings. Our 14k white and rose gold is 70% recycled. <\/p><p>All stones are responsibly sourced, recycled or traceable mine-to-market when available. Currently we use a mix of 50% recycled diamonds on most pieces, but are moving towards using 100% post-consumer recycled diamonds. Diamond pieces that use 100% certified post-consumer diamonds are marked with the SCS logo. <\/p>",
             "page": "materials"
           }
         },

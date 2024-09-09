@@ -38,6 +38,22 @@
   .facets__wrapper {
   align-items: baseline;
   }
+  /* Make the filter sticky */
+.facets-container {
+  position: -webkit-sticky; /* Safari support */
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  z-index: 10; /* Ensures it stays on top */
+  background-color: white; /* Prevent content from bleeding through */
+  padding-top: 1rem; /* Adjust padding as needed */
+}
+
+/* Ensure there's enough space above for any headers or navigation */
+@media screen and (min-width: 750px) {
+  .facets-container {
+    top: 150px; /* Adjust this value to account for any fixed headers */
+  }
+}
 </style>
 
 {%- liquid

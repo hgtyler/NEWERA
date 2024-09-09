@@ -3432,41 +3432,46 @@
                           transform: translateX(100%) scaleX(0);
                       }
                   }
-                  
-                  .font-face {
-                      font-family: 'ABCWhyte-Book';
-                      src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/ABCWhyte-Book.otf?v=1719262541') format('otf');
-                      /* Adjust format as needed */
-                      font-weight: normal;
-                      font-style: normal;
-                  }
-                  
                   .body {
-                      font-family: 'ABCWhyte-Book', sans-serif;
-                  }
-                  
-                  .font-face {
-                      font-family: 'AubergeScriptBasicFive';
-                      src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/AubergeScriptBasicFive.otf?v=1719262592') format('otf');
-                      /* Adjust format as needed */
-                      font-weight: normal;
-                      font-style: normal;
-                  }
-                  
-                  .font-face {
-                      font-family: 'AubergeScriptBasicOne';
-                      src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/Auberge_Script_Basic_One.otf?v=1720478553') format('otf');
-                      /* Adjust format as needed */
-                      font-weight: normal;
-                      font-style: normal;
-                  }
-                  
+                    font-family: 'ABCWhyte-Book', sans-serif;
+                }
+
                   @font-face {
-                      font-family: 'BeirutDisplayWeb-Book';
-                      src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayWeb-Book.woff?v=1704912705') format('woff2');
-                      font-weight: normal;
-                      font-style: normal;
-                  }
+                    font-family: 'BeirutDisplayTrialBook';
+                    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayTrial-Book.woff2?v=1725814600') format('woff2'),
+                        url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/BeirutDisplayTrial-Book.woff?v=1725814600') format('woff');
+                    font-weight: 300;
+                    font-style: normal;
+                    font-display: swap;
+                }
+                
+                @font-face {
+                    font-family: 'ABCWhyte-Book';
+                    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/ABCWhyte-Book.woff2?v=1725814600') format('woff2'),
+                        url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/ABCWhyte-Book.woff?v=1725814600') format('woff');
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: swap;
+                }
+                
+                @font-face {
+                    font-family: 'AubergeScriptBasicFive';
+                    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/AubergeScriptBasicFive.woff2?v=1725814600') format('woff2'),
+                        url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/AubergeScriptBasicFive.woff?v=1725814600') format('woff');
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: swap;
+                }
+                
+                @font-face {
+                    font-family: 'AubergeScriptBasicOne';
+                    src: url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/AubergeScriptBasicOne.woff2?v=1725814600') format('woff2'),
+                        url('https://cdn.shopify.com/s/files/1/0021/7474/6681/files/AubergeScriptBasicOne.woff?v=1725814600') format('woff');
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: swap;
+                }
+                
 
                         /* Fullscreen overlay for loading screen */
 #loading-screen {

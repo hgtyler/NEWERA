@@ -1,9 +1,9 @@
 <style>
     .focus-links-container {
-        margin-left: .5rem;
+        margin-left: 0rem;
     }
 
-    @media screen and (max-width: 750;) {
+    @media screen and (max-width: 750px;) {
         .focus-links-container {
             display: none;
         }
@@ -50,6 +50,13 @@
             <li class="focus-link full-unstyled-link"> 
                 <a class="full-unstyled-link" href="/collections/{{ parent_collection_handle }}">
                      {{ parent_collection.title }}
+                </a>
+            </li> 
+            {% else %}
+            <span class="focus-divider">/</span>
+            <li class="focus-link full-unstyled-link"> 
+                <a class="full-unstyled-link" href="/collections/{{ collection_handle }}">
+                     {{ collection.title }}
                 </a>
             </li> 
         {%- endif -%}

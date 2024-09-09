@@ -2,8 +2,11 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "custom_css": [
+        "h1 {text-align: center; font-family: 'AubergeScriptBasicOne'; text-transform: lowercase; padding-top:35px;}"
+      ],
       "settings": {
-        "layout": "collage",
+        "layout": "grid",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,

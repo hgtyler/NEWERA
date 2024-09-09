@@ -13,6 +13,12 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .newsletter-heading {
+    font-family: 'ABCWhyte-Book';
+  }
+  .newsletter__subheading h5 {
+    font-family: 'ABCWhyte-Book';
+  }
 {%- endstyle -%}
 
 <div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
@@ -23,7 +29,7 @@
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="newsletter-heading {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
