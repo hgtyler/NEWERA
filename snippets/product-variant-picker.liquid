@@ -25,6 +25,9 @@
         {% render 'special-products' compass: true, product: product %}
       {% endif %}
     {%- endif -%}
+    {% if product.tags contains "bespoke" %}
+      {% render 'bespoke-products' %}
+    {% endif %}
 
     {%- for option in product.options_with_values -%}
       {%- assign option_name = option.name | downcase -%}

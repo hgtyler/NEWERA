@@ -1,0 +1,30 @@
+<variant-dropdowns  class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
+    {% if product.metafields.custom.metal_option %}
+      <div class="product-form__input product-form__input--dropdown cart-attribute__field">
+        <legend class="form__label">
+            Metal:
+            <span data-selected-value>
+              {{- option.selected_value -}}
+            </span>
+          </legend>
+        <div class="select">
+          <select id="Option-{{ section.id }}-{{ forloop.index1 }}"
+            class="select__select"
+            name="properties[Metal]"
+            data-option-name="{{option_name}}"
+            form="{{ product_form_id }}"
+          >
+            <script type="application/json" id="variant-data">
+              {{ product.variants | json }}
+            </script>
+            {%- for value in product.metafields.custom.metal_option.value -%}
+              <option  data-option-value="{{ value | escape }}" value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                {{ value }}
+              </option>
+            {%- endfor -%}
+          </select>
+          {% render 'icon-caret' %}
+        </div>
+      </div>
+    {% endif %}
+  </variant-dropdowns>
