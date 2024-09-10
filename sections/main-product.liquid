@@ -54,7 +54,7 @@
     }
 
   {%- endstyle -%}
-<script src = "{{ 'product-media.js' | asset_url }}"defer = "defer" > </script>
+  <script src = "{{ 'product-media.js' | asset_url }}"defer = "defer" > </script>
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   {%- if product.quantity_price_breaks_configured? -%}
@@ -479,7 +479,6 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, variant: product.variants, block: block, product_form_id: product_form_id %}
-
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,

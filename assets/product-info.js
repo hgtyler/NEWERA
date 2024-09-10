@@ -13,11 +13,11 @@ if (!customElements.get("product-info")) {
 
       constructor() {
         super();
+
         this.quantityInput = this.querySelector(".quantity__input");
       }
 
       connectedCallback() {
-        console.log("ProductInfo connectedCallback called...");
         this.initializeProductSwapUtility();
 
         this.onVariantChangeUnsubscriber = subscribe(
@@ -41,7 +41,7 @@ if (!customElements.get("product-info")) {
         this.quantityForm = this.querySelector(".product-form__quantity");
         if (!this.quantityForm) return;
 
-        this.setQuantityBoundaries();
+        this.setQuantityBoundries();
         if (!this.dataset.originalSection) {
           this.cartUpdateUnsubscriber = subscribe(
             PUB_SUB_EVENTS.cartUpdate,
@@ -51,30 +51,27 @@ if (!customElements.get("product-info")) {
       }
 
       disconnectedCallback() {
-        if (this.onVariantChangeUnsubscriber)
-          this.onVariantChangeUnsubscriber();
-        if (this.cartUpdateUnsubscriber) this.cartUpdateUnsubscriber();
+        this.onVariantChangeUnsubscriber();
+        this.cartUpdateUnsubscriber?.();
       }
 
       initializeProductSwapUtility() {
-        this.preProcessHtmlCallbacks.push((html) => {
+        this.preProcessHtmlCallbacks.push((html) =>
           html
             .querySelectorAll(".scroll-trigger")
             .forEach((element) =>
               element.classList.add("scroll-trigger--cancel"),
-            );
-        });
+            ),
+        );
         this.postProcessHtmlCallbacks.push((newNode) => {
-          if (window?.Shopify?.PaymentButton)
-            window.Shopify.PaymentButton.init();
-          if (window?.ProductModel) window.ProductModel.loadShopifyXR();
+          window?.Shopify?.PaymentButton?.init();
+          window?.ProductModel?.loadShopifyXR();
         });
       }
 
       handleOptionValueChange({
         data: { event, target, selectedOptionValues },
       }) {
-        console.log("Variant change detected:", selectedOptionValues);
         if (!this.contains(event.target)) return;
 
         this.resetProductFormState();
@@ -88,134 +85,28 @@ if (!customElements.get("product-info")) {
         const shouldFetchFullPage =
           this.dataset.updateUrl === "true" && shouldSwapProduct;
 
-        // Added logic to handle combined listings with large variants
-        if (this.requiresAsyncVariantLoad(productUrl, selectedOptionValues)) {
-          this.loadVariantsAsync(productUrl, selectedOptionValues).then(
-            (variantData) => {
-              this.updateProductInfoFromVariantData(variantData);
-            },
-          );
-        } else {
-          this.renderProductInfo({
-            requestUrl: this.buildRequestUrlWithParams(
-              productUrl,
-              selectedOptionValues,
-              shouldFetchFullPage,
-            ),
-            targetId: target.id,
-            callback: shouldSwapProduct
-              ? this.handleSwapProduct(productUrl, shouldFetchFullPage)
-              : this.handleUpdateProductInfo(productUrl),
-          });
-        }
+        this.renderProductInfo({
+          requestUrl: this.buildRequestUrlWithParams(
+            productUrl,
+            selectedOptionValues,
+            shouldFetchFullPage,
+          ),
+          targetId: target.id,
+          callback: shouldSwapProduct
+            ? this.handleSwapProduct(productUrl, shouldFetchFullPage)
+            : this.handleUpdateProductInfo(productUrl),
+        });
       }
 
       resetProductFormState() {
         const productForm = this.productForm;
-        if (productForm) {
-          productForm.toggleSubmitButton(true);
-          productForm.handleErrorMessage();
-        }
-      }
-
-      // New method to determine if async variant loading is required
-      requiresAsyncVariantLoad(productUrl, selectedOptionValues) {
-        // Logic to determine if async loading is needed
-        // e.g., checking if the product has too many variants to load all at once
-        return this.dataset.requiresAsyncLoading === "true";
-      }
-
-      // New method to load variants asynchronously
-      loadVariantsAsync(productUrl, selectedOptionValues) {
-        const requestUrl = this.buildRequestUrlWithParams(
-          productUrl,
-          selectedOptionValues,
-          false,
-        );
-        return fetch(requestUrl)
-          .then((response) => response.json())
-          .then((variantData) => {
-            return variantData;
-          })
-          .catch((error) => {
-            console.error("Error loading variants:", error);
-          });
-      }
-
-      // New method to update product information from variant data
-      updateProductInfoFromVariantData(variantData) {
-        const variant = variantData.variant;
-        if (!variant) {
-          this.setUnavailable();
-          return;
-        }
-        this.updateVariantInputs(variant.id);
-        this.updateMediaFromVariantData(variant);
-        this.updateProductInfoFieldsFromVariantData(variantData);
-      }
-
-      // Update product fields such as price, SKU, inventory, etc., based on new variant data
-      updateProductInfoFieldsFromVariantData(variantData) {
-        const variant = variantData.variant;
-
-        if (this.pickupAvailability) this.pickupAvailability.update(variant);
-
-        const updateSourceFromDestination = (
-          id,
-          shouldHide = (source) => false,
-        ) => {
-          const source = variantData[id];
-          const destination = this.querySelector(
-            `#${id}-${this.dataset.section}`,
-          );
-          if (source && destination) {
-            destination.innerHTML = source;
-            destination.classList.toggle("hidden", shouldHide(source));
-          }
-        };
-
-        updateSourceFromDestination("price");
-        updateSourceFromDestination("Sku", ({ classList }) =>
-          classList.contains("hidden"),
-        );
-        updateSourceFromDestination(
-          "Inventory",
-          ({ innerText }) => innerText === "",
-        );
-        updateSourceFromDestination("Volume");
-        updateSourceFromDestination("Price-Per-Item", ({ classList }) =>
-          classList.contains("hidden"),
-        );
-
-        this.updateQuantityRules(this.sectionId, variantData);
-        if (this.querySelector(`#Quantity-Rules-${this.dataset.section}`))
-          this.querySelector(
-            `#Quantity-Rules-${this.dataset.section}`,
-          ).classList.remove("hidden");
-        if (this.querySelector(`#Volume-Note-${this.dataset.section}`))
-          this.querySelector(
-            `#Volume-Note-${this.dataset.section}`,
-          ).classList.remove("hidden");
-
-        if (this.productForm) {
-          this.productForm.toggleSubmitButton(
-            variant.available ? false : true,
-            window.variantStrings.soldOut,
-          );
-        }
-
-        publish(PUB_SUB_EVENTS.variantChange, {
-          data: {
-            sectionId: this.sectionId,
-            variantData,
-            variant,
-          },
-        });
+        productForm?.toggleSubmitButton(true);
+        productForm?.handleErrorMessage();
       }
 
       handleSwapProduct(productUrl, updateFullPage) {
         return (html) => {
-          if (this.productModal) this.productModal.remove();
+          this.productModal?.remove();
 
           const selector = updateFullPage
             ? "product-info[id^='MainProduct']"
@@ -245,7 +136,7 @@ if (!customElements.get("product-info")) {
       }
 
       renderProductInfo({ requestUrl, targetId, callback }) {
-        if (this.abortController) this.abortController.abort();
+        this.abortController?.abort();
         this.abortController = new AbortController();
 
         fetch(requestUrl, { signal: this.abortController.signal })
@@ -260,8 +151,7 @@ if (!customElements.get("product-info")) {
           })
           .then(() => {
             // set focus to last clicked option value
-            const targetElement = document.querySelector(`#${targetId}`);
-            if (targetElement) targetElement.focus();
+            document.querySelector(`#${targetId}`)?.focus();
           })
           .catch((error) => {
             if (error.name === "AbortError") {
@@ -272,32 +162,11 @@ if (!customElements.get("product-info")) {
           });
       }
 
-      handleUpdateProductInfo(productUrl) {
-        return (html) => {
-          const productInfoElement = html.querySelector("product-info");
-          if (productInfoElement) {
-            // Replace current product info with the new HTML content
-            this.innerHTML = productInfoElement.innerHTML;
-
-            // Re-initialize any scripts or elements that need to be reset
-            this.initializeProductSwapUtility();
-            this.initQuantityHandlers();
-
-            console.log(
-              "Product information updated with content from:",
-              productUrl,
-            );
-          } else {
-            console.error("Failed to find product-info in the returned HTML.");
-          }
-        };
-      }
-
       getSelectedVariant(productInfoNode) {
         const selectedVariant = productInfoNode.querySelector(
           "variant-selects [data-selected-variant]",
         )?.innerHTML;
-        return selectedVariant ? JSON.parse(selectedVariant) : null;
+        return !!selectedVariant ? JSON.parse(selectedVariant) : null;
       }
 
       buildRequestUrlWithParams(
@@ -307,7 +176,7 @@ if (!customElements.get("product-info")) {
       ) {
         const params = [];
 
-        if (!shouldFetchFullPage) params.push(`section_id=${this.sectionId}`);
+        !shouldFetchFullPage && params.push(`section_id=${this.sectionId}`);
 
         if (optionValues.length) {
           params.push(`option_values=${optionValues.join(",")}`);
@@ -316,22 +185,99 @@ if (!customElements.get("product-info")) {
         return `${url}?${params.join("&")}`;
       }
 
+      updateOptionValues(html) {
+        const variantSelects = html.querySelector("variant-selects");
+        if (variantSelects) {
+          HTMLUpdateUtility.viewTransition(
+            this.variantSelectors,
+            variantSelects,
+            this.preProcessHtmlCallbacks,
+          );
+        }
+      }
+
+      handleUpdateProductInfo(productUrl) {
+        return (html) => {
+          const variant = this.getSelectedVariant(html);
+
+          this.pickupAvailability?.update(variant);
+          this.updateOptionValues(html);
+          this.updateURL(productUrl, variant?.id);
+          this.updateVariantInputs(variant?.id);
+
+          if (!variant) {
+            this.setUnavailable();
+            return;
+          }
+
+          this.updateMedia(html, variant?.featured_media?.id);
+
+          const updateSourceFromDestination = (
+            id,
+            shouldHide = (source) => false,
+          ) => {
+            const source = html.getElementById(`${id}-${this.sectionId}`);
+            const destination = this.querySelector(
+              `#${id}-${this.dataset.section}`,
+            );
+            if (source && destination) {
+              destination.innerHTML = source.innerHTML;
+              destination.classList.toggle("hidden", shouldHide(source));
+            }
+          };
+
+          updateSourceFromDestination("price");
+          updateSourceFromDestination("Sku", ({ classList }) =>
+            classList.contains("hidden"),
+          );
+          updateSourceFromDestination(
+            "Inventory",
+            ({ innerText }) => innerText === "",
+          );
+          updateSourceFromDestination("Volume");
+          updateSourceFromDestination("Price-Per-Item", ({ classList }) =>
+            classList.contains("hidden"),
+          );
+
+          this.updateQuantityRules(this.sectionId, html);
+          this.querySelector(
+            `#Quantity-Rules-${this.dataset.section}`,
+          )?.classList.remove("hidden");
+          this.querySelector(
+            `#Volume-Note-${this.dataset.section}`,
+          )?.classList.remove("hidden");
+
+          this.productForm?.toggleSubmitButton(
+            html
+              .getElementById(`ProductSubmitButton-${this.sectionId}`)
+              ?.hasAttribute("disabled") ?? true,
+            window.variantStrings.soldOut,
+          );
+
+          publish(PUB_SUB_EVENTS.variantChange, {
+            data: {
+              sectionId: this.sectionId,
+              html,
+              variant,
+            },
+          });
+        };
+      }
+
       updateVariantInputs(variantId) {
         this.querySelectorAll(
           `#product-form-${this.dataset.section}, #product-form-installment-${this.dataset.section}`,
         ).forEach((productForm) => {
           const input = productForm.querySelector('input[name="id"]');
-          input.value = variantId || "";
+          input.value = variantId ?? "";
           input.dispatchEvent(new Event("change", { bubbles: true }));
         });
       }
 
       updateURL(url, variantId) {
-        if (this.querySelector("share-button")) {
-          this.querySelector("share-button").updateUrl(
-            `${window.shopUrl}${url}${variantId ? `?variant=${variantId}` : ""}`,
-          );
-        }
+        this.querySelector("share-button")?.updateUrl(
+          `${window.shopUrl}${url}${variantId ? `?variant=${variantId}` : ""}`,
+        );
 
         if (this.dataset.updateUrl === "false") return;
         window.history.replaceState(
@@ -342,11 +288,10 @@ if (!customElements.get("product-info")) {
       }
 
       setUnavailable() {
-        if (this.productForm)
-          this.productForm.toggleSubmitButton(
-            true,
-            window.variantStrings.unavailable,
-          );
+        this.productForm?.toggleSubmitButton(
+          true,
+          window.variantStrings.unavailable,
+        );
 
         const selectors = [
           "price",
@@ -364,10 +309,11 @@ if (!customElements.get("product-info")) {
           .forEach(({ classList }) => classList.add("hidden"));
       }
 
-      updateMediaFromVariantData(variant) {
-        if (!variant.featured_media) return;
+      updateMedia(html, variantFeaturedMediaId) {
+        if (!variantFeaturedMediaId) return;
 
         const mediaGallerySource = this.querySelector("media-gallery ul");
+        const mediaGalleryDestination = html.querySelector(`media-gallery ul`);
 
         const refreshSourceData = () => {
           if (this.hasAttribute("data-zoom-on-hover")) enableZoomOnHover(2);
@@ -386,18 +332,18 @@ if (!customElements.get("product-info")) {
           return [mediaGallerySourceItems, sourceSet, sourceMap];
         };
 
-        if (mediaGallerySource) {
+        if (mediaGallerySource && mediaGalleryDestination) {
           let [mediaGallerySourceItems, sourceSet, sourceMap] =
             refreshSourceData();
           const mediaGalleryDestinationItems = Array.from(
-            this.querySelectorAll("media-gallery ul li[data-media-id]"),
+            mediaGalleryDestination.querySelectorAll("li[data-media-id]"),
           );
           const destinationSet = new Set(
             mediaGalleryDestinationItems.map(({ dataset }) => dataset.mediaId),
           );
           let shouldRefresh = false;
 
-          // Add items from new data not present in DOM
+          // add items from new data not present in DOM
           for (let i = mediaGalleryDestinationItems.length - 1; i >= 0; i--) {
             if (
               !sourceSet.has(mediaGalleryDestinationItems[i].dataset.mediaId)
@@ -407,7 +353,7 @@ if (!customElements.get("product-info")) {
             }
           }
 
-          // Remove items from DOM not present in new data
+          // remove items from DOM not present in new data
           for (let i = 0; i < mediaGallerySourceItems.length; i++) {
             if (
               !destinationSet.has(mediaGallerySourceItems[i].dataset.mediaId)
@@ -417,12 +363,12 @@ if (!customElements.get("product-info")) {
             }
           }
 
-          // Refresh
+          // refresh
           if (shouldRefresh)
             [mediaGallerySourceItems, sourceSet, sourceMap] =
               refreshSourceData();
 
-          // Sort media galleries to match new data order
+          // if media galleries don't match, sort to match new data order
           mediaGalleryDestinationItems.forEach(
             (destinationItem, destinationIndex) => {
               const sourceData = sourceMap.get(destinationItem.dataset.mediaId);
@@ -435,7 +381,7 @@ if (!customElements.get("product-info")) {
                   ),
                 );
 
-                // Refresh source now that it has been modified
+                // refresh source now that it has been modified
                 [mediaGallerySourceItems, sourceSet, sourceMap] =
                   refreshSourceData();
               }
@@ -443,26 +389,24 @@ if (!customElements.get("product-info")) {
           );
         }
 
-        // Set featured media as active in the media gallery
-        if (this.querySelector("media-gallery")) {
-          this.querySelector("media-gallery").setActiveMedia(
-            `${this.dataset.section}-${variant.featured_media.id}`,
-            true,
-          );
-        }
-
-        // Update media modal
-        const modalContent = this.productModal?.querySelector(
-          ".product-media-modal__content",
+        // set featured media as active in the media gallery
+        this.querySelector(`media-gallery`)?.setActiveMedia?.(
+          `${this.dataset.section}-${variantFeaturedMediaId}`,
+          true,
         );
-        const newModalContent = document.querySelector(
-          "product-modal .product-media-modal__content",
+
+        // update media modal
+        const modalContent = this.productModal?.querySelector(
+          `.product-media-modal__content`,
+        );
+        const newModalContent = html.querySelector(
+          `product-modal .product-media-modal__content`,
         );
         if (modalContent && newModalContent)
           modalContent.innerHTML = newModalContent.innerHTML;
       }
 
-      setQuantityBoundaries() {
+      setQuantityBoundries() {
         const data = {
           cartQuantity: this.quantityInput.dataset.cartQuantity
             ? parseInt(this.quantityInput.dataset.cartQuantity)
@@ -521,7 +465,7 @@ if (!customElements.get("product-info")) {
 
       updateQuantityRules(sectionId, html) {
         if (!this.quantityInput) return;
-        this.setQuantityBoundaries();
+        this.setQuantityBoundries();
 
         const quantityFormUpdated = html.getElementById(
           `Quantity-Form-${sectionId}`,
@@ -557,7 +501,7 @@ if (!customElements.get("product-info")) {
       }
 
       get productForm() {
-        return this.querySelector("product-form");
+        return this.querySelector(`product-form`);
       }
 
       get productModal() {
@@ -565,7 +509,7 @@ if (!customElements.get("product-info")) {
       }
 
       get pickupAvailability() {
-        return this.querySelector("pickup-availability");
+        return this.querySelector(`pickup-availability`);
       }
 
       get variantSelectors() {

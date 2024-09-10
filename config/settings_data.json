@@ -2,6 +2,7 @@
   "current": {
     "logo": "shopify:\/\/shop_images\/Starling_logo_burgundy_1.png",
     "logo_width": 220,
+    "favicon": "shopify:\/\/shop_images\/burgundyface_1.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -138,7 +139,7 @@
     "blocks": {
       "1387321792192259120": {
         "type": "shopify:\/\/apps\/mini-customization-fields\/blocks\/app-embed\/e2bc653a-3a1f-4c8a-af16-5a28d6116641",
-        "disabled": false,
+        "disabled": true,
         "settings": {
         }
       }

@@ -11,7 +11,7 @@
     "image_banner_gc7MzJ": {
       "type": "image-banner",
       "settings": {
-        "image_2": "shopify:\/\/shop_images\/starling-bespoke-colorful-rings_a7ecb753-274f-4810-a909-a3f17823a9b7.png",
+        "image_2": "shopify:\/\/shop_images\/MKSADLER-1406_1_74333830-8ee5-4844-97db-c05ca05954cb.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -55,6 +55,9 @@
         "heading_Cp3jxY",
         "text_KTK976"
       ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\";}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -68,7 +71,8 @@
     "image_banner_37NdK4": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/testbanner.jpg",
+        "image": "shopify:\/\/shop_images\/MKSADLER-9386_1.jpg",
+        "image_2": "shopify:\/\/shop_images\/MKSADLER-9059_1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",

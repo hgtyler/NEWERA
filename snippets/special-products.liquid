@@ -1,0 +1,47 @@
+{%- if compass == true -%}
+  {% assign custom_stones = "North Stone, East Stone, West Stone, South Stone" | split: ", " %}
+  {%- if product.title contains "3 STONES" -%}
+    {% assign custom_stones = "North Stone, East Stone, West Stone" | split: ", " %}
+  {%- endif -%}
+  {%- if product.title contains "2 STONES" -%}
+    {% assign custom_stones = "East Stone, West Stone" | split: ", " %}
+  {%- endif -%}
+  
+  {%- assign custom_stones = "North Stone, East Stone, West Stone" | split: ", " %}
+  {%- assign custom_stones_options = "garnet, amethyst, aquamarine, gray diamond, emerald, alexandrite, ruby, peridot, sapphire, pink tourmaline, citrine, tanzanite" | split: ", " %}
+  {% assign swatch_value = value | handleize | prepend: 'stone-' | append: '.jpg' | file_url %}
+  
+  {%- for option in custom_stones -%}
+  <fieldset class="js product-form__input product-form__input--swatch">
+    <legend class="form__label">
+      {{ option }}:
+      <span data-selected-value 
+        id="selected-{{ option | handleize }}">
+        {{- option.selected_value -}}
+      </span>
+    </legend>
+      {%- for value in custom_stones_options -%}
+        {%- capture input_id -%}
+          {{ section.id }}-{{ option }}-{{ forloop.index0 -}}
+        {%- endcapture -%}
+        <input
+          type="radio"
+          id="{{ input_id }}"
+          name="properties[{{ option | escape }}]"
+          value="{{ value | escape }}"
+          class="swatch-input__input 
+          {% if visually_disabled %} visually-disabled{% endif %}
+          {% if checked %}checked{% endif %}
+          {% if disabled %}disabled{% endif %}">
+      <label 
+        for="{{ input_id }}" 
+        class="swatch-label">
+      <span
+        class="swatch"
+        style="--swatch--background: 'url('{{ swatch_value }}')';"
+      ></span>
+      </label>
+    {%- endfor -%}
+  </fieldset>
+  {%- endfor -%}
+{%- endif -%}

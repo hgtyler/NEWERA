@@ -169,6 +169,10 @@
       "settings": {
         "heading": "Start Your Revival",
         "heading_size": "h2",
+        "email_field": true,
+        "phone_field": true,
+        "message_field": false,
+        "custom_form": "Tell us about what you would like to revive",
         "color_scheme": "",
         "padding_top": 36,
         "padding_bottom": 36
@@ -280,6 +284,7 @@
         "column_TLcepG",
         "column_k6EAgk"
       ],
+      "disabled": true,
       "settings": {
         "title": "Before & Afters",
         "heading_size": "h2",
@@ -340,6 +345,7 @@
         "slide_Fj8iDE",
         "slide_aQwUxp"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "medium",
@@ -423,6 +429,7 @@
         "column_gAC3r6",
         "column_RJLUpY"
       ],
+      "disabled": true,
       "settings": {
         "title": "Testimonials",
         "heading_size": "h1",

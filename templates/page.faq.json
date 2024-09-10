@@ -2,36 +2,214 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
       }
     },
-    "rich_text_LANWTJ": {
-      "type": "rich-text",
+    "image_banner_rUFnDH": {
+      "type": "image-banner",
       "blocks": {
-        "heading_XgnyhF": {
+        "heading_3pePxR": {
           "type": "heading",
           "settings": {
             "heading": "frequently asked questions",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         }
       },
       "block_order": [
-        "heading_XgnyhF"
+        "heading_3pePxR"
       ],
       "custom_css": [
-        "h2 {font-family: \"AubergeScriptBasicOne\";}"
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 45px;}"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
+        "image": "shopify:\/\/shop_images\/FAQ.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
         "color_scheme": "",
-        "full_width": true,
-        "burgundy_line": false,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "collapsible_content_ee7MfP": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_pGrHLq": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "General Care",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_HttdDe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Cleaning",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_e3cfXh": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Storage",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_pGrHLq",
+        "collapsible_row_HttdDe",
+        "collapsible_row_e3cfXh"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "jewelry care",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_7W8Efy": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_78mptp": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if an item breaks after 10 days and I swear it's not my fault?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_mUK84w": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "The item broke and it's totally my dog's fault or mine!",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_fMGmRG": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "My ring is too big\/small. Can you resize it?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_78mptp",
+        "collapsible_row_mUK84w",
+        "collapsible_row_fMGmRG"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "repairs",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "collapsible_content_RyqB7k": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_zGbLYQ": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you ship worldwide?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_7Be4tE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What are your shipping methods within the USA?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_MDRYeM": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long do orders take to process?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_ynbbrC": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I track my order?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_6Ukebd": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I return or exchange a product?",
+            "icon": "none",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_zGbLYQ",
+        "collapsible_row_7Be4tE",
+        "collapsible_row_MDRYeM",
+        "collapsible_row_ynbbrC",
+        "collapsible_row_6Ukebd"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "shipping & returns",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_first",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "rich_text_6xyD6L": {
@@ -41,7 +219,7 @@
           "type": "heading",
           "settings": {
             "heading": "still have questions?",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
         "text_eVdkqf": {
@@ -63,7 +241,7 @@
         "text_VFnGde"
       ],
       "custom_css": [
-        "h2 {font-family: \"AubergeScriptBasicOne\";}"
+
       ],
       "settings": {
         "desktop_content_position": "center",
@@ -78,7 +256,10 @@
   },
   "order": [
     "main",
-    "rich_text_LANWTJ",
+    "image_banner_rUFnDH",
+    "collapsible_content_ee7MfP",
+    "collapsible_content_7W8Efy",
+    "collapsible_content_RyqB7k",
     "rich_text_6xyD6L"
   ]
 }

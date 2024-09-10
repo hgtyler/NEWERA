@@ -25,28 +25,77 @@
     %}
 {% endcomment %}
 
-<input
-  type="{{ type | default: 'radio' }}"
-  id="{{ id }}"
-  name="{{ name }}"
-  value="{{ value }}"
-  form="{{ product_form_id }}"
-  class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %}"
-  {% if checked %}
-    checked
-  {% endif %}
-  {% if disabled %}
-    disabled
-  {% endif %}
-  {% if additional_props %}
-    {{ additional_props }}
-  {% endif %}
->
-<label
-  for="{{ id }}"
-  title="{{ value }}"
-  class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
->
-  {% render 'swatch', swatch: swatch, shape: shape %}
-  {{ help_text }}
-</label>
+{%- assign option_name = name | downcase -%}
+
+{%- if option_name contains 'metal' -%}
+  {%- assign swatch_image_url = '' -%}
+  
+  {%- case value -%}
+    {%- when '14k Yellow Gold' -%}
+      {%- assign swatch_image_url = 'https://cdn.shopify.com/s/files/1/0021/7474/6681/files/metal-14k-yellow-gold.jpg?v=1652809319' -%}
+      {%- when '18k Yellow Gold' -%}
+        {%- assign swatch_image_url = 'https://cdn.shopify.com/s/files/1/0021/7474/6681/files/metal-18k-yellow-gold.jpg?v=1665618385' -%}
+    {%- when '14k White Gold' -%}
+      {%- assign swatch_image_url = 'https://cdn.shopify.com/s/files/1/0021/7474/6681/files/metal-14k-white-gold.jpg?v=1652809319' -%}
+    {%- when '14k Rose Gold' -%}
+      {%- assign swatch_image_url = 'https://cdn.shopify.com/s/files/1/0021/7474/6681/files/metal-14k-rose-gold.jpg?v=1652809319' -%}
+    {%- else -%}
+      {%- assign swatch_image_url = 'default-metal-swatch.jpg' -%}
+  {%- endcase -%}
+
+  <input
+    type="{{ type | default: 'radio' }}"
+    id="{{ id }}"
+    name="{{ name }}"
+    value="{{ value }}"
+    form="{{ product_form_id }}"
+    class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %}"
+    {% if checked %}
+      checked
+    {% endif %}
+    {% if disabled %}
+      disabled
+    {% endif %}
+    {% if additional_props %}
+      {{ additional_props }}
+    {% endif %}
+  >
+  <label
+    for="{{ id }}"
+    title="{{ value }}"
+    class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
+  >
+    <span
+      class="swatch{% if shape == 'square' %} swatch--square{% endif %}"
+      style="--swatch--background: url('{{ swatch_image_url }}');"
+    ></span>
+    {{ help_text }}
+  </label>
+
+{%- else -%}
+  <input
+    type="{{ type | default: 'radio' }}"
+    id="{{ id }}"
+    name="{{ name }}"
+    value="{{ value }}"
+    form="{{ product_form_id }}"
+    class="swatch-input__input{% if visually_disabled %} visually-disabled{% endif %}"
+    {% if checked %}
+      checked
+    {% endif %}
+    {% if disabled %}
+      disabled
+    {% endif %}
+    {% if additional_props %}
+      {{ additional_props }}
+    {% endif %}
+  >
+  <label
+    for="{{ id }}"
+    title="{{ value }}"
+    class="swatch-input__label{% if shape == 'square' %} swatch-input__label--square{% endif %}"
+  >
+    {% render 'swatch', swatch: swatch, shape: shape %}
+    {{ help_text }}
+  </label>
+{%- endif -%}

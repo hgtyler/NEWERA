@@ -2,6 +2,7 @@
   "sections": {
     "video_DxiFyk": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -17,9 +18,8 @@
     },
     "image_banner_ybm3Gt": {
       "type": "image-banner",
-      "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/testbanner.jpg",
+        "image": "shopify:\/\/shop_images\/starling-emerald-rings.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-center",
@@ -54,9 +54,9 @@
         "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
-        "burgundy_line": false,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "burgundy_line": true,
+        "padding_top": 28,
+        "padding_bottom": 24
       }
     },
     "double_image_banner_kpRaem": {
@@ -65,7 +65,7 @@
         "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
         "banner_header_text": "",
         "image_1_url": "shopify:\/\/shop_images\/banner_1_8d7ebe01-03c8-4d50-b63d-5f8f9aacc429.jpg",
-        "image_2_url": "shopify:\/\/shop_images\/banner_2_cc625d05-3a57-462b-b67a-edae3ef01910.jpg",
+        "image_2_url": "shopify:\/\/shop_images\/IMG_6761.heic",
         "button_text": "Shop September Bespoke Gems",
         "button_link": "shopify:\/\/collections\/bespoke-gems"
       }
