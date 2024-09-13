@@ -136,14 +136,6 @@
     "content_for_index": [
 
     ],
-    "blocks": {
-      "1387321792192259120": {
-        "type": "shopify:\/\/apps\/mini-customization-fields\/blocks\/app-embed\/e2bc653a-3a1f-4c8a-af16-5a28d6116641",
-        "disabled": true,
-        "settings": {
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

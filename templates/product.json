@@ -20,6 +20,11 @@
           "settings": {
           }
         },
+        "infinite_options_app_block_wAg8Ww": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
         "variant_picker_RhW3MJ": {
           "type": "variant_picker",
           "settings": {
@@ -87,6 +92,7 @@
         "custom_liquid_pyT8wz",
         "title",
         "price",
+        "infinite_options_app_block_wAg8Ww",
         "variant_picker_RhW3MJ",
         "text_marVHj",
         "buy_buttons",

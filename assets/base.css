@@ -3497,3 +3497,9 @@
   #loading-screen.hidden {
     display: none;
   }
+
+  .spb-productoptionswatch {
+    width: 25px  !important;
+    height: 25px  !important;
+    border-radius: 50%  !important;
+}

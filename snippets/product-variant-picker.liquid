@@ -19,16 +19,6 @@
     data-section="{{ section.id }}"
     {{ block.shopify_attributes }}
   >
-    {%- if product.title contains "4 STONES"  or  product.title contains "3 STONES" or  product.title contains "2 STONES" -%}
-    {% assign compass = true %}
-      {% if compass %}
-        {% render 'special-products' compass: true, product: product %}
-      {% endif %}
-    {%- endif -%}
-    {% if product.tags contains "bespoke" %}
-      {% render 'bespoke-products' %}
-    {% endif %}
-
     {%- for option in product.options_with_values -%}
       {%- assign option_name = option.name | downcase -%}
     
@@ -63,7 +53,7 @@
               {% render 'product-variant-options', product: product, option: option, block: block, picker_type: picker_type %}
             </select>
             <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
+              {% render 'icon-caret' %}
             </span>
           </div>
         </div>
