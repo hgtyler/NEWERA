@@ -47,7 +47,7 @@
           "settings": {
             "heading": "General Care",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>We promote #wearalways, but there are times when you may want to be more careful and remove your jewelry before doing certain activities.<\/p><p>These times include:<\/p><p>Strenuous activity that involves rubbing against metal such as exercise classes or weight lifting. Cleaning with harsh chemicals such as bleach, especially anything with Chlorine... and make sure to avoid swimming pools and hot tubs with Chlorine, which can cause discoloring and damage to fine jewelry. Also, you may want to avoid activities where your hands get extra dirty, as they can cause build-up on the jewelry (although it can usually be removed easily). This may include activities such as gardening, working with clay, cooking, or using lotion\/oils. Please use extra caution with softer stones such as pearls, turquoise, and opals.<\/p><p>In order to avoid tarnishing, it is important to remove any item that is Gold-Dipped Silver before getting it wet or using lotions and perfumes.<\/p>",
             "page": ""
           }
         },
@@ -56,7 +56,7 @@
           "settings": {
             "heading": "Cleaning",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>If your jewelry becomes dull or dirty, we recommend using a soft brush (a make-up brush or soft toothbrush) and an organic cleaning spray or non-detergent soap. Rinse with warm water and air dry. You can also use a lint-free jewelry polishing cloth. If your jewelry needs a deep cleaning, please take it to your local jeweler or email us.<\/p>",
             "page": ""
           }
         },
@@ -65,7 +65,7 @@
           "settings": {
             "heading": "Storage",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>The best way to store your Starling jewelry is in the box you received the piece in. Any soft fabric bag or box will also do, as long as it is clean and dry.<\/p>",
             "page": ""
           }
         }
@@ -96,18 +96,18 @@
         "collapsible_row_78mptp": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What if an item breaks after 10 days and I swear it's not my fault?",
+            "heading": "What if there is a quality issue and it's not my fault?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>We stand by the quality of our items. If an item breaks after our 10-day return policy, please send an image of the item to hello@starlingjewelry.com. We can then determine the next steps, whether it’s exchanging the item or repairing.<\/p>",
             "page": ""
           }
         },
         "collapsible_row_mUK84w": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "The item broke and it's totally my dog's fault or mine!",
+            "heading": "I need a repair and ugh it's my fault!",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>That's okay, it can be fixed! Send an image of the piece to hello@starlingjewelry.com, and we can determine our repair\/replacement charges. Shipping charges will be the customer’s responsibility.<\/p>",
             "page": ""
           }
         },
@@ -116,7 +116,7 @@
           "settings": {
             "heading": "My ring is too big\/small. Can you resize it?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Yes! First figure out what size you would like. We have a handy ring-sizing chart on the site. Then email hello@starlingjewelry.com with your information. We will get back to you within 24 hours with a quote and timeline.<\/p>",
             "page": ""
           }
         }
@@ -149,7 +149,7 @@
           "settings": {
             "heading": "Do you ship worldwide?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>We ship to select international countries with DHL. We are not responsible for tax and duty fees.<\/p>",
             "page": ""
           }
         },
@@ -158,7 +158,7 @@
           "settings": {
             "heading": "What are your shipping methods within the USA?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>USPS 2 to 5 business day and UPS 2 Day. We offer free USPS shipping on orders over $200.<\/p><p>We are not responsible for delayed delivery caused by carrier.<\/p>",
             "page": ""
           }
         },
@@ -167,7 +167,7 @@
           "settings": {
             "heading": "How long do orders take to process?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>As our company grows, please be patient with us. Our items are made to order, and most items take 7-10 days to make and ship out as soon as they are finished. Any order with engraving or personalized stone arrangements usually take 2-3 weeks to make. Bespoke and custom items take an estimate of 6-8 weeks to make before shipping.<\/p><p>If your order is a rush item please email us and we will do everything we can to get it to you on time!<\/p>",
             "page": ""
           }
         },
@@ -176,7 +176,7 @@
           "settings": {
             "heading": "Can I track my order?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Yes! We will send you a tracking number as soon as the items ships.<\/p>",
             "page": ""
           }
         },
@@ -185,7 +185,7 @@
           "settings": {
             "heading": "Can I return or exchange a product?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>If you are not entirely pleased with a product you purchased, Starling will accept non-personalized items for exchange or return within 10 days of your delivery date. Item(s) must be returned in new and re-sellable condition with original jewelry box. Returns after the 10-day period are only eligible for a store credit and at the discretion of Starling Jewelry. If you would like to make a return please email us at hello@starlingjewelry.com for a return authorization. No refund will be granted without return authorization. Returns will be credited minus a $10 return shipping cost. All shipping charges are non refundable. You’ll receive the refund within 5-7 business days depending on your bank.<\/p><p>For your protection, please pack your returns in the original box with the return authorization form. Return your order with an insured courier (e.g., FedEx, UPS) and retain your receipt. Once your return is processed, the purchasing card will be credited for the merchandise amount only. We cannot refund shipping charges on return items.<\/p><p><strong>Personalized items, bespoke gems, one-of-a-kind items and special orders cannot be returned. Personalized pieces include any item that is engraved, custom name necklaces, compass charms, and any special order. <\/strong><\/p><p>Starling is not responsible for items damaged or lost in transit. For questions about shipping or repairs please email us at hello@starlingjewelry.com<\/p>",
             "page": ""
           }
         }
@@ -218,7 +218,7 @@
         "heading_LzQJJA": {
           "type": "heading",
           "settings": {
-            "heading": "still have questions?",
+            "heading": "Still have questions?",
             "heading_size": "h2"
           }
         },

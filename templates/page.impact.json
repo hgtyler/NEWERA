@@ -11,6 +11,7 @@
     "image_banner_DkDncU": {
       "type": "image-banner",
       "settings": {
+        "image": "shopify:\/\/shop_images\/starling-emerald-rings.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
@@ -62,6 +63,7 @@
         "text_rY99VB"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/IMG_5287.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -185,6 +187,7 @@
       "blocks": {
         "heading_k6r3Ch": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Organizations close to our heart",
             "heading_size": "h2"
@@ -240,9 +243,11 @@
         "column_36DPik",
         "column_pbfC46"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
+        "title_center": false,
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,

@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_gLgdDk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_c6UWb4": {
+          "type": "heading",
+          "settings": {
+            "heading": "jewelry care",
+            "heading_size": "h1"
+          }
+        },
+        "text_VqKnJB": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/pages\/questions-new\" title=\"Questions\">Repairs<\/a> | <a href=\"\/pages\/shipping-policy\" title=\"Shipping Policy\">Shipping<\/a> | <a href=\"\/pages\/exchange-and-return-policy\" title=\"Exchange and Return Policy\">Returns <\/a>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_c6UWb4",
+        "text_VqKnJB"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 70px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/FAQ.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "multirow_9QMajc": {
+      "type": "multirow",
+      "blocks": {
+        "row_MFaytB": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MKSADLER-9059_1.jpg",
+            "caption": "",
+            "heading": "General Care",
+            "text": "<p>We promote #wearalways, but there are times when you may want to be more careful and remove your jewelry before doing certain activities.<\/p><p>These times include:<\/p><ul><li>Strenuous activity that involves rubbing against metal such as exercise classes or weight lifting. <\/li><\/ul><p><\/p><ul><li>Cleaning with harsh chemicals such as bleach, especially anything with Chlorine... and make sure to avoid swimming pools and hot tubs with Chlorine, which can cause discoloration and damage to fine jewelry. <\/li><\/ul><p><\/p><ul><li>Activities where your hands get extra dirty, as they can cause build-up on the jewelry (although it can usually be removed easily). This may include activities such as gardening, working with clay, cooking, or using lotion\/oils. <\/li><\/ul>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_WGcK8w": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_218b185b-4490-468b-9b8b-224f507e63eb.jpg",
+            "caption": "",
+            "heading": "Cleaning",
+            "text": "<p>If your jewelry becomes dull or dirty, we recommend using a soft brush (a make-up brush or soft toothbrush) and an organic cleaning spray or non-detergent soap. Rinse with warm water and air dry. You can also use a lint-free jewelry polishing cloth. If your jewelry needs a deep cleaning, please take it to your local jeweler or email us.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "row_mMB9Tz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_5287.jpg",
+            "caption": "",
+            "heading": "Storage",
+            "text": "<p>The best way to store your Starling jewelry is in the box you received the piece in. Any soft fabric bag or box will also do, as long as it is clean and dry.<\/p>",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_MFaytB",
+        "row_WGcK8w",
+        "row_mMB9Tz"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "image_layout": "alternate-right",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_gLgdDk",
+    "multirow_9QMajc"
+  ]
+}

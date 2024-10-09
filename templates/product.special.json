@@ -36,6 +36,11 @@
             "text_style": "body"
           }
         },
+        "infinite_options_app_block_9w8A6M": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -89,6 +94,7 @@
         "price",
         "variant_picker_RhW3MJ",
         "text_marVHj",
+        "infinite_options_app_block_9w8A6M",
         "buy_buttons",
         "custom_liquid_eU8EVb",
         "custom_liquid_9rmtjY",
@@ -144,7 +150,7 @@
           "settings": {
             "heading": "Returns",
             "icon": "none",
-            "row_content": "<p>Return Policy:<\/p><p>- All engraved or custom pieces, bespoke gems, one of a kind pieces, compass charms, sample sale or international orders are final sale.<\/p><p>- 10-Day Returns\/Exchanges For Domestic Orders ($10 return shipping fee)<\/p><p>For more detailed information on our shipping & returns policy, click <a href=\"https:\/\/www.starlingjewelry.com\/pages\/faq\"><span style=\"text-decoration:underline\">here!<\/span><\/a><\/p><p><br\/><\/p>",
+            "row_content": "<p>Return Policy:<\/p><p>- All engraved or custom stone arrangement pieces, bespoke gems, one of a kind pieces, custom orders, archive sale or international orders are final sale.<\/p><p>- 10-Day Returns\/Exchanges For Domestic Orders ($15 return shipping fee)<\/p><p>For more detailed information on our shipping & returns policy, click <a href=\"https:\/\/www.starlingjewelry.com\/pages\/faq\" target=\"_blank\"><span style=\"text-decoration:underline\">here!<\/span><\/a><\/p><p><br\/><\/p>",
             "page": ""
           }
         },

@@ -20,7 +20,7 @@
         "text_yThdWT": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe jewelry is meant to be worn and are here to help you revive your jewelry box. The Heirloom Revival mission is: wear more, buy less. The largest diamond mine is in our homes. Let's start putting those stones to use. It's our responsibility as citizens of earth, the future of fine jewelry and so sentimental. Heirloom Revival is here to help you recycle and remake your most precious objects.<\/p><p><\/p><p>Read more about our process below! <\/p><p><\/p><p><\/p>"
+            "text": "<p>We believe jewelry is meant to be worn and are here to help you revive your jewelry box. The Heirloom Revival mission is: wear more, buy less. The largest diamond mine is in our homes. Let's start putting those stones to use. It's our responsibility as citizens of earth, the future of fine jewelry and so sentimental. Heirloom Revival is here to help you recycle and remake your most precious objects. Heirloom Revival projects typically start at $2000 depending on the design, stone size and metal.<\/p><p><\/p><p>Read more about our process below and inquire for a quote below!<\/p><p><\/p><p><\/p>"
           }
         }
       },
@@ -170,7 +170,7 @@
         "heading": "Start Your Revival",
         "heading_size": "h2",
         "email_field": true,
-        "phone_field": true,
+        "phone_field": false,
         "message_field": false,
         "custom_form": "Tell us about what you would like to revive",
         "color_scheme": "",
@@ -363,7 +363,7 @@
         "heading_PMAXep": {
           "type": "heading",
           "settings": {
-            "heading": "Start Your Revival",
+            "heading": "Reserve a Revival Spot",
             "heading_size": "h2"
           }
         },

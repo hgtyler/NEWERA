@@ -60,14 +60,6 @@
       {%- endif -%}
     {%- endfor -%}
     
-    {%- if product.tags contains 'engraving' -%}
-      <div class="product-form__input product-form__input--engraving">
-        <label for="engraving-input" class="form__label">
-          Custom Engraving (Max 20 characters):
-        </label>
-        <input type="text" id="engraving-input" name="properties[Engraving]" maxlength="20" class="engraving__input" placeholder="Enter your engraving here" />
-      </div>
-    {%- endif -%}
 
     <script type="application/json" data-selected-variant>
       {{ product.selected_or_first_available_variant | json }}

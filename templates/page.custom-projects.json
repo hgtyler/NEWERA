@@ -13,14 +13,14 @@
         "heading_JtRf3w": {
           "type": "heading",
           "settings": {
-            "heading": "Bespoke Designs",
+            "heading": "bespoke designs",
             "heading_size": "h2"
           }
         },
         "text_AKLCWr": {
           "type": "text",
           "settings": {
-            "text": "<p>At Starling, we love doing bespoke designs for engagement rings, important milestones or just because. Look through our site or socials for inspiration and reach out with your project below! We can't wait to make something magical together. <\/p>"
+            "text": "<p>At Starling, we love doing custom designs for engagement rings, important milestones or just because. Look through our site or socials for inspiration and reach out with your project below! We can't wait to make something magical together. <\/p>"
           }
         }
       },
@@ -28,13 +28,16 @@
         "heading_JtRf3w",
         "text_AKLCWr"
       ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 55px;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
         "color_scheme": "",
         "full_width": true,
-        "burgundy_line": true,
-        "padding_top": 40,
+        "burgundy_line": false,
+        "padding_top": 12,
         "padding_bottom": 16
       }
     },
@@ -44,15 +47,15 @@
 
       ],
       "settings": {
-        "heading": "Let's Get Started!",
+        "heading": "Let's Design",
         "heading_size": "h2",
         "email_field": true,
         "phone_field": false,
         "message_field": false,
         "custom_form": "Please Tell Us: Dream Stone, Dream Setting, Budget & Any Timeline Requests:",
-        "color_scheme": "scheme-2",
-        "padding_top": 40,
-        "padding_bottom": 36
+        "color_scheme": "scheme-1",
+        "padding_top": 20,
+        "padding_bottom": 16
       }
     },
     "collage_Uz9dWg": {
@@ -82,13 +85,16 @@
         "image_zzNDQg",
         "image_UnA9Gq"
       ],
+      "custom_css": [
+        "h2 {text-align: center; font-family: \"AubergeScriptBasicOne\"; font-size: 45px;}"
+      ],
       "settings": {
-        "heading": "Past Bespoke Projects",
+        "heading": "past bespoke designs",
         "heading_size": "h2",
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "padding_top": 36,
         "padding_bottom": 8
       }
@@ -126,121 +132,9 @@
         "desktop_layout": "left",
         "mobile_layout": "column",
         "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "padding_top": 0,
         "padding_bottom": 36
-      }
-    },
-    "slideshow_gaELcw": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_phjYEG": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_0730.jpg",
-            "heading": "",
-            "heading_size": "h2",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "top-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_jLb7wM": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_0205.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_tbi9bp": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_1060.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_TKmpVt": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_0727.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "slide_hXbMzJ": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_7605.jpg",
-            "heading": "",
-            "heading_size": "h1",
-            "subheading": "",
-            "button_label": "",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": false,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "scheme-1",
-            "text_alignment_mobile": "center"
-          }
-        }
-      },
-      "block_order": [
-        "slide_phjYEG",
-        "slide_jLb7wM",
-        "slide_tbi9bp",
-        "slide_TKmpVt",
-        "slide_hXbMzJ"
-      ],
-      "settings": {
-        "layout": "full_bleed",
-        "slide_height": "medium",
-        "slider_visual": "counter",
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "image_behavior": "none",
-        "show_text_below": true,
-        "accessibility_info": "Slideshow about our brand"
       }
     }
   },
@@ -249,7 +143,6 @@
     "rich_text_AyC4x3",
     "contact_form_VXp4Vp",
     "collage_Uz9dWg",
-    "collage_Ym9744",
-    "slideshow_gaELcw"
+    "collage_Ym9744"
   ]
 }

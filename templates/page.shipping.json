@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "image_banner_p37bGm": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_pLeKnP": {
+          "type": "heading",
+          "settings": {
+            "heading": "shipping",
+            "heading_size": "h1"
+          }
+        },
+        "text_UfB7Hj": {
+          "type": "text",
+          "settings": {
+            "text": "<a href=\"\/pages\/care\" title=\"Care\">Jewelry Care<\/a> |  <a href=\"\/pages\/happiness-guarantee\" title=\"Happiness Guarantee\">Repairs<\/a>  | <a href=\"\/pages\/exchange-and-return-policy\" title=\"Exchange and Return Policy\">Returns<\/a>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pLeKnP",
+        "text_UfB7Hj"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 70px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/FAQ.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_p37bGm"
+  ]
+}

@@ -20,6 +20,11 @@
           "settings": {
           }
         },
+        "infinite_options_app_block_UtWHyG": {
+          "type": "shopify:\/\/apps\/infinite-options\/blocks\/app-block\/7e73b6f9-82b0-45f5-9b9b-04f446ba1a9b",
+          "settings": {
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -47,13 +52,6 @@
           "settings": {
           }
         },
-        "text_3jtxD9": {
-          "type": "text",
-          "settings": {
-            "text": "Estimated Ship Date",
-            "text_style": "body"
-          }
-        },
         "collapsible_tab_qg6gir": {
           "type": "collapsible_tab",
           "settings": {
@@ -77,11 +75,11 @@
         "title",
         "subtitle",
         "price",
+        "infinite_options_app_block_UtWHyG",
         "variant_picker",
         "text_LdeJyi",
         "buy_buttons",
         "description",
-        "text_3jtxD9",
         "collapsible_tab_qg6gir",
         "collapsible_tab_XFRQem"
       ],
@@ -151,6 +149,7 @@
         "column_en4Qe9",
         "column_P7B9zj"
       ],
+      "disabled": true,
       "custom_css": [
         ".multicolumn__title {text-align: center;}",
         ".title {text-align: center;}",
@@ -174,23 +173,24 @@
         "padding_bottom": 36
       }
     },
-    "6d66d2c3-2304-463d-9d07-02ce5c433be2": {
-      "type": "image-banner",
+    "video_KiXqeW": {
+      "type": "video",
       "settings": {
-        "image_overlay_opacity": 0,
-        "image_height": "small",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/Aug24_Web_Video_Vr2.MOV",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
         "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -220,13 +220,13 @@
         "text_hqXD8q": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Choose between a bezel, prong, or cloud setting style, and your preferred 14k gold color. Ring is made to fit you - if you don’t know your ring size, select “I Don’t Know” as a size option and we will ship you a free ring sizer before making. After ordering you will receive a 3D CAD design of your selections within 5-10 days before we make the final ring. Bespoke rings take 6-8 weeks to make. Complimentary 2-day UPS shipping included.<\/p>"
           }
         },
         "text_yHadVc": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"\/pages\/bespoke-contact\" target=\"_blank\" title=\"Bespoke Gems Inquiry\">Learn More<\/a><\/p>"
+            "text": "<p>Have any questions? <a href=\"\/pages\/contact-us\" target=\"_blank\" title=\"Contact Us\">Contact us!<\/a><\/p><p><\/p>"
           }
         }
       },
@@ -244,13 +244,56 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "double_image_banner_rVLrm7": {
+      "type": "double-image-banner",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "scheme-3",
+        "banner_header_text": "bespoke projects",
+        "image_1_url": "shopify:\/\/shop_images\/rings2.png",
+        "image_2_url": "shopify:\/\/shop_images\/rings.jpg",
+        "button_text": "View More Past Bespoke Projects",
+        "button_link": ""
+      }
+    },
+    "featured_collection_JtENHg": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bespoke-gems",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "shop_collection": true,
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "multicolumn_7zLYbU",
-    "6d66d2c3-2304-463d-9d07-02ce5c433be2",
+    "video_KiXqeW",
     "related-products",
-    "rich_text_xBCJKB"
+    "rich_text_xBCJKB",
+    "double_image_banner_rVLrm7",
+    "featured_collection_JtENHg"
   ]
 }

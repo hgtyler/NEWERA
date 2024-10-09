@@ -7,6 +7,12 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .title-wrapper-with-link {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -31,8 +37,8 @@
     {% endif %}
   >
     {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link {% if section.settings.title_center %} center {% endif %} title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
-        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin multicolumn__title">
+        <h2 class="title inline-richtext center {{ section.settings.heading_size }}">
           {{ section.settings.title }}
         </h2>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
@@ -234,7 +240,7 @@
     {
     "type": "checkbox",
     "id": "title_center",
-    "default": false,
+    "default": true,
     "label": "t:sections.multicolumn.settings.title_center.label"
       },    
       {
