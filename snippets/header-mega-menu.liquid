@@ -10,6 +10,10 @@
   font-family: 'ABCWhyte-Book';
   }
 
+  .bold-link {
+  font-size: 17px;
+  }
+
 </style>
 <nav class="header__inline-menu">
   <ul class="list-menu list-menu--inline" role="list">
@@ -41,6 +45,18 @@
                 >
                   {%- for childlink in link.links -%}
                     <li>
+                      {% if childlink.handle contains "all" %}
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link bold-link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                        {% else %}
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
@@ -51,6 +67,7 @@
                       >
                         {{ childlink.title | escape }}
                       </a>
+                    {% endif %}
                       {%- if childlink.links != blank -%}
                         <ul class="list-unstyled" role="list">
                           {%- for grandchildlink in childlink.links -%}

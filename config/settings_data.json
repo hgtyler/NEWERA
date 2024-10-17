@@ -98,7 +98,7 @@
     "badge_corner_radius": 40,
     "sale_badge_color_scheme": "scheme-5",
     "sold_out_badge_color_scheme": "scheme-4",
-    "brand_headline": "",
+    "brand_headline": "fine jewelry moved by light and color, made to be — ever yours",
     "brand_description": "<p><\/p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
@@ -136,6 +136,20 @@
     "content_for_index": [
 
     ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "2187360915322861293": {
+        "type": "shopify:\/\/apps\/uploadly-file-upload\/blocks\/app-embed\/d91e9a53-de3d-49df-b7a1-ac8a15b213e5",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {

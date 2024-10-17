@@ -297,6 +297,76 @@
         "padding_bottom": 64
       }
     },
+    "image_announcement_banner_9axEQQ": {
+      "type": "image-announcement-banner",
+      "blocks": {
+        "heading_C9MV9b": {
+          "type": "heading",
+          "settings": {
+            "heading": "holiday shipping",
+            "heading_size": "h0"
+          }
+        },
+        "text_VwUd3g": {
+          "type": "text",
+          "settings": {
+            "text": "Bespoke, Heirloom Revival, and Custom Pieces:",
+            "text_style": "subtitle"
+          }
+        },
+        "text_KkRKFq": {
+          "type": "text",
+          "settings": {
+            "text": "Order by Oct 17th",
+            "text_style": "body"
+          }
+        },
+        "text_DrCPL3": {
+          "type": "text",
+          "settings": {
+            "text": "Main Collection \/ Made to Order Pieces:",
+            "text_style": "subtitle"
+          }
+        },
+        "text_xiA9dN": {
+          "type": "text",
+          "settings": {
+            "text": "USPS (Free): Dec 2nd",
+            "text_style": "body"
+          }
+        },
+        "text_UKMTkb": {
+          "type": "text",
+          "settings": {
+            "text": "FEDEX: Dec 5th",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_C9MV9b",
+        "text_VwUd3g",
+        "text_KkRKFq",
+        "text_DrCPL3",
+        "text_xiA9dN",
+        "text_UKMTkb"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"AubergeScriptBasicOne\"; font-size: 50px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/STARLINGxMONTAGUEDINERxFF-42_1_1577cc8c-3352-4f2e-a749-cf9f0d565cac.jpg",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-7036b2aa-a717-42b9-a8c1-ce9850ab22c4",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "image_banner_rFA3Cp": {
       "type": "image-banner",
       "blocks": {
@@ -319,6 +389,7 @@
         "heading_nNNBfz",
         "text_mhCdkE"
       ],
+      "disabled": true,
       "custom_css": [
         "h2 {font-family: \"BeirutDisplayTrialBook\"; font-weight: 200;}",
         ".banner__text {color: white; font-family: \"ABCWhyte-Book\"; font-size: 14px;}"
@@ -413,6 +484,7 @@
     "featured_collection_wXJbwk",
     "image_banner_fwMtA3",
     "multicolumn_UP9Cd9",
+    "image_announcement_banner_9axEQQ",
     "image_banner_rFA3Cp",
     "image_with_text_qtyTbe",
     "double-image-banner",
